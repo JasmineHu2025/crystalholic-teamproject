@@ -12,8 +12,8 @@ npm install
 
 # 啟動開發伺服器
 npm run dev
-預設網址 http://localhost:5173
-查看該頁面請加索引 例如/About
+預設網址 http://localhost:5173/
+查看該頁面請加索引 例如#/about
 
 # 每次開發前執行 
 git pull 確保版本最新
@@ -70,7 +70,7 @@ public/images/
 
 
 
-🌐 部署 GitHub Pages
+📝 部署 GitHub Pages
 # 1. 第一次操作請打開終端機：
 npm install gh-pages --save-dev
 
@@ -109,6 +109,9 @@ npm run deploy
 
 🚀 每次要上傳至網址時
 npm run deploy
+
+🌐 網址為
+https://jasminehu2025.github.io/crystalholic-teamproject/
 
 
 
