@@ -1,0 +1,331 @@
+@import '../../components/BgLight.css';
+
+.pc_main{
+    width: 100%;
+    min-height:100vh;
+    padding-top: 70px;             /* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;        /* 🟣 讓 padding 計入 100vh */
+    display:flex;
+    flex-direction:column; 
+}
+
+/* ─── 系列 icon 區 ─────────────────────────────── */
+.pc_icon_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(2rem, 4.5vw, 6.25rem);
+    position: relative; 
+
+    margin: 6rem 0;
+}
+
+.pc_icon_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor:pointer;
+}
+.pc_icon_item:hover img {
+  border: 3px solid #C093D6;
+  border-radius: 999px;
+  transition: border .35s ease;
+}
+.pc_icon_item img {
+  width: 7rem;
+  height: 100%;
+  border: 3px solid transparent;
+  border-radius: 999px;
+}
+.pc_icon_item.pc_active img {
+  border: none;
+}
+.pc_icon_item span {
+    color: #585858;
+
+    font-family: "Noto Sans TC";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 150%;
+    letter-spacing: 0.1rem;
+    background-image:linear-gradient(currentColor,currentColor);
+    background-repeat:no-repeat;
+    background-position:left bottom;
+    background-size:0 1px;
+    transition:background-size .35s ease;
+  }
+  .pc_icon_item:hover span {
+    background-size:100% 2px;
+  }
+  .pc_icon_item.pc_active span{
+    color:#6060CC;
+    background-size:100% 2px;
+  }
+  
+  /* ─── 單一三角形水平滑動指示器 ─────────────────── */
+  .pc_triangle_indicator{
+    position:absolute;
+    bottom:-8rem;                   /* 與商品區上緣貼齊 */
+    left:0; 
+    width:6rem;
+    height:5rem;
+    /* background:url(../images/S-Background/bg-noise-light.png),#DCEFEF; */
+    clip-path:polygon(50% 0%,100% 100%,0% 100%);
+    transition:left .4s ease;  
+    pointer-events:none;
+
+    /* background: none;
+    background-color: transparent; */
+  }
+/* ─── 商品區與背景對話框 ──────────────────────── */
+.pc_product_area {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding:8rem 0 16rem; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative; /* 給 z-index 用 */
+    z-index: 1;         /* 蓋在 .pc_icon_area 上 */
+}
+
+/* ----系列商品---- */
+.pc_products {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.25rem, 5vw, 3rem);
+    margin-bottom: 5rem;/* 80px */
+    width: 85%;
+}
+
+/* 單張商品卡 */
+.pc_product_card {
+    width: 28%;
+    /* flex:1 1 16rem; */
+    max-width:20rem;
+    cursor: pointer;
+}
+
+/* 商品照 */
+.pc_product_img_wrap {
+    border-radius: 20px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 15px 0px rgba(209, 235, 240, 0.80);
+    overflow: hidden;
+
+    margin-bottom: 1.25rem;/* 20px */
+    aspect-ratio: 25 / 27;   /* 寬 = 高 */
+}
+
+.pc_product_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 商品資訊 */
+.pc_product_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;/* 8px */
+}
+
+.pc_product_name {
+    color: #585858;
+    /* 中文/小標題2 */
+    font-family: "Noto Sans TC";
+    font-size: 1rem;/* 16px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.1rem;/* 1.6px */
+}
+
+.pc_product_price {
+    /* color: #125FB2; */
+    /* 中文/內文2 */
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.088rem; /* 1.4px */
+}
+
+/* 水晶 */
+.pc_product_crystals {
+    display: flex;
+    gap: 0.375rem; /* 6px */
+}
+
+.pc_crystal_img {
+    width: 1.125rem; /* 18px */
+    height: 1.125rem;
+}
+
+/* ─── 系列產品介紹 ────────────────────────────── */
+.pc_product_introduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pc_product_introduce h5 {
+    /* color: #128DB2; */
+    /* 中文/霞鶩文楷/標題5 */
+    font-family: "LXGW WenKai Mono TC";
+    font-size: 1.25rem;/* 20px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.125rem;/* 2px */
+}
+
+.pc_divider_line {
+    width: 95%;
+    margin: 0.625rem 0 1.25rem;
+}
+
+.pc_product_introduce p {
+    color: #585858;
+    /* 中文/思源黑體/內文2 */
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem;/* 14px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.088rem;/* 1.4px */
+    display: inline; 
+}
+.pc_footer{
+    width: 100%;
+    position: relative;
+
+    clip-path: ellipse(70% 100% at 50% 100%);
+    padding-top: 9.0625rem;/* 145px */
+
+    margin-top:-10rem; 
+
+    z-index: 2;
+}
+
+/* ----- 商品對話框＋三角型 各系列顏色 ----- */
+/* 澄語之藍背景 */
+.pc_bg_blue {
+    background:
+      url(../images/S-Background/bg-noise-light.png),
+      /* 左中 */ radial-gradient(circle 60vw at 10% 48%, rgba(245, 249, 212, 0.35) 0%, rgba(245, 249, 212, 0.00) 100%),
+      /* 左下 */ radial-gradient(circle 70vw at 7% 96%, rgb(209, 235, 248) 0%, rgba(12, 92, 108, 0) 100%),
+      /* 上方 */ radial-gradient(circle 30vw at 75% 30%, rgba(245, 249, 212, 0.35) 0%, rgba(245, 249, 212, 0.00) 100%),
+      /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(209, 235, 240) 0%, rgba(209, 235, 240, 0.00) 100%),
+      /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(209, 235, 240) 0%, rgba(209, 235, 240, 0.00) 100%);
+    background-color: #DCEFEF;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.triangle_blue {
+    background:url(../images/S-Background/bg-noise-light.png),#DCEFEF;
+}
+.pc_intro_title_blue {
+    color: #128DB2;
+}
+.price_blue {
+    color: #125FB2;
+}
+  
+/* 秘境探光背景 */
+.pc_bg_adventure {
+    background:
+      url(../images/S-Background/bg-noise-light.png),
+      /* 左中 */ radial-gradient(circle 60vw at 10% 48%, rgba(245, 249, 212, 0.35) 0%, rgba(245, 249, 212, 0.00) 100%),
+      /* 左下 */ radial-gradient(circle 70vw at 7% 96%, rgb(255, 219, 180) 0%, rgba(255, 219, 180, 0.00) 100%),
+      /* 上方 */ radial-gradient(circle 30vw at 75% 30%, rgba(255, 246, 190, 0.35) 0%, rgba(255, 246, 190, 0.00) 100%),
+      /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(255, 219, 180) 0%, rgba(255, 219, 180, 0.00) 100%),
+      /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(255, 219, 180) 0%, rgba(255, 219, 180, 0.00) 100%);
+    background-color: #FBECD5;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.triangle_adventure {
+    background:url(../images/S-Background/bg-noise-light.png),#FBECD5;
+}
+.pc_intro_title_adventure {
+    color: #B66700;
+}
+.price_adventure {
+    color: #A5520D;
+}
+.pc_shadow_adventure {
+    box-shadow: 0 0 15px 0 rgba(255, 218, 179, 0.8);
+}
+  
+/* 四季琉波背景 */
+.pc_bg_seasons {
+    background:
+      url(../images/S-Background/bg-noise-light.png),
+      /* 左中 */ radial-gradient(circle 60vw at 10% 48%, rgba(196, 248, 255, 0.35) 0%, rgba(196, 248, 255, 0.00) 100%),
+      /* 左下 */ radial-gradient(circle 70vw at 7% 96%, rgb(177, 220, 194) 0%, rgba(196, 241, 214, 0.00) 100%),
+      /* 上方 */ radial-gradient(circle 30vw at 75% 30%, rgba(196, 248, 255, 0.35) 0%, rgba(196, 248, 255, 0.00) 100%),
+      /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(196, 241, 214) 0%, rgba(196, 241, 214, 0.00) 100%),
+      /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(196, 241, 214) 0%, rgba(196, 241, 214, 0.00) 100%);
+    background-color: #EDF4D4;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.triangle_seasons {
+    background:url(../images/S-Background/bg-noise-light.png),#EDF4D4;
+}
+.pc_intro_title_seasons {
+    color: #23AB89;
+}
+.price_seasons {
+    color: #0D7A5F;
+}
+.pc_shadow_seasons {
+    box-shadow: 0 0 15px 0 rgba(196, 241, 214, 0.8);
+}
+
+  
+/* 微醺晶釀背景 */
+.pc_bg_cocktail {
+    background:
+      url(../images/S-Background/bg-noise-light.png),
+      /* 左中 */ radial-gradient(circle 60vw at 10% 48%, rgba(255, 239, 195, 0.35) 0%, rgba(255, 239, 195, 0.00) 100%),
+      /* 左下 */ radial-gradient(circle 70vw at 7% 96%, rgb(255, 206, 197) 0%, rgba(255, 206, 197, 0.00) 100%),
+      /* 上方 */ radial-gradient(circle 30vw at 75% 30%, rgba(255, 239, 195, 0.35) 0%, rgba(255, 239, 195, 0.00) 100%),
+      /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(255, 206, 197) 0%, rgba(255, 206, 197, 0.00) 100%),
+      /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(255, 206, 197) 0%, rgba(255, 206, 197, 0.00) 100%);
+    background-color: #FDE7E7;
+    background-repeat: repeat;
+    background-size: cover;
+}
+.triangle_cocktail {
+    background:url(../images/S-Background/bg-noise-light.png),#FDE7E7;
+}
+.pc_intro_title_cocktail {
+    color: #DF5B36;
+}
+.price_cocktail {
+    color: #BE3B16;
+}
+.pc_shadow_cocktail {
+    box-shadow: 0 0 15px 0 rgba(255, 206, 197, 0.8);
+}
+
+@media (min-width: 1440px) {
+    .pc_icon_item img {
+        width: 9rem;
+    }
+}
+@media (max-width: 820px) {
+    .pc_divider_line {
+        width: 85%;
+    }   
+}

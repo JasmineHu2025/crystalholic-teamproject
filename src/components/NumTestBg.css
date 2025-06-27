@@ -1,0 +1,29 @@
+main {
+    height: 100%;
+  
+    /* 背景圖層 */
+    background:
+      url('../images/S-Background/bg-noise-light.png'),
+      radial-gradient(circle 48.24vw at -10% -12%,
+          rgba(255, 120, 158, 0.32) 22.12%,
+          rgba(255, 120, 158, 0.05) 59.62%,
+          rgba(255, 120, 158, 0) 100%),
+      radial-gradient(circle 48.76vw at 3% 135%,
+          rgba(162, 141, 255, 0.80) 0%,
+          rgba(162, 141, 255, 0.16) 50.96%,
+          rgba(162, 141, 255, 0) 100%),
+      radial-gradient(circle 39.66vw at 77% -15%,
+          rgba(162, 141, 255, 0.36) 0%,
+          rgba(162, 141, 255, 0.04) 75.9%,
+          rgba(162, 141, 255, 0) 100%),
+      radial-gradient(circle 48.24vw at 110% 125%,
+          rgba(255, 120, 158, 0.32) 22.12%,
+          rgba(255, 120, 158, 0.05) 60.1%,
+          rgba(255, 120, 158, 0) 100%);
+  
+    background-color: #fff;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

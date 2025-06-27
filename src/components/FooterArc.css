@@ -1,0 +1,142 @@
+.footer-arc {
+  width: 100%;
+  position: relative;
+  background-image:
+    linear-gradient(107deg, rgba(162, 105, 232, 0.95) -19.31%, rgba(66, 73, 212, 0.95) 169.85%),
+    url(/images/S-Background/noise-background.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  clip-path: ellipse(80% 100% at 50% 100%);
+  box-sizing: border-box;
+  padding: 160px 20px 40px;
+  /* 多預留上邊空間讓弧形浮出 */
+  min-height: 540px;
+  /* 原本太矮會截掉圓弧 */
+  z-index: 2;
+}
+
+/* .footer-arc-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 120px;
+  flex-wrap: wrap;
+  font-family: 'Noto Sans TC';
+  font-weight: 500;
+  z-index: 2;
+  padding-bottom: 20px;
+}
+
+.footer-arc-content>div {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-align: left;
+}
+
+.footer-arc h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-arc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-arc ul li {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-arc ul li a {
+  color: white;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.footer-arc ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #f3dbff;
+  transition: width 0.3s ease;
+}
+
+.footer-arc ul li a:hover::after {
+  width: 100%;
+}
+
+.contact p {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 48px;
+  height: 48px;
+}
+
+.footer-arc hr {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  border-top: 1px solid white;
+  margin: 0;
+  padding: 0;
+}
+
+.copyright {
+  font-family: 'Noto Sans TC';
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  font-size: 14px;
+  color: white;
+  margin-top: 40px;
+  padding-bottom: 40px;
+} */
+
+/* RWD */
+@media screen and (max-width: 1024px) {
+  /* .footer-arc-content {
+    gap: 60px;
+    margin: auto 100px;
+  }
+
+  .footer-arc-content>div {
+    width: 200px;
+  } */
+
+  .footer-arc {
+    min-height: 730px;
+  }
+
+}
+
+@media screen and (max-width: 820px) {
+  .footer-arc {
+    display: none;
+  }
+}

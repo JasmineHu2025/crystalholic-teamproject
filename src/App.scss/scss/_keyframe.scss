@@ -1,0 +1,101 @@
+  @keyframes floatY {
+
+    0%,
+    100% {
+      transform: translateY(45%);
+    }
+
+    50% {
+      transform: translateY(70%);
+    }
+  }
+
+  @keyframes floatY-s {
+
+    0%,
+    100% {
+      transform: translateY(-25%);
+    }
+
+    50% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes Afterdelay {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes coverFadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes fadeInSlide {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+  // 開始測驗鑽石 閃爍
+  @keyframes opacityGlow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+  // 畫面2 scroll
+  @keyframes scrollDiamondAnim {
+    0% {
+      top: 10px;
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    80% {
+      top: 40px;
+      opacity: 1;
+    }
+
+    100% {
+      top: 40px;
+      opacity: 0;
+    }
+  }  

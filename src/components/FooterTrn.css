@@ -1,0 +1,166 @@
+.footertrn{
+    width: 100%;
+    position:relative;
+    background-color: transparent;
+
+    color: white;
+    /* z-index: 999; */
+}
+
+.footertrn_info,.footertrn_rwdbox {
+    display: flex;
+    justify-content: center; 
+     /* 120 px → 7.5 rem (120/16)；太大畫面再放大、太小畫面往下收斂 */
+     gap: clamp(3.75rem, 8vw, 7.5rem);
+
+}
+.footertrn_info{
+    padding: 2.1875rem 0; /* 35px */
+}
+
+/* 各標題 */
+.footertrn_title{
+    /* 中文/思源黑體/footer標題 */
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.088rem; /* 1.4px */
+
+    margin-bottom: 1rem; /* 15px */
+}
+
+/* 各標題內容 */
+.footertrn li,.footertrn a{
+    color: white;
+
+    /* 中文/思源黑體/內文2 */
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.088rem; /* 1.4px */
+
+    margin-bottom: 0.3125rem; /* 5px */
+}
+
+/* icon區 */
+.footertrn_social_icon{
+    display: flex;
+    gap: 0.625rem; /* 10px */
+}
+.footertrn_social_icon a{
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    transition: 0.35s;
+    background-size: contain;
+}
+.footertrn-icon-line{
+    background-image: url(../images/S-Footer/icon_line.svg);
+}
+.footertrn-icon-ig{
+    background-image: url(../images/S-Footer/icon_ig.svg);
+}
+.footertrn-icon-fb{
+    background-image: url(../images/S-Footer/icon_fb.svg);
+}
+.footertrn-icon-line:hover {
+    background-image: url(../images/S-Footer/icon_line_h.svg);
+}
+.footertrn-icon-ig:hover {
+    background-image: url(../images/S-Footer/icon_ig_h.svg);
+}
+.footertrn-icon-fb:hover {
+    background-image: url(../images/S-Footer/icon_fb_h.svg);
+}
+
+/* 底部區域 */
+.footertrn_bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footertrn_bottom small{
+    /* 中文/思源黑體/內文2 */
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    letter-spacing: 0.088rem; /* 1.4px */
+
+    margin: 1.75rem 0; /* 25px */
+}
+.footertrn_bottom hr{
+    width: 100%;
+    margin: 0;
+}
+
+/* .footertrn a,.footertrn li,.footertrn p,.footertrn small,.footertrn h4 {
+    white-space: nowrap;
+    word-break: keep-all;
+} */
+
+/* COMPANY、SERVICE 文字連結底線動畫 --------------------------- */
+.footertrn_company a,.footertrn_service a {
+  display: inline-block;               /* 寬度 = 文字長度 */
+  padding: 0;                          /* 若有左右 padding 會拉長底線，先清掉 */
+  text-decoration: none;               /* 關掉原生底線 */
+
+  /* 底線：用背景控制 -------------------------------------- */
+  background-image: linear-gradient(currentColor, currentColor); /* 1px 線 */
+  background-repeat: no-repeat;
+  background-position: left bottom;    /* 從文字左下開始 */
+  background-size: 0 1px;              /* 起始寬度 0%，高度 1px */
+
+  transition: background-size 0.35s ease;  /* 平滑伸展 */
+}
+
+.footertrn_company a:hover,.footertrn_service a:hover {
+  background-size: 100% 1px;           /* 滑過時拉到 100% */
+}
+
+/* ========================================================= */
+/* ---------- RWD 斷點：≤ 1024px ---------- */
+@media (max-width: 1024px) {
+    .footertrn_rwdbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .footertrn_follow ul,.footertrn_follow li{
+        margin: 0;
+    }
+}
+
+/* ---------- RWD 斷點：≤ 800px ---------- */
+@media (max-width: 800px) {
+  .footertrn_info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .footertrn_company,
+  .footertrn_service,
+  .footertrn_follow {
+    display: none; /* 隱藏其他部分 */
+  }
+
+  .footertrn_contact {
+    display: block; /* 顯示聯絡資訊 */
+    text-align: center;
+  }
+
+  .footertrn_bottom {
+    display: flex; /* 顯示版權聲明 */
+  }
+
+  .footertrn {
+    display: block; /* 保持 footer 存在 */
+  }
+}

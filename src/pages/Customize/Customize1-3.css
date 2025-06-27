@@ -1,0 +1,397 @@
+/* 變數：root */
+:root {
+    --color-deep: #585858;
+    --bg: url(../images/S-Background/noise-background.jpg);
+    --color-bg1: #faf2fc;
+    --color-primary1: #8750BF;
+    --color-primary2: rgb(162, 105, 232);
+    --color-lesser3: rgb(66, 73, 212);
+    --letter-spacing: 2.4px;
+    --font-h2: "LXGW WenKai Mono TC", monospace;
+    --font-button-24: "Noto Sans TC", sans-serif;
+}
+
+
+
+/* 內容 */
+.content-j {
+    font-size: 14px;
+    font-family: 'Noto Sans TC';
+    font-weight: 400;
+    font-style: var(--font-button-24);
+    letter-spacing: 1.4px;
+    text-align: center;
+    margin: 3vh 0 0;
+}
+
+.text-j {
+    color: var(--color-deep);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text2,
+.text3 {
+    color: var(--color-deep);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.text3-wrap {
+    top: 150px;
+}
+
+.text2 img,
+.text3 img {
+    width: 82.936px;
+}
+
+.text2 h2,
+.text3 h2 {
+    color: var(--color-primary1);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 32px;
+    font-family: var(--font-h2);
+    font-size: 30px;
+    letter-spacing: var(--letter-spacing);
+}
+
+.text2 h2 {
+    margin-top: -230px;
+}
+
+.text-j h2 {
+    color: var(--color-primary1);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    font-family: var(--font-h2);
+    font-size: 30px;
+    letter-spacing: var(--letter-spacing);
+}
+
+.index,
+.index2,
+.index3 {
+    /* height: calc(100vh - 70px); */
+    position: relative;
+    z-index: 0;
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    /* 🟣 剛好一整視窗高（含 padding） */
+    padding-top: 70px;
+    /* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;
+    /* 🟣 讓 padding 計入 100vh */
+
+
+}
+
+.index {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.index2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 300px;
+    z-index: 1;
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 50px;
+}
+
+.button-box2,
+.button-box3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 50px;
+}
+
+.button-box2 {
+    margin-top: -150px;
+}
+
+.button1,
+.button2 {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Noto Sans TC';
+    font-weight: 400;
+    letter-spacing: var(--letter-spacing);
+    border: none;
+    border-radius: 999px;
+    /* 背景材質 */
+    background-color: #A67CEB;
+    z-index: 1;
+}
+
+.button1:hover,
+.button2:hover {
+    background-color: #9763Ca;
+}
+
+.button1:active,
+.button2:active {
+    background-color: #6E3BBF;
+}
+
+.button1 {
+    padding: 1px 6px;
+    width: 340px;
+    height: 68px;
+}
+
+.button2 {
+    padding: 0;
+    width: 236px;
+    height: 56px;
+}
+
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #A67CEB;
+  color: #A67CEB;
+}
+
+/* hover 效果 */
+.btn-outline:hover {
+  background-color:#9763Ca;
+  border-color: #9763Ca;
+  color: white;
+}
+
+/* 點擊效果 */
+.btn-outline:active {
+  background-color: #6E3BBF;
+  border-color: #6E3BBF;
+  color: white;
+}
+.background-1 {
+    /* border: 3px solid #83000b; */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    /* top: 280px; */
+    z-index: 0;
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: #8750BF;
+    text-align: center;
+    font-family: "Noto Sans TC";
+    font-size: 1.25rem;
+    /* 20px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% 通常不需要單位 */
+    letter-spacing: 0.0625rem;
+    /* 1px */
+}
+
+.modalContent {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: popIn 0.25s ease;
+}
+
+.modalContent p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btnConfirm {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #8750BF;
+    color: white;
+}
+
+.btnConfirm:hover {
+    background-color: #9763CA;
+}
+
+
+.bracelet-preview-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.bracelet-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+/* .bracelet-label {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #8750BF;
+    font-weight: 500;
+    font-family: "Noto Sans", sans-serif;
+} */
+
+
+.background-1 img {
+    display: block;
+    justify-content: center;
+    width: 170%;
+}
+
+.img1,
+.img2,
+.img3 {
+    aspect-ratio: 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.img1 {
+    background-image: url(../images/Custom/custom-bracelet-recommend-1.png);
+    width: 35vw;
+}
+
+.img2 {
+    background-image: url(../images/Custom/custom-bracelet-recommend-2.png);
+}
+
+.img3 {
+    background-image: url(../images/Custom/custom-bracelet-recommend-3.png);
+}
+
+.img2,
+.img3 {
+    width: 28vw;
+}
+
+.index3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 150px;
+    padding-bottom: 75px;
+}
+
+.copyrightNotice {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+
+    /* Customize2 */
+    .text2 {
+        margin-top: -60px;
+    }
+
+    .button-box2 {
+        margin-top: -120px;
+        gap: 30px;
+    }
+
+    .button-box {
+        gap: 30px;
+    }
+
+    .button1 {
+        width: 280px;
+        height: 60px;
+    }
+
+    .text3-wrap{
+        margin-top: -11rem;
+    }
+
+    .background-1 img {
+        display: flex;
+        justify-content: center;
+        width: 180%;
+    }
+
+    /* Customize3 */
+    .index3 {
+        padding-top: 350px;
+        padding-bottom: 250px;
+    }
+
+    .background-2 li {
+        margin: 0 -20px;
+    }
+
+    .img1 {
+        width: 38vw;
+    }
+
+    .img2,
+    .img3 {
+        width: 31vw;
+    }
+    .bracelet-preview-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .bracelet-preview {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+  }
+
+  .bracelet-svg {
+    width: 240px;
+    height: 240px;
+  }
+}

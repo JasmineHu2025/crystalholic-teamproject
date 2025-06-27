@@ -1,0 +1,203 @@
+/* ---------- root ---------- */
+:root {
+  --color-bg1:#b493ee;
+  --color-bg2:#420f99;
+  /* --color1: 66 73 212; */
+  --color1: 22 24 135;
+  --color2:0 3 70;
+  /* --color3:36 40 105; */
+  --color3:58 35 177;
+  /* --color4:66 73 212; */
+  --color4:247 66 229;
+  --color5:180 147 238;
+  --color-interactive:19 0 129;
+  --gradientColor: rgb(131, 46, 228);
+
+  --circle-size:120%;
+  --blending:hard-light;
+}
+
+/* ---------- keyframes unchanged ---------- */
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0)
+  }
+
+  50% {
+    transform: rotate(180deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%)
+  }
+
+  50% {
+    transform: translateY(50%)
+  }
+
+  100% {
+    transform: translateY(-50%)
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translate(-50%, -10%)
+  }
+
+  50% {
+    transform: translate(50%, 10%)
+  }
+
+  100% {
+    transform: translate(-50%, -10%)
+  }
+}
+
+/* ---------- gradient background ---------- */
+.gradient-bgb {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: -99;
+  overflow: hidden;
+
+  /* 多層 background，最上面是 5 顆光暈，再疊噪點材質，最後才是線性漸層 */
+  background:
+    /* 2️⃣ 左下紫光 */
+    radial-gradient(circle 1rem at 5% 85%,
+      var(--gradientColor, .8) 0%,
+      var(--gradientColor, .5) 50%,
+      var(--gradientColor, .1) 100%),
+
+    /* 7️⃣ 噪點材質圖 */
+    /* url(../images/S-Background/bg-noise-light.png), */
+
+    /* 8️⃣ 原本的線性漸層底色 */
+    linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* 滾動時固定 */
+}
+
+.gr adient-bg svg {
+  display: none
+}
+
+/* ★ removed goo filter, kept blur only → 減少重算層 ★ */
+.gradients-container {
+  filter: blur(30px);
+  /* ★ changed ★ */
+  width: 100%;
+  height: 100%;
+}
+
+.gradient-bgb .g1,
+.gradient-bgb .g2,
+.gradient-bgb .g3,
+.gradient-bgb .g4,
+.gradient-bgb .g5,
+.gradient-bgb .interactive {
+  position: absolute;
+  mix-blend-mode: var(--blending);
+  will-change: transform;
+  /* ★ GPU hint ★ */
+}
+
+/* ---------- circles (縮小尺寸 + 保留動畫) ---------- */
+.gradient-bgb .g1 {
+  background: radial-gradient(circle, rgba(var(--color1)/.75) 0, transparent 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size)/2);
+  left: calc(50% - var(--circle-size)/2);
+  animation: moveVertical 30s ease infinite;
+}
+
+.gradient-bgb .g2 {
+  background: radial-gradient(circle, rgba(var(--color2)/.8) 0, transparent 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size)/2);
+  left: calc(50% - var(--circle-size)/2);
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+}
+
+.gradient-bgb .g3 {
+  background: radial-gradient(circle, rgba(var(--color3)/.8) 0, transparent 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% + 160px);
+  left: calc(50% - 400px);
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
+}
+
+.gradient-bgb .g4 {
+  background: radial-gradient(circle, rgba(var(--color4)/.3) 0, transparent 50%) no-repeat;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size)/2);
+  left: calc(50% - var(--circle-size)/2);
+  transform-origin: calc(50% - 200px);
+  animation: moveHorizontal 40s ease infinite;
+  opacity: .7;
+}
+
+.gradient-bgb .g5 {
+  background: radial-gradient(circle, rgba(var(--color5)/.22) 0, transparent 60%) no-repeat;
+  width: calc(var(--circle-size)*1.15);
+  height: calc(var(--circle-size)*1.15);
+  top: calc(50% - var(--circle-size)*0.575);
+  left: calc(50% - var(--circle-size)*0.575);
+  transform-origin: calc(50% - 520px) calc(50% + 120px);
+  animation: moveInCircle 28s ease infinite;
+}
+
+/* ---------- interactive layer ---------- */
+.gradient-bgb .interactive {
+  background: radial-gradient(circle, rgba(var(--color-interactive)/.8) 0, transparent 50%) no-repeat;
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+  opacity: .6;
+}
+
+/* ---------- noise overlay ---------- */
+.gradient-bgb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: url(../images/S-Background/noise-background.jpg);
+  opacity: .25;
+  /* background: rgba(157, 12, 12, .18);
+  filter: url(#f); */
+  mix-blend-mode: multiply;
+}
+
+/* ---------- stars ---------- */
+#bgb-container {
+  position: absolute;
+  inset: 0;
+  z-index: -97;
+  pointer-events: none;
+}
+
+#bg {
+  position: absolute;
+  inset: 0
+}

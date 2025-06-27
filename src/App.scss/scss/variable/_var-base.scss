@@ -1,0 +1,43 @@
+//RWD斷點  @media()
+$media-xxlg: "min-width:1919px"; //1920
+$media-xxlg-up: "min-width:1680px"; //1680 & 1920 可以共用的頁面用這個 cover1
+$media-xxlg-up-h: "(min-width:1680px) and (max-height:1051px)"; //1680 小百科
+$media-xlg-up: "max-width:1365px";  //iPad Air 1180*820(橫向) /iPad Mini 1024*768(橫向) iPad Pro 1024*1366(直向)
+$media-xlg-h: "(max-width:1367px)  and (min-height:820px)";  //iPad Air1180*820 /pro 1366*1024(橫向) *cover1用*
+$media-xlg-h-pro: "(max-width:1367px)  and (min-height:1024px)";  //ipad pro 1366*1024(橫向) *cover1用*
+
+$media-lg-up: "min-width:1026px";
+$media-lg: "max-width:1025px"; //iPad Air??好像沒用到(待檢查)/ 小百科小百科pro(直向)/mini(橫向) ; tarotcard pro/air/mini 直
+
+$media-lg-h:"(max-width:1025px) and (max-height:769px)"; //ipad mini(橫向)
+
+$media-md-up: "max-width:821px";  //*小百科 ipad air(直向) 用
+$media-md: "max-width:820px"; // cover1 iPad Mini/air 768*1024(直向)
+
+$media-sm-up: "min-width:641px"; //手機板以上
+$media-sm: "max-width:640px"; // i12 Pro /
+
+
+/* 手鍊半徑 */ 
+$rrr: clamp(100px, 20vw, 250px); 
+
+///lg, md, sm 為主
+
+// // 速率
+// $speed-fast: 0.35s; //通常
+// $speed-slow: 0.65s;
+
+// //邊框
+// $border-s: 1px solid;
+// $border-m: 2px solid;
+// $border-l: 3px solid;
+
+// //圓角
+// $radius-ex: 99px; //膠囊型
+// $radius-s: 3px; 
+// $radius-m: 8px; 
+// $radius-l: 16px; 
+
+// // 排序
+// $z-bg:-1;
+// $z-ex:999;

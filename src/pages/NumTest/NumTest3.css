@@ -1,0 +1,502 @@
+/* 變數：root */
+:root {
+    --color-white: #ffffff;
+    --color-deep: #585858;
+    --bg: url(../images/noisy-background.jpg);
+    --color-bg1: #faf2fc;
+    --color-primary1: #8750BF;
+    --color-primary2: #a269e8;
+    --color-primary3: #684581;
+    --color-primary4: #A67CEB;
+    --color-primary5: #E4DEED;
+    --color-primary6: #D7BEFF;
+    --color-primary7: #FAF6FF;
+    --color-primary8: #e7d8ea;
+    --color-hover1: #d8c9ef;
+    --color-font-darkgray: #585858;
+    --color-font-gray: #8284A2;
+}
+
+
+
+
+.index-numtest3 {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    max-width: 80%;
+    /* margin: 0 auto; */
+    margin: 0 8%;
+    /* 左邊圖片本身左右有空白 */
+    gap: 4%;
+    /* flex: 1; */
+
+    width: 100%;
+    height: 100vh;
+    /* 🟣 剛好一整視窗高（含 padding） */
+    padding-top: 70px;
+    /* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;
+    /* 🟣 讓 padding 計入 100vh */
+}
+
+
+/* 左側 */
+#left {
+    min-width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* border: 5px solid blue; */
+}
+
+.box-numtest3 {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    max-width: 90%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    /* margin-bottom: -5%; */
+    /* background-color: green; */
+    z-index: 1;
+}
+
+.imgp0-box {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto 5%;
+    /* background-color: red; */
+}
+
+.imgp-p0 {
+    width: 85%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+#hashtag-box2 {
+    display: none;
+}
+
+
+
+
+
+/* 右側 */
+#right {
+    min-width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* border: 5px solid blue; */
+}
+
+.hashtag-box,
+.friends,
+.enemies,
+.crystals,
+#box1,
+#box2,
+#hashtag-box,
+.hashtag,
+.people-box,
+.people-box2,
+.crystal-box,
+.bracelet-design,
+.star-box {
+    display: flex;
+}
+
+/* 欄位設定 */
+.people-box,
+.people-box2,
+.crystal-box,
+.bracelet-design {
+    width: 100%;
+}
+
+.bracelet-design,
+.star-box {
+    flex-direction: column;
+    align-items: center;
+}
+
+.title2 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: -7%;
+}
+
+.title3 {
+    margin-top: -20%;
+}
+
+#box2>div {
+    flex: 1;
+}
+
+.friends,
+.enemies,
+.crystals {
+    flex-direction: column;
+}
+
+#box1,
+#box2 {
+    gap: 1.25rem;
+}
+
+#box1,
+#box2 {
+    margin-bottom: 1.25rem;
+}
+
+/* 標籤 */
+#hashtag-box {
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hashtag {
+    height: 2.5rem;
+    width: 12.5rem;
+    border: 0.08rem solid var(--color-primary1);
+    border-radius: 99px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 標題 */
+.people-box,
+.people-box2,
+.crystal-box {
+    background: var(--color-white);
+    padding: 2rem 1.3rem 1.8rem 1.3rem;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    z-index: 0;
+}
+
+.title-numtest3 {
+    width: 10.3rem;
+    height: 2rem;
+    border-radius: 99px;
+    background: var(--color-primary4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.25rem;
+    margin-bottom: -1rem;
+    z-index: 2;
+}
+
+
+/* 圖片大小 */
+.people,
+.people div,
+.crystal,
+.crystal div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.people,
+.crystal {
+    gap: 0.5rem;
+}
+
+.img-p1,
+.img-p2,
+.img-p3,
+.img-p4,
+.img-p5,
+.img-p6 {
+    width: 75%;
+}
+
+.img-p7,
+.img-p8,
+.img-p9 {
+    width: 45%;
+}
+
+
+/* 手鍊 */
+.bracelet {
+    /* width: 11.25rem; */
+    display: block;
+    margin: auto;
+    width: 93%;
+    transition: transform 0.25s ease;   
+}
+
+.bracelet:hover {
+    /* width: 12rem; */
+    /* width: 100%; */
+    /* animation: zoomIn 0.25s forwards ease; */
+    transform: scale(1.08);
+}
+
+.bracelet-box {
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+    width: 12rem;
+    height: 8rem;
+    /* width: 12rem;
+    height: 8rem; */
+}
+
+.star-box {
+    position: relative;
+    z-index: 1;
+}
+
+.star {
+    width: 18rem;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+/* 按鈕 */
+#button-box {
+    display: flex;
+    gap: 5%;
+}
+
+#button-box>button {
+    flex: 1;
+}
+
+.button1-j,
+.button2-j {
+    border-radius: 99px;
+    border-style: none;
+    padding: 1rem 2rem;
+}
+
+.button1-j {
+    color: var(--color-primary1);
+    border: 1px solid var(--color-primary4);
+    background: none;
+}
+
+.button2-j {
+    color: var(--color-white);
+    background: #A67CEB;
+}
+
+.button1-j:hover,
+.button2-j:hover {
+    background-color: #9764ca;
+    color: #fff;
+}
+
+.button1-j:active,
+.button2-j:active {
+    background-color: #6E3BBF;
+    color: #fff;
+}
+
+
+
+/* 字大小 */
+.title-name {
+    font-size: 1.5rem;
+}
+
+.title-name span {
+    font-size: 2rem;
+}
+
+.name-0 {
+    font-size: 2.5rem;
+}
+
+.hashtag {
+    font-size: 1.25rem;
+}
+
+.title-numtest3,
+.button1-j,
+.button2-j {
+    font-size: 1rem;
+}
+
+.content-numtest3 {
+    font-size: 0.875rem;
+}
+
+/* 文字顏色 */
+.name-box,
+.hashtag,
+.name {
+    color: var(--color-primary3);
+}
+
+.title-numtest3 {
+    color: var(--color-white);
+}
+
+.content-numtest3 {
+    color: var(--color-deep);
+}
+
+/* 字型 ＆ 字重 */
+.name,
+.content-numtest3,
+.title-numtest3 p,
+.hashtag p,
+.name-box,
+.button1-j,
+.button2-j {
+    font-family: "Noto Sans TC";
+    letter-spacing: 0.08rem;
+}
+
+.title-numtest3 p {
+    letter-spacing: 0.1rem;
+}
+
+.name,
+.title-numtest3 p,
+.hashtag p,
+.name-box span {
+    font-weight: 500;
+}
+
+.content-numtest3,
+.name-box p,
+.button1-j,
+.button2-j {
+    font-weight: 400;
+}
+
+
+.copyrightNotice {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* RWD 斷點： ≤ 1024 */
+@media (max-width: 1024px) {
+
+    /* 左側 */
+    .index-numtest3 {
+        flex-direction: column;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    #left {
+        height: 35%;
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5%;
+        margin: 7% auto;
+    }
+
+    .box-numtest3 {
+        height: 100%;
+        gap: 1rem;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    #hashtag-box2 {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        width: 70%;
+        gap: 1rem;
+    }
+
+    .imgp0-box {
+        justify-content: center;
+        margin: auto 2%;
+        width: 100%;
+    }
+
+    .img-p0 {
+        width: 100%;
+    }
+
+
+
+    /* 右側 */
+    #hashtag-box {
+        display: none;
+    }
+
+    .title-numtest3 {
+        width: 12rem;
+        height: auto;
+        padding: .5rem 2rem;
+    }
+
+    .hashtag {
+        height: auto;
+        width: auto;
+        padding: 2% 10%;
+    }
+
+    #box2 {
+        margin-bottom: 2.5rem;
+    }
+
+    #button-box {
+        margin-bottom: 7%;
+    }
+
+    /* 圖片大小 */
+    .img-p1,
+    .img-p2,
+    .img-p3,
+    .img-p4,
+    .img-p5,
+    .img-p6 {
+        width: 85%;
+    }
+
+    .img-p7,
+    .img-p8,
+    .img-p9 {
+        width: 55%;
+    }
+
+    /* 手鍊 */
+    .bracelet {
+        width: 12rem;
+    }
+
+
+
+    /* 字大小 */
+    .hashtag {
+        font-size: 1.3rem;
+    }
+
+    .title-numtest3,
+    .button1-j,
+    .button2-j,
+    .name {
+        font-size: 1.1rem;
+    }
+
+    .content-numtest3 {
+        font-size: 1rem;
+    }
+}

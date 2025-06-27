@@ -1,0 +1,39 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-wrapper {
+  /* 不設定背景/padding，由 LoginRegisterModal 控制 */
+  /* width: 480px; */
+  /* max-width: 90%; */
+  width: clamp(480px, 30vw, 580px);
+  height: clamp(590px, 80vh, 750px);
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  animation: popup 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

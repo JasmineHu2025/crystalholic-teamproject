@@ -1,0 +1,139 @@
+.customize-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    transition: opacity 0.3s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.customize-modal {
+    font-family: 'Noto Sans TC';
+    padding: 40px 60px;
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+    transition: transform 0.3s ease;
+    animation: popup 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.customize-title-box {
+    gap: 20px;
+    padding-bottom: 35px;
+}
+
+.customize-title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8750bf;
+    font-weight: 500;
+}
+
+.customize-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 268px;
+    padding-right: 4px;
+    margin-bottom: 20px;
+}
+
+/* 滾輪樣式 */
+.customize-content::-webkit-scrollbar {
+    display: flex;
+    width: 16px;
+    padding: 3px 3px 95px 3px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100px;
+    background: #E4DEED;
+
+}
+
+.customize-content::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border: 4px solid #E4DEED;
+    background: #FFF;
+    box-shadow: 0px 0px 5px 0px rgba(233, 166, 160, 0.35);
+    width: 10px;
+    height: 130px;
+
+}
+
+
+.customize-content p {
+    color: #585858;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1.6px;
+    padding-left: 35px;
+}
+
+.top {
+    color: #8750BF;
+    font-weight: 500;
+    margin-left: -30px;
+}
+
+.customize-close {
+    display: block;
+    margin: 35px auto 0;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 999px;
+    border: #8750bf solid 1px;
+    background-color: transparent;
+    color: #8750bf;
+    cursor: pointer;
+    font-family: "Noto Sans TC";
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    text-align: center;
+}
+
+.customize-close:hover {
+    background-color: #9763Ca;
+    color: #fff;
+}
+
+.customize-close:active {
+    background-color: #8750bf;
+    color: #fff;
+}

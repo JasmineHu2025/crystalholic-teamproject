@@ -1,0 +1,257 @@
+@import '../../components/NumTestBg.css';
+
+/* ----------整頁容器（扣掉固定 Navbar 70px） ----------- */
+.numtest2 {
+    width: 100%;
+    height: 100vh;                 /* 剛好一整視窗高（含 padding） */
+    padding-top: 70px;             /* 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;        /* 讓 padding 計入 100vh */
+    display: flex;
+}
+
+/* 主要內容區 */
+.num2-numtest {
+     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- 第一個標題 ---------- */
+.num2-title-1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem; /* 32px */
+
+    margin-bottom: 3.75rem; /* 60px */
+}
+/* 左右裝飾 */
+.num2-decorate-left,.num2-decorate-right {
+    width: 5.183rem; /* 82.94px */
+    height: 0.707rem; /* 11.31px */
+}
+/* 標題 */
+.num2-decorate-title {
+    color: #8750BF;
+
+    /* 中文/霞鶩文楷/標題3 */
+    font-family: "LXGW WenKai Mono TC";
+    font-size: 1.75rem; /* 28px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.175rem; /* 2.8px */
+}
+
+/* ---------- 第二個:主標題 ---------- */
+.num2-title-2 {
+    color: #8750BF;
+
+    /* 中文/霞鶩文楷/標題1 */
+    font-family: "LXGW WenKai Mono TC";
+    font-size: 2.25rem; /* 36px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.225rem; /* 3.6px */
+    
+    margin-bottom: 3.75rem; /* 60px */
+}
+
+/* ---------- 填入西元出生年月日區 ----------  */
+/* yyyy / mm / dd 外層容器 */
+.num2-date {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 5.625rem;
+}
+
+/* 單一欄位：年、月、日 + 下拉圖示 */
+.num2-date-enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #8750BF;
+  gap: 1.25rem;
+  width: clamp(10rem, 22vw, 13.313rem);
+  position: relative;
+}
+
+/* select 選單樣式 */
+.num2-select {
+  width: 100%;
+  height: 48px;
+  padding: 0 1rem;
+  font-size: 2.25rem; /* 36px */
+  font-family: "Noto Sans TC";
+  color: rgba(0, 0, 0, 0.24);
+  border: none;
+  background: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 48px;              /* ✅ 垂直置中 */
+  text-align: center;             /* ✅ 水平置中 */
+  text-align-last: center;        /* ✅ Firefox 專用，讓下拉展開時也置中 */
+
+}
+
+.num2-select:invalid {
+  color: rgba(0, 0, 0, 0.24); /* 顯示預設值用灰色 */
+}
+
+
+/* 有選擇值時字變深 */
+.num2-select:valid {
+  color: #8750BF;
+}
+
+/* 選單右邊圖示（三角形） */
+.num2-date-button {
+  width: 1.875rem;
+  height: 1.875rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* 日曆圖示 */
+.num2-calendar {
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+.num2-calendar-wrapper {
+  position: relative;
+}
+
+.num2-date-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+
+/* 按鈕 */
+.num2-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+
+    padding: 1rem 6.5rem;
+
+    border: none;
+    border-radius: 999px; 
+
+    color: #ffffff;
+    background-color: #A67CEB;
+
+    /* Button/24 */
+    font-family: "Noto Sans TC";
+    font-size: 1.5rem; /* 24px; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.15rem; /* 2.4px; */
+
+    cursor: pointer;
+}
+.num2-button:hover{
+    background-color: #9763Ca;
+}
+
+.num2-button:active {
+    background-color: #6E3BBF;
+}
+.copyrightNotice {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* ========================================================= */
+/* ---------- RWD 斷點：≤ 1024px ---------- */
+@media (max-width: 1024px) {
+    .num2-title-1 {
+        gap: 1.5rem;
+    }
+    .num2-date {
+        gap: 2rem; 
+    }
+
+    .num2-select {
+   width: 200px;
+  }
+
+}
+/* ---------- RWD 斷點：≤ 820px ---------- */
+@media (max-width: 820px) {
+  .numtest2 {
+    padding-top: 60px; /* 減少 padding */
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .num2-title-1{
+    margin-top: 6rem;
+  }
+
+  .num2-decorate-right,
+  .num2-decorate-left{
+max-width:50px;
+  }
+  
+
+  .num2-title-2 {
+    font-size: 1.5rem; /* 24px */
+    letter-spacing: 0.15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+
+  .num2-date {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .num2-date-enter {
+    width: 80%; /* 自適應寬度 */
+    max-width: 300px;
+    gap: 1rem;
+  }
+
+  .num2-select {
+    font-size: 1rem; /* 24px */
+    height: 40px;
+   padding-left: 0px;
+   width: 60px;
+  }
+
+  .num2-date-button {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .num2-calendar {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  .num2-button {
+    font-size: 1.25rem;
+    padding: 0.75rem 4rem;
+    margin-bottom: 2rem;
+  }
+}

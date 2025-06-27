@@ -1,0 +1,1348 @@
+/* 變數：root */
+:root {
+    --color-white: #ffffff;
+    --color-deep: #585858;
+    --bg: url(../images/noisy-background.jpg);
+    --color-bg1: #faf2fc;
+    --color-primary1: #8750BF;
+    --color-primary2: #a269e8;
+    --color-primary3: #684581;
+    --color-primary4: #A67CEB;
+    --color-primary5: #E4DEED;
+    --color-primary6: #D7BEFF;
+    --color-primary7: #FAF6FF;
+    --color-primary8: #e7d8ea;
+    --color-primary9: #A770DE;
+    --color-hover1: #d8c9ef;
+    --color-font-gray: #8284A2;
+
+
+    --shodow: rgb(233, 166, 160, .35);
+    --color-font: #585858;
+    --color-lesser3: #4249d4;
+    --letter-spacing: 2.4px;
+    --font-h2: "LXGW WenKai Mono TC", monospace;
+    --font-button-24: "Noto Sans TC", sans-serif;
+}
+
+
+
+
+
+/* 背景 */
+.index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 1.25rem;
+
+    height: 100vh;
+    /* 🟣 剛好一整視窗高（含 padding） */
+    padding-top: 4.375rem;
+    /* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;
+    /* 🟣 讓 padding 計入 100vh */
+
+}
+
+/*水晶擺放教學*/
+.crystalGuideOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crystalGuideContent {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Noto Sans TC';
+    width: 450px;
+    height: 300px;
+}
+
+.crystalGuideContent h3 {
+    font-family: "Noto Sans TC";
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.063rem;
+    color: #8750BF;
+}
+
+.crystalGuideContent p {
+    font-family: "Noto Sans TC";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.1rem;
+    color: #8750BF;
+}
+
+.guideCloseBtn {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #A67CEB;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    width: 152.5px;
+    height: 46px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.guideCloseBtn:hover {
+    background-color: #9763Ca;
+}
+
+.guideCloseBtn:active {
+    background-color: #6e3bbf;
+}
+
+
+
+.boxs2,
+.iconbox2 {
+    width: 100%;
+}
+
+.boxs3 {
+    display: flex;
+    flex-direction: row;
+    width: 85rem;
+}
+
+.sizeAndBeads {
+    width: 100%;
+}
+
+.icon1Box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+}
+
+.iconPanelWrapper {
+    display: flex;
+    justify-content: flex-end;
+    /* 按鈕靠右 */
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    /* 讓 panelOverlay 能絕對定位在這裡面 */
+    height: 100%;
+    /* 確保有空間定位 */
+    z-index: 20;
+}
+
+.align {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    width: auto;
+}
+
+.boxs,
+.boxs2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxs {
+    width: 80%;
+    gap: 1.87rem;
+    margin-top: 1rem;
+}
+
+.boxs2 {
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-content: center;
+    gap: 1.87rem;
+}
+
+
+
+/* 名稱欄 */
+.titleName {
+    color: var(--color-primary3);
+    padding-bottom: 1.25rem;
+    text-align: center;
+}
+
+.inputName {
+    border-style: none;
+    width: 100%;
+    height: 3.25rem;
+    border-radius: 0.938rem;
+    text-align: center;
+    color: var(--color-primary3);
+}
+
+.inputName:focus {
+    outline: none;
+    border: 2px solid var(--color-primary4);
+    box-shadow: 0 0 0.3rem var(--color-primary4);
+}
+
+.inputName::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 3.25rem;
+}
+
+.name {
+    flex-flow: column;
+    align-items: center;
+    width: 80%;
+}
+
+.price {
+    text-align: center;
+    line-height: 3.25rem;
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.price:focus {
+    outline: none;
+}
+
+
+/* 尺寸設定 */
+.sizeBox {
+    padding: 1.25rem 1.5rem;
+    width: 100%;
+    border-radius: 1.25rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+}
+
+.title-size {
+    margin-bottom: 0.625rem;
+    color: var(--color-primary1);
+}
+
+.line {
+    border: 1px solid #8c5abe80;
+    height: 0.063rem;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    color: #ffffff;
+    border-style: none;
+    padding: 0.25rem 1rem;
+    width: 100%;
+    height: 2rem;
+    border-radius: 1.25rem;
+    background: var(--color-primary4)
+}
+
+.button:hover {
+    background-color: #9763Ca;
+}
+
+.button.active {
+    background-color: #6e3bbf;
+}
+
+.crystalSizeButtons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+}
+
+/* 滑桿 */
+.sliderInput {
+    -webkit-appearance: none;
+    height: 0.25rem;
+    width: 100%;
+    background: var(--color-primary5);
+    border-radius: 0.313rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.sliderInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1.563rem;
+    background: #ffffff;
+    border-radius: 8px;
+    border: .75px solid var(--color-primary6);
+    box-shadow: 0 0 0.313rem var(--shodow);
+    transition: 0.3s;
+}
+
+.sliderInput:hover::-webkit-slider-thumb {
+    background: var(--color-primary6);
+    border: .75px solid #ffffff;
+}
+
+/* 尺寸設定視窗框 */
+.crystalSizeBox,
+.ringSizeBox {
+    margin-bottom: 1rem;
+}
+
+.crystalSizeBox,
+.ringSizeBox,
+.ringJewelryBox,
+.imagesBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.imagesBox {
+    margin: auto 50% auto auto;
+}
+
+.ringSizeSlider {
+    width: 100%;
+}
+
+.imagesBox img {
+    width: 1.563rem;
+    cursor: pointer;
+}
+
+.crystalSize,
+.ringSize,
+.ringJewelry,
+.sizeValue {
+    color: var(--color-font);
+    text-wrap-mode: nowrap;
+}
+
+.sizeValue {
+    color: var(--color-font);
+    text-wrap-mode: nowrap;
+}
+
+
+
+
+
+/* 手鍊 */
+/* 手鏈容器：相對定位、置中 */
+.bracelet {
+    position: relative;
+    width: 25.25rem;
+    height: 25.25rem;
+    margin: 2.5rem;
+}
+
+/* 通用珍珠樣式 */
+.pearl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    border-radius: 50%;
+    background-color: var(--color-primary8);
+    background-blend-mode: darken;
+    box-shadow: 0px 2.775px 6.937px 0px rgba(0, 0, 0, 0.10) inset;
+
+    /* ➊ 旋轉到角度 ➋ 向右平移半徑 ➌ 把自身中心拉回 (-50%, -50%) */
+    transform:
+        rotate(calc(360deg / 32 * var(--i))) translateX(calc(404.4px / 2)) translate(-50%, -50%);
+}
+
+.pearlBig,
+.pearlSmall {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.pearlBase {
+    composes: pearl;
+    cursor: pointer;
+    position: absolute;
+    inset: 0;
+    background-color: #F3ECF5;
+    mix-blend-mode: multiply;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.pearlImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    mix-blend-mode: normal;
+}
+
+
+/* 單顆水晶列表 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit
+}
+
+/* 珠子視窗框 */
+#beadWindow {
+    /* 6 顆珠寬 + 5 個 gap + 兩側 padding */
+    width: calc(6*var 3rem + 5*var 0.75rem + 2*var 1.25rem);
+    /* 2 行珠高 + gap + 上下 padding */
+    height: calc(2*var 3rem + var 0.875rem + 2*var 1.5rem);
+    /* width: 390px; */
+    width: 100%;
+    height: 9.875rem;
+    margin: 2.375rem auto;
+    background: var(--color-white);
+    border-radius: 1.25rem;
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    position: relative;
+    padding: 1.5rem 1.25rem;
+    padding-top: calc(1.25rem + 0.625rem/2);
+    /* 給頁籤留位置 */
+}
+
+/* 珠子頁籤列 */
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    width: 24rem;
+    position: absolute;
+    top: -1.15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0;
+    cursor: pointer;
+    align-items: self-end;
+}
+
+.tab.active {
+    color: var(--color-primary1);
+    background: var(--color-white);
+    z-index: 2;
+}
+
+/* 水晶列表 */
+.tabs hr {
+    background: var(--color-primary3);
+    border-style: none;
+    width: 0.063rem;
+    height: 1.469rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* 單一頁籤 */
+.tab {
+    width: 5.3rem;
+    height: 2.313rem;
+    border: none;
+    padding: 0;
+    background: var(--color-primary7);
+    color: var(--color-primary3);
+    border-top-left-radius: 1.125rem;
+    border-top-right-radius: 1.125rem;
+    line-height: 2.313rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* 珠子網格 */
+.beadGrid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 46px);
+    /* 垂直 */
+    grid-template-rows: repeat(2, 46px);
+    /* 水平 */
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-content: space-around;
+}
+
+/* 珠子外觀 */
+.bead {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #e3e3e3;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, .10);
+    cursor: pointer;
+}
+
+.selectedBead {
+    outline: 2px solid #b28ed5;
+    outline-offset: 0px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+
+/* 儲存/刪除按鈕 */
+.iconBox1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 3.125rem;
+}
+
+.btnDel,
+.btnSave {
+    width: 3.125rem;
+    height: 3.125rem;
+    cursor: pointer;
+    background-size: contain;
+}
+
+
+/* icon按鈕 */
+.btnDel {
+    background-image: url(../images/Custom/btn_del.png);
+}
+
+.btnSave {
+    background-image: url(../images/Custom/btn_save.png);
+}
+
+/* hover */
+.btnDel:hover {
+    background-image: url(../images/Custom/btn_del_hover.png);
+}
+
+.btnSave:hover {
+    background-image: url(../images/Custom/btn_save_hover.png);
+}
+
+/* active */
+.btnDel:active,
+.btnSave:active {
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid var(--color-primary9);
+    border-radius: 0.94rem;
+}
+
+/* 預載icon hover按鈕(解決重整頁面hover狀態前的閃爍問題) */
+.preload {
+    position: absolute;
+    top: -624.938rem;
+    left: -624.938rem;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-image: url(../images/Custom/btn_del_hover.png),
+        url(../images/Custom/btn_save_hover.png);
+}
+
+
+
+
+
+/* 價格框 */
+.priceBox {
+    position: relative;
+    top: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.price {
+    width: 55%;
+    height: 2.75rem;
+    border-style: none;
+    border-radius: 0.625rem;
+}
+
+
+
+/* 右側欄 */
+
+
+.iconBox2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    height: 31rem;
+    right: 10%;
+}
+
+.icon1Box {
+    width: 2.5rem;
+    border-radius: 0.938rem;
+    background: rgb(255, 255, 255, 225);
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    z-index: 10;
+    position: relative;
+}
+
+.icon1Box {
+    padding: 0.875rem 0.938rem 1.25rem 0.938rem;
+    width: 5.438rem;
+    /* height: 28.125rem; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon1Box hr {
+    margin: 0.75rem 0;
+}
+
+.icon2 {
+    width: 8rem;
+    height: 8rem;
+    transform: translateX(32px);
+    background-image: url('/images/Custom/btn_cart_tool.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 0.2rem;
+    cursor: pointer;
+}
+
+.icon2:hover {
+    background-image: url('/images/Custom/btn_cart_tool_hover.png');
+    scale: 1.09;
+}
+
+.icon1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.icon1 p,
+.icon2 p {
+    display: flex;
+    justify-content: center;
+}
+
+.icon1 p {
+    color: var(--color-font-gray);
+}
+
+
+/* 右邊按鈕 */
+.iconBtn1 {
+    background-image: url(../images/Custom/btn_size_tool.svg);
+}
+
+.iconBtn2 {
+    background-image: url(../images/Custom/btn_ans_tool.svg);
+}
+
+.iconBtn3 {
+    background-image: url(../images/Custom/btn_knowl_tool.svg);
+}
+
+.iconBtn4 {
+    background-image: url(../images/Custom/btn_note_tool.svg);
+}
+
+.iconBtn5 {
+    background-image: url(../images/Custom/btn_dum_tool.svg);
+}
+
+/* hover */
+.iconBtn1:hover,
+.iconBtn1.active {
+    background-image: url(../images/Custom/btn_size_tool_hover.svg);
+}
+
+.iconBtn2:hover,
+.iconBtn2.active {
+    background-image: url(../images/Custom/btn_ans_tool_hover.svg);
+}
+
+.iconBtn3:hover,
+.iconBtn3.active {
+    background-image: url(../images/Custom/btn_knowl_tool_hover.svg);
+}
+
+.iconBtn4:hover,
+.iconBtn4.active {
+    background-image: url(../images/Custom/btn_note_tool_hover.svg);
+}
+
+.iconBtn5:hover,
+.iconBtn5.active {
+    background-image: url(../images/Custom/btn_dum_tool_hover.svg);
+}
+
+
+.iconBtn1,
+.iconBtn2,
+.iconBtn3,
+.iconBtn4,
+.iconBtn5 {
+    width: 3.3rem;
+    height: 3.3rem;
+    padding-bottom: 0.313rem;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.line2 {
+    border: .5px solid var(--color-font-gray);
+    height: 0.063rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 字型設定 */
+.titleName,
+.inputName,
+.title-size,
+.crystalSize,
+.button,
+.ringSize,
+.sizeValue,
+.ringJewelry,
+.tab,
+.price,
+.icon1 p,
+.icon2 p {
+    font-family: "Noto Sans TC";
+    letter-spacing: 0.08rem;
+}
+
+/* 字重 */
+.titleName,
+.title-size {
+    font-weight: 500;
+}
+
+.inputName,
+.crystalSize,
+.button,
+.ringSize,
+.sizeValue,
+.ringJewelry,
+.tab,
+.price,
+.icon1 p,
+.icon2 p {
+    font-weight: 400;
+}
+
+/* 字型大小 */
+.icon1 p,
+.icon2 p {
+    font-size: 0.75rem;
+}
+
+.button,
+.sizeValue,
+.tab {
+    font-size: 0.875rem;
+}
+
+.title-size,
+.crystalSize,
+.ringSize,
+.ringJewelry {
+    font-size: 1rem;
+}
+
+.titleName,
+.price {
+    font-size: 1.25rem;
+}
+
+.inputName {
+    font-size: 1.5rem;
+}
+
+
+/* 側邊滑入視窗 */
+.panelOverlay {
+    position: relative;
+    width: auto;
+    /* 由 panelContent 撐開即可 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+    /* 讓 panelContent 自己控制互動 */
+    z-index: 10;
+}
+
+.panelInner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.panelHeader {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 1rem 0 1rem;
+}
+
+
+.panelContent {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* ← 保留互動功能*/
+    position: absolute;
+    width: 18.75rem;
+    height: 26.125rem;
+    right: -1.5rem;
+    max-width: 90vw;
+    z-index: 32;
+    border-radius: 40px 0px 0px 40px;
+    background: rgba(255, 255, 255, 255);
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    backdrop-filter: blur(2px);
+    padding: 0rem 1.2rem 2rem;
+    animation: slideIn 0.3s ease forwards;
+    scrollbar-width: thin;
+    scrollbar-color: #FFF #E4DEED;
+}
+
+.overlayContent {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #E4DEED;
+}
+
+.overlayContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.overlayContent::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 999px;
+}
+
+.overlayContent::-webkit-scrollbar-thumb {
+    background-color: #C3B7DD;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+
+.panelTitle {
+    color: #8750BF;
+    text-align: center;
+    /* 中文/思源黑體/小標題3 */
+    font-family: "Noto Sans TC";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.063rem;
+}
+
+.panelOverlay p {
+    color: #585858;
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.088rem;
+    text-align: left;
+}
+
+.decorLine {
+    margin: 0.635rem auto 0.938rem auto;
+}
+
+.overlayContent {
+    position: relative;
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.panelTitle2 {
+    color: #A67CEB;
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.088rem;
+}
+
+.closeBtnWrapper {
+    position: sticky;
+    top: 1rem;
+    z-index: 9999;
+    width: 3rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #8750bf;
+    line-height: 1;
+}
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(3rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/*wikiBtn */
+.wikiBtn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-family: "Noto Sans TC", sans-serif;
+    background-color: var(--color-primary4);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.wikiBtn:hover {
+    background-color: #6e3bbf;
+    box-shadow: 0 0 6px rgba(135, 80, 191, 0.5);
+}
+
+.wikiBtn:active {
+    background-color: #6e3bbf;
+    box-shadow: 0 0 6px rgba(135, 80, 191, 0.5);
+}
+
+
+/*特別訂製*/
+.customTextarea {
+    height: 9rem;
+    border: #8750BF solid 2px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.088rem;
+    color: #333;
+}
+
+.customTextarea:focus {
+    outline: none;
+}
+
+.customTextarea::placeholder {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.088rem;
+}
+
+
+/*是否刪除的彈窗*/
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: #8750BF;
+    text-align: center;
+    font-family: "Noto Sans TC";
+    font-size: 1.25rem;
+    /* 20px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% 通常不需要單位 */
+    letter-spacing: 0.0625rem;
+    /* 1px */
+}
+
+.modalContent {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: popIn 0.25s ease;
+}
+
+.modalContent p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.modalButtons button {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.modalButtons button:first-child {
+    background-color: #8750BF;
+    color: white;
+}
+
+.modalButtons button:first-child:hover {
+    background-color: #9763CA;
+}
+
+.modalButtons button:last-child {
+    background-color: #f0f0f0;
+    color: #6b6b6b;
+}
+
+.modalButtons button:last-child:hover {
+    background-color: #e0e0e0;
+}
+
+.btnConfirm {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #8750BF;
+    color: white;
+}
+
+.btnConfirm:hover {
+    background-color: #9763CA;
+}
+
+/* 彈出動畫 */
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/*手鍊加入購物車彈窗*/
+.modalContentLarge {
+    background: white;
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.previewtopic {
+    font-size: 1.375rem;
+}
+
+.previewImg {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.infoBox {
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #806b8b;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticeBox {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    accent-color: #8750bf;
+    cursor: pointer;
+    gap: 8px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.errorText {
+    color: var(--color-primary3);
+    font-size: 0.875rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 1680px) {
+    .index {
+        max-width: 65%;
+    }
+
+    .tabs {
+        gap: 0.3rem;
+        width: 50rem;
+        transform: translate(-27.5%, -51%);
+    }
+}
+
+/* 小於 1024px：上下分區 */
+@media screen and (max-width: 1024px) {
+    .index {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+    .boxs2 {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxs {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon2 {
+        order: 2;
+        transform: translateX(32px);
+    }
+
+    .iconBox2 {
+        order: 1;
+        margin-top: -30px;
+    }
+
+    .align {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: -4.5rem;
+        margin-top: -2rem;
+    }
+
+
+
+    .boxs3 {
+        width: 85rem;
+        margin-right: -500px;
+    }
+
+    .sizeAndBeads {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 800px;
+    }
+
+
+    .sizeBox,
+    #beadWindow {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    .boxs2 {
+        width: 50%;
+    }
+
+    .bracelet {
+        order: 1;
+    }
+
+    .iconPanelWrapper {
+        order: 2;
+        margin-top: 1rem;
+    }
+
+    .priceBox {
+        order: 3;
+    }
+
+
+
+    /* 珠子頁籤列 */
+    .name {
+        margin-top: 4rem;
+    }
+
+    .tabs {
+        position: static;
+        transform: none;
+        width: 32rem;
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+
+
+    .tab.active {
+        color: var(--color-primary1);
+        background: var(--color-white);
+        z-index: 2;
+    }
+
+    /* 水晶列表 */
+    .tabs hr {
+        background: var(--color-primary3);
+        border-style: none;
+        width: 0.063rem;
+        height: 1.469rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 單一頁籤 */
+    .tab {
+        display: flex;
+        justify-content: center;
+        gap: 20rem;
+        width: 100rem;
+        position: relative;
+        transform: none;
+        margin: 0 auto;
+        transform: translate(0%, -230%);
+    }
+
+
+    /* 珠子網格 */
+    .beadGrid {
+        margin-top: -3rem;
+        gap: 1.5rem;
+    }
+
+    /* 珠子外觀 */
+    .bead {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        background: #e3e3e3;
+        box-shadow: inset 0 4px 8px rgba(0, 0, 0, .10);
+        cursor: pointer;
+
+    }
+
+    .selectedBead {
+        outline: 2px solid #b28ed5;
+        outline-offset: 0px;
+        border-radius: 50%;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .boxs {
+        width: 90%;
+    }
+}
