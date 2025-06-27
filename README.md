@@ -70,27 +70,45 @@ public/images/
 
 
 
-#上傳gh-pages
-第一次操作請打開終端機
+🌐 部署 GitHub Pages
+# 1. 第一次操作請打開終端機：
 npm install gh-pages --save-dev
 
-確認package.json檔有
+# 2. 確認package.json檔包含：
 "scripts": {
+  "dev": "vite",
   "build": "vite build",
+  "predeploy": "npm run build",
   "deploy": "gh-pages -d dist"
 },
+"homepage": "https://JasmineHu2025.github.io/crystalholic-teamproject"
 
-確認vite.config.js檔有
+# 3. 確認vite.config.js檔：
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
 export default defineConfig({
-  base:'./',
+  base: '/crystalholic-teamproject/',
   plugins: [react()],
 })
 
-因為我們的App.jsx目前是用 <BrowserRouter> 來檢視所有頁面
-要上傳PAGE的話必須改成<HashRouter></HashRouter>才看得到
-並把<BrowserRouter></BrowserRouter>先註解掉
 
-每次要上傳時 依序執行
-npm run build
+👯‍♀️ 共編者初次部署教學（僅限有權限的 Collaborator）
+# 1. 從 GitHub 複製專案
+git clone https://github.com/JasmineHu2025/crystalholic-teamproject.git
+
+# 2. 切換到專案資料夾
+cd crystalholic-teamproject
+
+# 3. 安裝套件
+npm install
+
+# 4. 執行部署
 npm run deploy
+
+
+🚀 每次要上傳至網址時
+npm run deploy
+
+
 

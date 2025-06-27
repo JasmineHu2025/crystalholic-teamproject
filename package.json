@@ -1,14 +1,15 @@
 {
-  "name": "crystalholic-react-project",
+  "name": "crystalholic-teamproject",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ktlinherstudio.github.io/crystalholic-react-project/",
+  "homepage": "https://JasmineHu2025.github.io/crystalholic-teamproject",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

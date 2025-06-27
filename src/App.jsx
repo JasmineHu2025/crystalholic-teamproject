@@ -1,7 +1,7 @@
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { AuthProvider } from './context/AuthContext';
 import { UIProvider } from './context/UIContext';
@@ -25,9 +25,8 @@ import Product from './pages/Product/Product';
 export default function App() {
   return (
     <div className="page-layout">
-      {/* <BrowserRouter> */}
+      <HashRouter>
 
-        <HashRouter>
         <AuthProvider>
           <UIProvider>
             <ScrollToTop />
@@ -38,18 +37,6 @@ export default function App() {
                 <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
 
                 <Route path="/" element={<Cover />} />
-                {/* <Route path="/cover0602" element={<Cover0602 />} /> */}
-                {/* <Route path="/CoverTest0527" element={<CoverTest0527 />} /> */}
-                {/* <Route path="/CoverTest0528" element={<CoverTest0528 />} /> */}
-                {/* <Route path="/TarotCard0528" element={<TarotCard0528 />} /> */}
-                {/* <Route path="/TarotCard0529" element={<TarotCard0529 />} /> */}
-                {/* <Route path="/FeedBack" element={<FeedBack />} /> */}
-                {/* <Route path="/FeedBackSW" element={<FeedBackSW />} /> */}
-                {/* <Route path="/FeedBackCarousel" element={<FeedBackCarousel />} /> */}
-                {/* <Route path="/Disco" element={<Disco />} /> */}
-                {/* <Route path="/DiscoAnima" element={<DiscoAnima />} /> */}
-                {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
-                {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
 
                 <Route path="/NumTest1" element={<NumTest1 />} />
                 <Route path="/NumTest2" element={<NumTest2 />} />
@@ -60,16 +47,13 @@ export default function App() {
                 <Route path="/Customize4" element={<Customize4 />} />
                 <Route path="/ShoppingCart" element={<ShoppingCart />} />
                 <Route path="/ProductCollection" element={<ProductCollection />} />
-                {/* <Route path="/Product" element={<Product />} /> */}
                 <Route path="/Product/:seriesKey/:productIndex" element={<Product />} />
               </Routes>
             </main>
           </UIProvider>
         </AuthProvider>
 
-
-        </HashRouter>
-      {/* </BrowserRouter> */}
+      </HashRouter>
     </div>
   );
 }
