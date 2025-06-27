@@ -1,33 +1,4 @@
+/* 字體設定與變數 */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
-
-/* 定義字體變數 */
-:root {
-  --font-english: 'Lora', 'Georgia', serif;
-  --font-body: 'Georgia', "LXGW WenKai Mono TC", 'Noto Sans TC', sans-serif;
-}
-
-/* 限定在 .font-style 區塊內才啟用字體樣式 */
-.font-style {
-  font-family: var(--font-body);
-  font-weight: 100;
-  line-height: 1.5;
-  letter-spacing: 2px;
-}
-
-.font-style *:lang(en) {
-  font-family: var(--font-english);
-  letter-spacing: 2px;
-}
-
-/* 
-套用方法
-在需要的頁面jxs檔中執行以下兩步驟
-1.
-import './styles/fonts.css';
-
-2.
-<div className="font-style">
-  包住你的頁面內容 
-</div> */
