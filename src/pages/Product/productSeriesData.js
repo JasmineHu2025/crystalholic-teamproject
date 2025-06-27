@@ -11,7 +11,7 @@ const productSeriesData = {
       {
         name: "沁藍之澗",
         price: "NT$1,280",
-        image: "/images/S-CrystalBracelet/product_blue_river.jpg",
+        image: "./images/S-CrystalBracelet/product_blue_river.jpg",
         description: [
           "如山澗流動的清澈藍光，這款設計帶來情緒上的安撫與能量的穩定。主石海藍寶具有溫柔卻堅定的療癒力，有助平衡喉輪、釐清內心想法、穩定情緒，讓你在混亂中依然擁有冷靜與洞察力。"
         ],
@@ -28,7 +28,7 @@ const productSeriesData = {
       {
         name: "沈睡王國",
         price: "NT$1,680",
-        image: "/images/S-CrystalBracelet/product_blue_party.jpg",
+        image: "./images/S-CrystalBracelet/product_blue_party.jpg",
         description: [
           "一場甜美與理性的療癒舞會，靈感來自熱帶珊瑚礁。主石菱錳礦散發如愛人般溫柔的能量，撫慰心靈深處的孤單與焦躁；結合藍晶石提升洞察與靈性直覺，適合情緒波動大、靈感匱乏的時刻配戴。"
         ],
@@ -47,7 +47,7 @@ const productSeriesData = {
       {
         name: "金魚泡泡",
         price: "NT$1,580",
-        image: "/images/S-CrystalBracelet/product_blue_goldfish.jpg",
+        image: "./images/S-CrystalBracelet/product_blue_goldfish.jpg",
         description: [
           "靈感來自陽光下閃耀的金魚泡泡，這款設計柔和又富趣味。主石黃水晶能喚醒內在陽光能量、激發創造力與自信心，適合表達壓抑、生活緊湊的人，協助釋放情緒、提升溝通效率與學習力。"
         ],
