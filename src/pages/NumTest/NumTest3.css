@@ -22,14 +22,11 @@
 
 .index-numtest3 {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     max-width: 80%;
-    /* margin: 0 auto; */
     margin: 0 8%;
     /* 左邊圖片本身左右有空白 */
-    gap: 4%;
-    /* flex: 1; */
+    /* gap: 4%; (手機版的推薦手鍊關係 需刪除)*/
 
     width: 100%;
     height: 100vh;
@@ -49,6 +46,7 @@
     justify-content: center;
     align-items: flex-end;
     /* border: 5px solid blue; */
+    margin-right: 4%;
 }
 
 .box-numtest3 {
@@ -133,6 +131,9 @@
 
 .title3 {
     margin-top: -20%;
+}
+.title3-mobile {
+    margin-top: -25%;
 }
 
 #box2>div {
@@ -233,8 +234,10 @@
     /* width: 11.25rem; */
     display: block;
     margin: auto;
-    width: 93%;
     transition: transform 0.25s ease;   
+}
+.bracelet {
+    width: 93%;
 }
 
 .bracelet:hover {
@@ -248,11 +251,14 @@
     position: relative;
     z-index: 99;
     cursor: pointer;
-    width: 12rem;
-    height: 8rem;
     /* width: 12rem;
     height: 8rem; */
 }
+.bracelet-box {
+    width: 12rem;
+    height: 8rem;
+}
+
 
 .star-box {
     position: relative;
@@ -260,13 +266,18 @@
 }
 
 .star {
-    width: 18rem;
     position: absolute;
     display: inline-flex;
     align-items: center;
 }
+.star {
+    width: 18rem;
+}
 
-
+/* 推薦手鍊(🐤手機版隱藏🐤) */
+.bracelet-box-moblie, .bracelet-mobile, .button-mobile {
+    visibility: hidden;
+}
 /* 按鈕 */
 #button-box {
     display: flex;
@@ -390,7 +401,7 @@
 
 
 
-/* RWD 斷點： ≤ 1024 */
+/* RWD 斷點： ≥ 1024 */
 @media (max-width: 1024px) {
 
     /* 左側 */
@@ -482,8 +493,6 @@
         width: 12rem;
     }
 
-
-
     /* 字大小 */
     .hashtag {
         font-size: 1.3rem;
@@ -498,5 +507,171 @@
 
     .content-numtest3 {
         font-size: 1rem;
+    }
+}
+
+
+/* RWD 斷點： ≥ 780 */
+@media (max-width: 780px) {
+    .index-numtest3 {
+        max-width: 85%;
+    }
+    /* 右側 */
+    #box1, #box2 {
+        flex-direction: column;
+    }
+    .title-numtest3 {
+        padding: 1%;
+        width: 9.5rem;
+    }
+    /* hastag */
+    #hashtag-box2 {
+        width: 85%;
+        gap: 0.5rem;
+    }
+    /* 隱藏視窗 */
+    .title2-mobile {
+        height: 100%;
+        width: 100%;
+    }
+    .title2-mobile svg {
+        padding-top: -50px;
+    }
+    .title2-mobile text {
+        text-align: center;
+    }
+    /* 欄位設定 */
+    .people-box, .people-box2 {
+        padding: 1.5rem 1rem 1rem 1rem;
+    }
+    .crystal-box {
+        padding: 1.75rem 1rem 1rem 1rem;
+    }
+
+    /* 手鍊 */
+    .bracelet-design {
+        display: none;
+    }
+    .bracelet-mobile {
+        display: block;
+        margin: auto;
+        transition: transform 0.25s ease; 
+        width: 100%;  
+    }
+    .bracelet-mobile:hover {
+        transform: scale(1.08);
+    }
+    .bracelet-box-mobile, .button-mobile {
+        background: rgba(255, 255, 255, 0.70);
+        box-shadow: 0 0 11.485px 0 rgba(233, 166, 160, 0.25);
+        backdrop-filter: blur(5.742547035217285px);
+
+        /* 定位 */
+        position:fixed;
+        right: 0;
+        z-index: 99;
+    }
+    .button-mobile {
+        visibility: unset;
+        color: #8284A2;
+        padding: 20px 16px;
+        writing-mode: vertical-rl;
+        border-radius: 1rem 0 0 1rem;
+        display: flex;
+        bottom: 25px;
+    }
+    .button-mobile img {
+        width: 1.25rem;
+        height: 1.25rem;
+        padding-top: 0.25rem;
+    }
+    .bracelet-box-mobile {
+        cursor: pointer;
+        border-radius: 999px 0 0 999px;
+        padding: 5px 10px 5px 20px;
+        width: 190px;
+        height: 140px;
+        bottom: 35px;
+    }
+    .bracelet-box-mobile img {
+        visibility: unset;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 隱藏按鈕：動畫 */
+    /* 滑出 */
+    .slide-out {
+        animation: slideOutRight 0.45s forwards ease-in-out;
+    }
+        @keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }}
+    /* 滑入 */
+    .slide-in {
+    animation: slideInRight 0.35s forwards ease-in-out;
+    }
+
+    @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }}
+
+    /* 按鈕 */
+    #button-box {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .button1-j, .button2-j {
+        padding: 0.5rem;
+    }
+
+
+    /* 圖片 */
+    .img-p1, .img-p2, .img-p3, .img-p4, .img-p5, .img-p6 {
+        width: 90%;
+    }
+    .img-p7, .img-p8, .img-p9 {
+        width: 50%;
+    }
+
+
+    /* 文字大小 */
+    .title-name, .title-name span, .title-numtest3 p, .name, .recommend-design {
+        font-size: 1rem;
+    }
+    .name-0 {
+        font-size: 1.5rem;
+    }
+    .button1-j, .button2-j {
+        font-size: 1.375rem;
+    }
+    .hashtag {
+        font-size: 0.9375rem;
+    }
+    .content-numtest3 {
+        font-size: 0.875rem;
+    }
+    /* 文字字重 */
+    .title-name {
+        font-weight: 400;
+    }
+    .title-name span, .name-0 {
+        font-weight: 700;
+    }
+    /* 間距 */
+    .recommend-design {
+        letter-spacing: 0.25rem;
     }
 }

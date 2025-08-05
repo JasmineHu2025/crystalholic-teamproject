@@ -1,9 +1,8 @@
 import characterData from './characterData';
-
 import './NumTest3.css';
 import '../../components/NumTestBg.css';
 import { useNavigate, useLocation } from 'react-router-dom';
-import productSeriesData from '../Product/productSeriesData';
+// import productSeriesData from '../Product/productSeriesData';  商品資訊(這邊用不到)
 import NavBarWrapper from '../../components/NavBarWrapper';
 import CopyrightNotice from '../../components/CopyrightNotice';
 import { useEffect, useState } from 'react';
@@ -25,7 +24,7 @@ export default function NumTest3() {
 
     const data = characterData[lifeNumber];
 
-    // ✅ 手鍊圖片對應商品頁資料（手動對照）
+    // ✅ 網頁版：手鍊圖片對應商品頁資料（手動對照）
     const braceletImageToProduct = {
         './images/Numtest/bracelet/bracelet1.png': { seriesKey: 'adventure', productIndex: 2 }, // 極圈探險家
         './images/Numtest/bracelet/bracelet2.png': { seriesKey: 'seasons', productIndex: 0 },   // 柔光初生
@@ -33,7 +32,7 @@ export default function NumTest3() {
         './images/Numtest/bracelet/bracelet4.png': { seriesKey: 'seasons', productIndex: 2 },   // 靜謐雪森
     };
 
-    // ✅ 點擊跳轉函式
+    // ✅ 網頁版：點擊跳轉函式
     const handleBraceletClick = () => {
         const path = braceletImageToProduct[data.bracelet];
         if (path) {
@@ -41,11 +40,39 @@ export default function NumTest3() {
         }
     };
 
+
+    /* 推薦手鍊(手機版)隱藏按鈕 */
+    const [showButton, setShowButton] = useState(true); // 初始顯示按鈕
+    const [isAnimating, setIsAnimating] = useState(false); // 控制動畫切換過程中不重複觸發
+
+    const handleToggle = () => {
+        if (isAnimating) return; // 避免動畫未結束時重複觸發
+        setIsAnimating(true);
+        setTimeout(() => {
+            setShowButton(prev => !prev);
+            setIsAnimating(false);
+        }, 500); // 動畫時間要與 CSS 動畫一致
+    };
+
+
     return (
         <>
             <NavBarWrapper variant="dark" />
             <div className='copyrightNotice'>
                 <main className="index-numtest3">
+                    {/* 隱藏按鈕：推薦設計款(手機版) */}
+                    {!showButton && (
+                        <div className={`bracelet-box-mobile ${isAnimating ? 'slide-out' : 'slide-in'}`} onClick={handleToggle} >
+                            <img className="bracelet-mobile" src={data.braceletMobile} alt={`bracelet-${data.number}`} />
+                        </div>)}
+
+                    {showButton && (
+                        <button className={`button-mobile ${isAnimating ? 'slide-out' : 'slide-in'}`} onClick={handleToggle}>
+                            <p className="recommend-design">推薦設計款</p>
+                            <img src="./images/Numtest/icon-arrow.svg" alt="" />
+                        </button>)}
+
+
                     {/* ---------- 左側 ---------- */}
                     <div id="left">
                         <div className="box-numtest3">
@@ -129,6 +156,7 @@ export default function NumTest3() {
                                 </ul>
                             </div>
 
+                            {/* ✅ 推薦設計款 */}
                             <div className="bracelet-design">
                                 <div className="title2">
                                     <svg viewBox="0 0 300 130" width="100%" preserveAspectRatio="xMidYMid meet">
@@ -153,6 +181,7 @@ export default function NumTest3() {
                             </div>
                         </div>
 
+                        {/* ✅ 按鈕 */}
                         <div id="button-box">
                             <button className="button1-j">分享測驗結果</button>
                             <button className="button2-j" onClick={() => navigate('/Customize3')}>
