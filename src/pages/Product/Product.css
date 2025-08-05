@@ -388,8 +388,77 @@
     position: relative;
 }
 
-@media (max-width: 820px ) {
+/* 螢幕 ≤ 820px */
+@media (max-width: 820px) {
     .p_product_area {
         padding: 0 5%;
+    }
+}
+
+/* 螢幕 ≤ 767px */
+@media (max-width: 767px) {
+    /* 麵包屑導覽 */
+    .breadcrumb {
+        letter-spacing: 0.01rem;
+        margin: 1.5rem 0;
+    }
+
+    /* ----- 單一商品區 ---- */
+    .p_product_area {
+        padding: 0 8%;
+        margin-bottom: 8%;
+    }
+    .p_product_box {
+        flex-direction: column;
+        margin: 1.25rem 0;
+    }
+
+    /* 文字共用區 */
+    .p_product_description,.p_product_title span,
+    .p_product_crystal_area p,
+    .p_product_size,.p_product_hand,
+    /* collection */.p_product_price{
+        /* 中文/內文2 */
+        font-family: "Noto Sans TC";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 150%; /* 21px */
+        letter-spacing: 0.088rem;
+    }
+    .p_product_qty,
+    .p_product_qty button {
+        /* 中文/思源黑體/小標題5 */
+        font-family: "Noto Sans TC";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 19.2px */
+        letter-spacing: 0.1rem;
+    }
+
+    .p_product_title {
+        gap: 6px;
+    }
+    /* ────────── Collection 區 ───────────────────── */
+    .p_collection {
+        clip-path: ellipse(145% 150% at 50% 150%);
+        padding-top: 14%;
+    }
+    .p_collection_products {
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        overflow-x: auto; /* ✅ 開啟橫向滾動 */
+        padding: 0.5rem 8vw;
+        scroll-padding-left: 10vw;
+        width: 100%;
+        scroll-snap-type: x mandatory; /* ✅ 可選：讓滑動對齊 */
+        -webkit-overflow-scrolling: touch; /* ✅ 手機滑動順暢 */
+    }
+    .p_product_card {
+        width: 73%;
+        flex: 0 0 auto;        /* ✅ 讓卡片不自動壓縮成多欄 */
+        scroll-snap-align: start;  /* ✅ 可選：滑動對齊開頭 */
     }
 }
