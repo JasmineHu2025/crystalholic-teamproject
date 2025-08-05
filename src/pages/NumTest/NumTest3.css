@@ -403,6 +403,10 @@
 
 /* RWD 斷點： ≥ 1024 */
 @media (max-width: 1024px) {
+    /* 推計設計款隱藏按鈕 */
+    .button-mobile {
+        display: none;
+    }
 
     /* 左側 */
     .index-numtest3 {
