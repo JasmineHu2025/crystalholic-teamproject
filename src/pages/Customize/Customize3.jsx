@@ -62,7 +62,7 @@ export default function Customize3() {
 
     navigate('/Customize4');
   };
-  
+
 
 
   const [selectedCrystal, setSelectedCrystal] = useState(null);
@@ -83,11 +83,11 @@ export default function Customize3() {
           <div className="text3-wrap">
             <div className="text3">
               <h2>
-                <img src="./images/Custom/line_left.svg" alt="" />
+                <img src="./images/Custom/line_left2.svg" alt="" />
                 {lifePathNumber && (
                   <p className="sub-title">點擊一條推薦手鍊</p>
                 )}
-                <img src="./images/Custom/line_right.svg" alt="" />
+                <img src="./images/Custom/line_right2.svg" alt="" />
               </h2>
             </div>
           </div>
@@ -175,24 +175,24 @@ export default function Customize3() {
               套用推薦
             </button>
           </div>
-          
+
         </main>
         <CopyrightNotice />
       </div>
-    {showRecommendErrorModal && (
-      <div className="modalOverlay">
-        <div className="modalContent">
-          <p>請先點選一條推薦手鍊！</p>
-          <button
-            className="btnConfirm"
-            onClick={() => setShowRecommendErrorModal(false)}
-          >
-            確認
-          </button>
+      {showRecommendErrorModal && (
+        <div className="modalOverlay">
+          <div className="modalContent">
+            <p>請先點選一條推薦手鍊！</p>
+            <button
+              className="btnConfirm"
+              onClick={() => setShowRecommendErrorModal(false)}
+            >
+              確認
+            </button>
+          </div>
         </div>
-      </div>
-    )}
-  </div>
-    
+      )}
+    </div>
+
   );
 }

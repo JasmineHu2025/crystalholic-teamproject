@@ -139,6 +139,12 @@ export default function Customize1() {
                             自己串串看，或是交給 Crystalholic<br />
                             為自己或重要的人，設計一份獨特又美麗的水晶祝福！
                         </p>
+                        <p className='content-j2'>
+                            量身訂製專屬飾品，為生活注入正能量<br />
+                            自己串串看，或是交給 Crystalholic<br />
+                            為自己或重要的人<br />
+                            設計一份獨特又美麗的水晶祝福！
+                        </p>
                     </div>
                     <div className="button-box">
                         <button className="button1" onClick={handleClick}>
