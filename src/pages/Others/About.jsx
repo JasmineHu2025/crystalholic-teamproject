@@ -26,7 +26,7 @@ export default function About() {
 
         <main className="about-main">
           <section className="about-hero" id='about-hero'>
-            <BgDark1/>
+            <BgDark1 />
             <div className="about-hero-content">
               <h1 className="about-hero-title">Crystalholic</h1>
               <p className="about-hero-subtitle">在忙碌世界中，找回屬於自己的寧靜</p>
@@ -44,6 +44,9 @@ export default function About() {
 
           <section className="beauty-spirituality">
             <div className="content">
+              <div className="image">
+                <img src={`${base}images/About/aboutus-braclet.png`} alt="設計款水晶手鍊" />
+              </div>
               <div className="text">
                 <div className="text-content">
                   <h2 className="title">美感與靈性的完美融合</h2>
@@ -63,9 +66,6 @@ export default function About() {
                     <li>設計與靈性兼具，讓水晶成為你風格與心靈的象徵</li>
                   </ul>
                 </div>
-              </div>
-              <div className="image">
-                <img src={`${base}images/About/aboutus-braclet.png`} alt="設計款水晶手鍊" />
               </div>
             </div>
           </section>
@@ -96,6 +96,9 @@ export default function About() {
 
           <section className="quality-guarantee">
             <div className="content">
+              <div className="image">
+                <img src={`${base}images/About/aboutus-quality.png`} alt="嚴選水晶品質" />
+              </div>
               <div className="text">
                 <div className="text-content">
                   <h2 className="title"><span className="en-font"> Crystalholic</span>的品質保證</h2>
@@ -110,9 +113,6 @@ export default function About() {
                     能量兼顧，讓你能安心佩戴，時時刻刻長久相伴。
                   </p>
                 </div>
-              </div>
-              <div className="image">
-                <img src={`${base}images/About/aboutus-quality.png`} alt="嚴選水晶品質" />
               </div>
             </div>
           </section>
