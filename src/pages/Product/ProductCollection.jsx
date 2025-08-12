@@ -19,11 +19,25 @@ export default function ProductCollection() {
 
   /* ---  icon 清單（id 必須對應資料檔 key） ----------------------------- */
   const iconList = [
-    { id: 'blue', label: '澄語之藍', icon: './images/Product/icon_blue.svg',iconActive: './images/Product/icon_blue_click.svg' },
-    { id: 'adventure', label: '秘境探光', icon: './images/Product/icon_adventure.svg',iconActive: './images/Product/icon_adventure_click.svg' },
-    { id: 'seasons', label: '四季琉波', icon: './images/Product/icon_seasons.svg',iconActive: './images/Product/icon_seasons_click.svg' },
-    { id: 'cocktail', label: '微醺晶釀', icon: './images/Product/icon_cocktail.svg',iconActive: './images/Product/icon_cocktail_click.svg' }
+    { id: 'blue', label: '澄語之藍', icon: './images/Product/icon_blue.svg', iconActive: './images/Product/icon_blue_click.svg' },
+    { id: 'adventure', label: '秘境探光', icon: './images/Product/icon_adventure.svg', iconActive: './images/Product/icon_adventure_click.svg' },
+    { id: 'seasons', label: '四季琉波', icon: './images/Product/icon_seasons.svg', iconActive: './images/Product/icon_seasons_click.svg' },
+    { id: 'cocktail', label: '微醺晶釀', icon: './images/Product/icon_cocktail.svg', iconActive: './images/Product/icon_cocktail_click.svg' }
   ];
+
+  /* 0812 */
+  // 手機版左右切換用（依 iconList 順序）
+  const seriesOrder = iconList.map(i => i.id);
+
+  const goPrev = () => {
+    const i = seriesOrder.indexOf(activeSeries);
+    setActiveSeries(seriesOrder[(i - 1 + seriesOrder.length) % seriesOrder.length]);
+  };
+
+  const goNext = () => {
+    const i = seriesOrder.indexOf(activeSeries);
+    setActiveSeries(seriesOrder[(i + 1) % seriesOrder.length]);
+  };
 
 
   /* --- 點擊商品卡片導頁 ---------------------------------------------- */
@@ -56,7 +70,7 @@ export default function ProductCollection() {
         // 預載主圖
         const img = new Image();
         img.src = product.image;
-  
+
         // 預載水晶圖
         if (Array.isArray(product.crystals)) {
           product.crystals.forEach(src => {
@@ -73,12 +87,19 @@ export default function ProductCollection() {
       <NavBarWrapper variant="dark" />
       <main className="pc_main">
         {/* ─── 系列 icon 區 ───────────────────── */}
-        <section className="pc_icon_area" ref={iconAreaRef}>
-          {/* 三角形指示器 */}
+        <section className="pc_icon_area" ref={iconAreaRef} data-series={activeSeries}>
+          {/* 手機版：上一個 */}
+          <button className="pc_nav_btn pc_prev" onClick={goPrev} aria-label="上一個系列">
+            {/* <span className="pc_nav_chev" aria-hidden>‹</span> */}
+            <img className="pc_nav_icon" src="./images/S-Btn/btn_left.png" alt="" aria-hidden="true" />
+          </button>
+
+          {/* 桌機用三角形指示器（手機會被 CSS 隱藏） */}
           <div
             className={`pc_triangle_indicator triangle_${activeSeries}`}
             style={{ left: `${triangleX - 48}px` }}
           />
+
           {iconList.map(({ id, label, icon, iconActive }) => (
             <div
               key={id}
@@ -90,7 +111,22 @@ export default function ProductCollection() {
               <span>{label}</span>
             </div>
           ))}
+
+          {/* 手機版：下一個 */}
+          <button className="pc_nav_btn pc_next" onClick={goNext} aria-label="下一個系列">
+            {/* <span className="pc_nav_chev" aria-hidden>›</span> */}
+            <img className="pc_nav_icon" src="./images/S-Btn/btn_right.png" alt="" aria-hidden="true" />
+          </button>
+
         </section>
+
+        {/* ─── 系列介紹 ─────────────────────── */}
+        <section className="pc_product_introduce_mobile">
+          {productSeriesData[activeSeries].description.map((line, i) => (
+            <p key={i}>{line}</p>
+          ))}
+        </section>
+
 
         {/* ─── 商品區 ─────────────────────────── */}
         <section className={`pc_product_area pc_bg_${activeSeries}`}>
