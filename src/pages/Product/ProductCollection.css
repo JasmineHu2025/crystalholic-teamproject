@@ -457,4 +457,7 @@
     .pc_product_introduce {
         display: none;
     }
+    .pc_footer {
+        clip-path: ellipse(145% 150% at 50% 150%);
+    }
 }
