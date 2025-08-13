@@ -23,7 +23,13 @@ export default function CustomizeInfoModal({ isOpen, onClose }) {
       <div className="customize-modal" onClick={(e) => e.stopPropagation()}>
         <div className="customize-title-box">
           <h2 className="customize-title">✦ 一步步打造專屬水晶手鍊 ✦</h2>
-          <img src={`${base}images/Custom/deco-divider_purple.png`} alt="divider" />
+          {/* <img src={`${base}images/Custom/deco-divider_purple.png`} alt="divider" /> */}
+          {/* 手機版2 */}
+          <div className="deco-divider-mobile2">
+            <img className="divider-left" src={`${base}images/Custom/deco-divider_purple-left.svg`} alt="divider-left" />
+            <hr />
+            <img className="divider-right" src={`${base}images/Custom/deco-divider_purple-right.svg`} alt="divider-right" />
+          </div>
         </div>
         <div className="customize-content">
           <p><strong className='top'>1｜選擇水晶大小</strong><br />8mm 精緻、10mm 俐落，挑選你喜歡的尺寸。</p>

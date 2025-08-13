@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
@@ -50,9 +50,9 @@
     }
 }
 
+/* 標題 */
 .customize-title-box {
-    gap: 20px;
-    padding-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .customize-title {
@@ -62,12 +62,31 @@
     color: #8750bf;
     font-weight: 500;
 }
+/* ⭐️test⭐️ */
+.deco-divider-mobile2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.divider-left, .divider-right {
+    width: 1.3rem;
+    height: auto;
+}
+.deco-divider-mobile2 hr {
+    height: 1.5px;
+    width: 100%;
+    border-color: #8750BF;
+    margin: 0 -0.1rem;
+}
 
 .customize-content {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     overflow-y: auto;
     height: 268px;
-    padding-right: 4px;
+    padding-right: 1rem;
+    padding-left: 0.75rem;
+    margin-right: 0.75rem;
     margin-bottom: 20px;
 }
 
@@ -76,7 +95,6 @@
     display: flex;
     width: 16px;
     padding: 3px 3px 95px 3px;
-    flex-direction: column;
     align-items: center;
     border-radius: 100px;
     background: #E4DEED;
@@ -136,4 +154,51 @@
 .customize-close:active {
     background-color: #8750bf;
     color: #fff;
+}
+
+
+/* 手機：≤ 767px */
+@media (max-width:767px) {
+    .customize-modal-overlay {
+        padding: 6.5625rem 2.375rem;
+    }
+
+    .customize-modal {
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem 1.56rem;
+    }
+
+    /* 標題 */
+    .customize-title {
+        margin-bottom: 1rem;
+    }
+    .customize-title-box {
+        margin-bottom: 1rem;
+    }
+
+    /* 內文 */
+    .customize-content {
+        height: auto;
+        margin-bottom: auto;
+    }
+    /* 滾輪樣式 */
+    /* 按鈕 */
+    .customize-close {
+        margin-top: 2rem;
+    }
+
+    /* 文字大小 */
+    /* 文字大小 */
+    .customize-title {
+        font-size: 1rem;
+    }
+
+    /* 間距 */
+    .customize-title {
+        letter-spacing: 0.1rem;
+    }
+    .customize-content p {
+        line-height: 160%;
+    }
 }
