@@ -61,6 +61,7 @@
     margin-bottom: 20px;
     color: #8750bf;
     font-weight: 500;
+    letter-spacing: 0.1rem;
 }
 /* ⭐️test⭐️ */
 .deco-divider-mobile2 {
@@ -193,11 +194,7 @@
     .customize-title {
         font-size: 1rem;
     }
-
     /* 間距 */
-    .customize-title {
-        letter-spacing: 0.1rem;
-    }
     .customize-content p {
         line-height: 160%;
     }

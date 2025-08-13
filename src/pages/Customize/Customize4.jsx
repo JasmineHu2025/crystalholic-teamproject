@@ -806,10 +806,8 @@ export default function Customize4() {
             </div>
           </div>
 
+          {/* 尺寸設定 */}
           <div className={style.sizeAndBeads}>
-
-
-
             <div className={style.sizeBox}>
               <div className={style["title-size"]}>
                 <p>尺寸設定</p>
