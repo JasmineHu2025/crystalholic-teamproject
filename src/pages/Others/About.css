@@ -283,5 +283,7 @@
 
 /* 手機螢幕 ≤ 767px */
 @media (max-width: 767px) {
-
+  .about-hero-title {
+    color: brown;
+  }
 }
