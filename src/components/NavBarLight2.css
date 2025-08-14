@@ -225,13 +225,11 @@ header ul {
 
 
 @media screen and (max-width: 1024px) {
-
   /* 隱藏搜尋 icon */
   .icon1 li:first-child {
     display: none;
   }
-
-   .logo1 img {
+  .logo1 img {
     width: 160px;
     margin-left: 40px;
   }
@@ -245,58 +243,39 @@ header ul {
     margin-left: 20px;
   }
 
-
   .icon1 {
     margin-right: 30px;
   }
   }
-
-
-  /*  icon 區塊放大但不影響 icon 大小 */
-  /* .icon li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 9px;
-  } */
-
-  /*  圖片大小固定不變 */
-  /* .icon li img,
-  .member-button img {
-    width: 30px;
-    height: 30px;
-  } */
-
-  /*  member icon 的 button 也確保大小一致 */
-  /* .member-button {
-    width: 30px;
-    height: 30px;
-    padding: 0;
-  } */
 }
 
-  /* === 購物車數量(右上角) === */
-  .cart-badge {
-    position: absolute;
-    top: -2px;
-    right: -10px;
+/* 手機螢幕 ≤ 767px */
+@media (max-width: 767px) {
   
-    transform: translateX(0);
-    transform-origin: left center;
+}
+
+/* === 購物車數量(右上角) === */
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -10px;
   
-    min-width: 1.25rem;
-    height: 1.25rem;
-    padding: 0 4px;
-    border-radius: 999px;
-    background: #FF9D60;
-    color: #FFF;
+  transform: translateX(0);
+  transform-origin: left center;
   
-    font-family: "Noto Sans TC";
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 1.25rem;
-    text-align: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #FF9D60;
+  color: #FFF;
   
-    pointer-events: none;
-    transition: all 0.2s ease;
-  }
+  font-family: "Noto Sans TC";
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  text-align: center;
+  
+  pointer-events: none;
+  transition: all 0.2s ease;
+}

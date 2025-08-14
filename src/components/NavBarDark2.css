@@ -208,68 +208,25 @@
 }
 
 /* RWD：小螢幕不顯示 */
-@media screen and (max-width: 1024px) {
-  .navbar-searchbox {
+
+
+/* 手機螢幕 ≤ 767px */
+@media (max-width: 767px) {
+  .search-li {
     display: none;
   }
-}
-
-
-
-
-  @media screen and (max-width: 1024px) {
-
-    /* 隱藏搜尋 icon */
-    .icon2 li:first-child {
-      display: none;
-    }
-
-    .logo2 img {
-    margin-left: 40px;
-  }
-
-
-  .icon2 {
-    margin-right: 40px;
-  }
-
-    /*  icon 區塊放大但不影響 icon 大小 */
-    /* .icon2 li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0; 稍微縮小間距
-    margin: 0 9px;
-    width: 30px;
-    height: 30px;
-  } */
-
-
-    /*  member icon 的 button 也確保大小一致 */
-    /* .member-button2 {
-    width: 30px;
-    height: 30px;
-    padding: 0;
-  } */
-  }
-
-    @media screen and (max-width: 820px) {
-
-    /* 隱藏搜尋 icon */
-    .icon2 li:first-child {
-      display: none;
-    }
-
-    .logo2 img {
-    width: 160px;
+  .logo2 img {
     margin-left: 20px;
   }
-
-
   .icon2 {
-    margin-right: 30px;
+    margin-right: 20px;
+    gap: 8px;
   }
+  .icon2 a,.member-button2,.icon-menu {
+    width: 30px;
+    height: 30px;
   }
+}
 
   /* === 購物車數量(右上角) === */
   .cart-badge {
