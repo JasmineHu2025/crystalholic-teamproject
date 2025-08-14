@@ -28,6 +28,7 @@
   border-radius: 40px 40px 0 0;
 }
 
+
 .footerbgc_info,
 .footerbgc_rwdbox {
     display: flex;
@@ -204,9 +205,8 @@
   }
 
   .footerbgc_company,
-  .footerbgc_service,
-  .footertrn_follow {
-    display: none; /* 隱藏其他部分 */
+  .footerbgc_service {
+    display: none; 
   }
 
   .footerbgc_contact {
