@@ -334,8 +334,8 @@
     }   
 }
 
+/* 手機螢幕 ≤ 767px */
 @media (max-width: 767px) {
-
   /* icon 區：只顯示目前系列 + 左右切換鈕 */
     .pc_icon_area {
         gap: 1.25rem;
@@ -350,19 +350,34 @@
         display: flex; 
     }
 
-    /* .pc_icon_item.pc_active > span {
-        display: none;
-    } */
-
-    .pc_icon_item img {
-        width: 5.5rem; 
-    }
-    
-    .pc_icon_item span { 
-        font-size: 1.25rem; 
-        letter-spacing: 0.063rem; 
+    .pc_icon_item.pc_active img {
+        width: 100px; 
     }
 
+    .pc_icon_item.pc_active span {
+        background-image: none;   /* 不再畫 linear-gradient */
+        background-size: 0 0;     /* 防止舊值殘留 */
+        
+        /* 中文/思源黑體/小標題3 */
+        font-family: "Noto Sans TC";
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 450;
+        line-height: 150%; /* 30px */
+        letter-spacing: 0.063rem;
+    }
+
+    /* 左右切換按鈕（僅手機顯示） */
+    .pc_nav_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 45px;
+    }
+
+    /* 手機版系列介紹文字 */
     .pc_product_introduce_mobile {
         display: flex;
         flex-direction: column;
@@ -378,10 +393,42 @@
         line-height: 150%;
         letter-spacing: 0.088rem;/* 1.4px */
 
-        margin: 0 30px 30px;
+        margin: 0 1.875rem 2.5rem;
     }
     .pc_product_introduce_mobile p {
         text-align: center;
+    }
+
+    /* 預設收起：顯示 4 行，多餘以 … 截斷 */
+    .pc_intro_text.collapsed {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* 展開時拿掉限制*/
+    .pc_intro_text.expanded {}
+
+    /* 展開／收起 按鈕 */
+    .pc_readmore_btn {
+        display: flex;
+        align-items: center;
+
+        /* 中文/思源黑體/內文3 */
+        font-family: "Noto Sans TC";
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 18px */
+        letter-spacing: 0.075rem;
+        
+        margin-top: 0.25rem;
+
+        color: #8750BF;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     /* 手機不需要三角形指示器 */
@@ -389,75 +436,29 @@
         display: none; 
     }
 
-  /* 左右切換按鈕（僅手機顯示） */
-    .pc_nav_btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: 45px;
-    }
-    .pc_prev { 
-        order: -1; 
-    } /* 讓 prev 出現在最左側 */
-
-    /* 系列背景容器：上方留白與圓角 */
-    /* .pc_product_area {
-        padding: 2rem 0 5.5rem;
-        border-top-left-radius: 28px;
-        border-top-right-radius: 28px;
-    } */
-
-    /* 介紹區移到商品上方 */
-    /* .pc_product_introduce {
-        order: -1;
-        padding: 0 1.25rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    .pc_product_introduce h5 { font-size: 1.125rem; }
-    .pc_divider_line { width: 58%; margin: .25rem 0 .75rem; }
-    .pc_product_introduce p { display: block; font-size: .875rem; } */
-
+    /* 單一商品區域 */
     .pc_product_area {
         padding: 3.75rem 0 16rem;
     }
+
     /* 商品：單欄直向、置中 */
     .pc_products {
         flex-direction: column;
         align-items: center;
     }
+
     .pc_product_card {
         width: 82%;
     }
 
-    /* .pc_products {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        width: 88%;
-        margin: 0 auto 3rem;
-    } */
-    /* .pc_product_card {
-        width: 100%;
-        max-width: 22rem;
-    } */
-    /* .pc_product_img_wrap {
-        aspect-ratio: 1 / 1;
-        margin-bottom: .75rem;
-    } */
-    /* .pc_product_name  { font-size: .9375rem; } */
-    /* .pc_product_price { font-size: .875rem; } */
-    /* .pc_product_crystals { gap: .5rem; } */
-    /* .pc_crystal_img { width: .875rem; height: .875rem; } */
-
-    /* footer 弧形與內容距離微調（避免壓到內容） */
-    /* .pc_footer { margin-top: -6rem; padding-top: 7rem; } */
     .pc_product_introduce {
         display: none;
     }
+
+    /* footer */
     .pc_footer {
-        clip-path: ellipse(145% 150% at 50% 150%);
+        clip-path: ellipse(170% 150% at 50% 150%);
+        padding-top: 3rem;
+        margin-top: -17rem;
     }
 }

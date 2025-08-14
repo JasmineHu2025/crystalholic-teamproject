@@ -480,8 +480,8 @@ export default function ShoppingCart() {
                     <img
                       src={
                         showAllItems
-                          ? './images/ShoppingCart/shoppingcart-btn_accordion-open.svg'
-                          : './images/ShoppingCart/shoppingcart-btn_accordion-close.svg'
+                          ? './images/S-Btn/triangle_btn_close.svg'
+                          : './images/S-Btn/triangle_btn_open.svg'
                       }
                       alt="展開收合按鈕"
                       className="cart_toggle_icon"

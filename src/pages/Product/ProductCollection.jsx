@@ -2,7 +2,7 @@ import './ProductCollection.css';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import BgDark from '../../components/BgDark';
 import FooterTrn from '../../components/FooterTrn';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import productSeriesData from './productSeriesData';
 
@@ -10,6 +10,10 @@ export default function ProductCollection() {
   const [activeSeries, setActiveSeries] = useState('blue');
   const [favorites, setFavorites] = useState({});
   const [triangleX, setTriangleX] = useState(0);
+  // 📱 手機版介紹收合
+  const [showFullDesc, setShowFullDesc] = useState(false);   // true = 展開
+  // const needsToggle = productSeriesData[activeSeries].description.length > 4;
+  const introRef = useRef(null);                             // 取得 <section> DOM
 
   const location = useLocation();
   const iconRefs = useRef({});
@@ -38,6 +42,34 @@ export default function ProductCollection() {
     const i = seriesOrder.indexOf(activeSeries);
     setActiveSeries(seriesOrder[(i + 1) % seriesOrder.length]);
   };
+
+  // 切換系列時自動收起（僅影響手機版）
+  useEffect(() => {
+    setShowFullDesc(false);
+  }, [activeSeries]);
+
+  // 讓按鈕是否出現成為 state
+  const [needsToggle, setNeedsToggle] = useState(false);
+
+  /**
+   * 收起狀態下，用 scrollHeight vs. clientHeight 判斷
+   * 只要被 line-clamp 截斷，就顯示「查看完整介紹」
+   */
+  useLayoutEffect(() => {
+    const textEl = introRef.current?.querySelector('.pc_intro_text');
+    if (!textEl) {
+      setNeedsToggle(false);          // 找不到節點就不顯示按鈕
+      return;
+    }
+
+    // 判斷文字是否被 line-clamp 截斷
+    const isOverflow = textEl.scrollHeight > textEl.clientHeight + 1;
+
+    // ❶ 被截斷時：顯示「查看完整介紹 ▼」
+    // ❷ 已展開時：仍保留按鈕，改顯示「收起 ▲」
+    setNeedsToggle(isOverflow || showFullDesc);
+  }, [activeSeries, showFullDesc]);
+
 
 
   /* --- 點擊商品卡片導頁 ---------------------------------------------- */
@@ -88,9 +120,8 @@ export default function ProductCollection() {
       <main className="pc_main">
         {/* ─── 系列 icon 區 ───────────────────── */}
         <section className="pc_icon_area" ref={iconAreaRef} data-series={activeSeries}>
-          {/* 手機版：上一個 */}
+          {/* 手機版：上一個系列 */}
           <button className="pc_nav_btn pc_prev" onClick={goPrev} aria-label="上一個系列">
-            {/* <span className="pc_nav_chev" aria-hidden>‹</span> */}
             <img className="pc_nav_icon" src="./images/S-Btn/btn_left.png" alt="" aria-hidden="true" />
           </button>
 
@@ -112,7 +143,7 @@ export default function ProductCollection() {
             </div>
           ))}
 
-          {/* 手機版：下一個 */}
+          {/* 手機版：下一個系列 */}
           <button className="pc_nav_btn pc_next" onClick={goNext} aria-label="下一個系列">
             {/* <span className="pc_nav_chev" aria-hidden>›</span> */}
             <img className="pc_nav_icon" src="./images/S-Btn/btn_right.png" alt="" aria-hidden="true" />
@@ -121,11 +152,40 @@ export default function ProductCollection() {
         </section>
 
         {/* ─── 系列介紹 ─────────────────────── */}
-        <section className="pc_product_introduce_mobile">
-          {productSeriesData[activeSeries].description.map((line, i) => (
-            <p key={i}>{line}</p>
-          ))}
+        <section
+          ref={introRef}
+          className="pc_product_introduce_mobile"
+        >
+          <div
+            className={`pc_intro_text ${showFullDesc ? 'expanded' : 'collapsed'}`}
+          >
+            {productSeriesData[activeSeries].description.map((line, i) => (
+              <p key={i}>{line}</p>
+            ))}
+          </div>
+
+          {needsToggle && (
+            <button
+              type="button"
+              className="pc_readmore_btn"
+              onClick={() => setShowFullDesc(!showFullDesc)}
+            >
+              {showFullDesc
+                ? '收起介紹'
+                : '查看完整介紹'}
+              <img
+                src={
+                  showFullDesc
+                    ? './images/S-Btn/triangle_btn_close.svg'
+                    : './images/S-Btn/triangle_btn_open.svg'
+                }
+                alt="展開收合按鈕"
+                className="cart_toggle_icon"
+              />
+            </button>
+          )}
         </section>
+
 
 
         {/* ─── 商品區 ─────────────────────────── */}
