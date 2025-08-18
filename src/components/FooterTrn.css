@@ -120,7 +120,7 @@
 
 /* ========================================================= */
 /* ---------- RWD 斷點：≤ 1024px ---------- */
-/* @media (max-width: 1024px) {
+@media (max-width: 1024px) {
     .footertrn_rwdbox{
         display: flex;
         flex-direction: column;
@@ -130,8 +130,7 @@
     .footertrn_follow ul,.footertrn_follow li{
         margin: 0;
     }
-} */
-
+}
 
 /* 手機螢幕 ≤ 767px */
 @media (max-width: 767px) {
