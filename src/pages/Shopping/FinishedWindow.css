@@ -75,6 +75,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
+  width: 100%;
 }
 .order_title h3 {
   /* 中文/思源黑體/小標題3 */
@@ -86,9 +87,21 @@
   letter-spacing: 0.063rem;
   color: #8750BF;
 }
-.order_success_icon {
-  width: 100%;
+.order_success_deco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+.order_success-left,.order_success-right {
+  width: 1rem;
   max-width: 23.125rem;
+}
+.order_success_deco hr {
+  height: 1.5px;
+  width: 100%;
+  border-color: #8750BF;
+  margin: 0 -0.1rem;
 }
 
 /* 訂單說明文字區 */
@@ -100,7 +113,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 160%; /* 25.6px */
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.01rem;
 
   display: flex;
   flex-direction: column;
@@ -164,4 +177,11 @@
 @keyframes finishedWindow_fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* 手機螢幕 ≤ 767px */
+@media (max-width: 767px) {
+  .order_popup {
+    width: 88%;
+  }
 }

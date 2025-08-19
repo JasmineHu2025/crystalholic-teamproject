@@ -8,7 +8,7 @@ export default function FinishedWindow({ start }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
-  const { clearCart } = useCart(); 
+  const { clearCart } = useCart();
 
   const handleBackHome = () => {
     clearCart(); // 清空購物車
@@ -45,22 +45,30 @@ export default function FinishedWindow({ start }) {
         <div className="order_popup">
           <div className="order_title">
             <h3>✦ 訂單已完成 ✦</h3>
-            <img
-              src="./images/ShoppingCart/finshed_deco.svg"
-              alt="訂單已完成"
-              className="order_success_icon"
-            />
+            <div className="order_success_deco">
+              <img
+                className="order_success-left"
+                src="./images/Custom/deco-divider_purple-left.svg"
+                alt="左裝飾"
+              />
+              <hr />
+              <img
+                className="order_success-right"
+                src="./images/Custom/deco-divider_purple-right.svg"
+                alt="右裝飾"
+              />
+            </div>
           </div>
 
           <div className="order_text">
             <p>感謝你的支持，我們將儘快安排出貨</p>
             <p>期待這份水晶為你帶來好運與療癒</p>
-            <p>若有任何問題，歡迎加入 <a className="order_text_link" href="https://www.line.me/tw/" target="_blank" rel="noopener noreferrer">LINE</a> 與我們聯繫！</p>
+            <p>如有問題，歡迎加入 <a className="order_text_link" href="https://www.line.me/tw/" target="_blank" rel="noopener noreferrer">LINE</a> 與我們聯繫！</p>
           </div>
 
-            <button className="back_home_btn" onClick={handleBackHome}>
-              回到首頁
-            </button>
+          <button className="back_home_btn" onClick={handleBackHome}>
+            回到首頁
+          </button>
 
         </div>
       )}

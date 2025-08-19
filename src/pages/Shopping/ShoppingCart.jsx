@@ -501,7 +501,7 @@ export default function ShoppingCart() {
                   onClick={() => setMobileStep(1)}
                   disabled={!cartItems.length}
                 >
-                  填寫資料
+                  <span>填寫資料</span>
                   <img src="./images/S-Btn/btn_next_white.svg" alt="填寫資料" className="cart_btn" />
                 </button>
               </>
@@ -678,7 +678,7 @@ export default function ShoppingCart() {
                   onClick={() => setMobileStep(0)}
                 >
                   <img src="./images/S-Btn/btn_back.svg" alt="返回商品明細" className="cart_btn_back" />
-                  返回購物車
+                  <span>返回購物車</span>
                 </button>
               </>
             )
