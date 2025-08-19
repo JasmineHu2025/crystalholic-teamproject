@@ -10,16 +10,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
 }
 
 /* ----------- 標題 ------------  */
 .cart_title {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    /* gap: 2rem; */
     /* padding-top: 5rem;
     padding-bottom: 3.125rem; */
     padding-top: clamp(2.5rem, 10vh, 6rem);
@@ -36,12 +36,22 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.175rem;/* 2.8px */
+    white-space: nowrap;
+
+    margin: 0 2rem;
 }
 
 .cart_decorate-left,
 .cart_decorate-right {
-    height: 0.707rem; /* 11.31px */
-    width: 10.309rem; /* 164.94px */
+    width: 1rem; 
+    height: auto;
+}
+
+.cart_title hr {
+    height: 1.5px;
+    width: 10.5vw;
+    border-color: #8750BF;
+    margin: 0 -0.1rem;
 }
 
 /* ---------- 共用區 ----------  */
@@ -432,7 +442,9 @@
     padding-top: 9.0625rem;
     margin-top: 5rem;
 }
-
+.cart_footer_mobile {
+  display: none;
+}
 
 
 /* 結帳成功視窗 */
@@ -494,4 +506,182 @@
     letter-spacing: 0.088rem;
 
   text-align: left;
+}
+
+/* ========== Mobile 不重複元件設定 ========== */
+/* 商品列 */
+.cart_table_row_mobile {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    padding: 15px 25px;
+    gap: 8px;
+}
+/* 商品列右側資訊 */
+.cart_product_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 4px; */
+    justify-content: space-between;
+}
+/* 1. 商品名稱/刪除 */
+.cart_product_name_cross {
+    display: flex;
+    justify-content: space-between;
+}
+.cart_product_name_cross p {
+    /* 中文/思源黑體/內文2 */
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    letter-spacing: 1.4px;
+    color: #585858;
+}
+/* 填寫資料 按鈕 */
+.cart_btn_next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    width: 16rem;
+    height: 3.125rem;
+    border-radius: 999px;
+    border: 1px solid #A67CEB;
+    background-color: #A67CEB;
+    cursor: pointer;
+
+    /* 中文/思源黑體/小標題3 */
+    font-family: "Noto Sans TC";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.063rem;
+
+    color: white;
+}
+.cart_btn {
+    width: 24px;
+}
+
+/* 手機螢幕 ≤ 767px */
+@media (max-width: 767px) {
+    /* .cart_btn_next, .cart_btn_prev{ display:none; } */
+    .cart_title {
+        padding: 24px 0;
+    }
+    /* 購物車標題 */
+    .cart_decorate-title {
+        /* 中文/霞鶩文楷/標題4 */
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;
+    }
+    /* 1. 刪除鈕 */
+    .cart_cross_btn {
+        width: 24px;
+        height: 24px;
+    }
+    .cart_cross_btn img {
+        width: 10px;
+        height: auto;
+    }
+    /* 2. 尺寸 */
+    .cart_product_size {
+        display: flex;
+        gap: 4px;
+    }
+    /* 3. 數量 */
+    .cart_qty_select {
+        width: 64px;
+        height: 21px;
+        background-size: 8px;
+    }
+    /* 4. 小計 */
+    .cart_subtota {
+        display: flex;
+        justify-content: end;
+        /* 中文/思源黑體/內文2 */
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 21px */
+        letter-spacing: 1.4px;
+        color: #684581;
+    }
+
+    /* 共用文字 */
+    .cart_product_size,.cart_qty_select {
+        /* 中文/思源黑體/內文3 */
+        font-family: "Noto Sans TC";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 18px */
+        letter-spacing: 1.2px;
+        color: #585858;
+    }
+
+    /* footer */
+    .cart_footer {
+        display: none; 
+    }
+    .cart_footer_mobile {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #B999D8;
+
+        /* 中文/思源黑體/內文2 */
+        font-family: "Noto Sans TC";
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.088rem;
+    }
+
+    .cart_point {
+        gap: 1rem;
+    }
+
+    /* 第二頁 */
+    .cart_info_area {
+        margin: 0;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .cart_btn_prev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        width: 16rem;
+        height: 3.125rem;
+        border-radius: 999px;
+        border: 1px solid #8750BF;
+        cursor: pointer;
+
+        /* 中文/思源黑體/小標題3 */
+        font-family: "Noto Sans TC";
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.063rem;
+
+        color: #8750BF;
+        text-align: center;
+    }
+    .cart_btn_back {
+        width: 24px;
+    }
 }

@@ -12,6 +12,7 @@ import { useCart } from './CartContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { TW_COUNTIES, genStores } from './twDistricts';
 import FinishedWindow from './FinishedWindow';
+import useMedia from './useMedia';
 
 
 /* ───────────────────────────────────────────── */
@@ -202,6 +203,11 @@ export default function ShoppingCart() {
   const { isLoggedIn } = useAuth();
   const { showAuthModal, openAuthModal, closeAuthModal } = useUI();
 
+  /* 手機分頁 */
+  const isMobile = useMedia('(max-width: 767px)');
+  const [mobileStep, setMobileStep] = useState(0);
+  useEffect(() => { if (!isMobile) setMobileStep(0); }, [isMobile]);
+
   /* 展開控制 */
   const [showAllItems, setShowAllItems] = useState(false);
   const [showSuccessMsg, setShowSuccessMsg] = useState(false);
@@ -354,310 +360,625 @@ export default function ShoppingCart() {
         <div className="cart_title">
           <img
             className="cart_decorate-left"
-            src="./images/ShoppingCart/shoppingcart_deco-left.svg"
+            src="./images/Custom/deco-divider_purple-left.svg"
             alt="左裝飾"
           />
+          <hr />
           <h3 className="cart_decorate-title">購物車</h3>
+          <hr />
           <img
             className="cart_decorate-right"
-            src="./images/ShoppingCart/shoppingcart_deco-right.svg"
+            src="./images/Custom/deco-divider_purple-right.svg"
             alt="右裝飾"
           />
         </div>
 
+
         {/* 內容大區塊 */}
         <section className="cart_point">
-          {/* ===== 左側：商品清單 + 表單 ===== */}
-          <section className="cart_left">
-            {/* 購物車清單 */}
-            <section className="cart_purchase_items">
-              {/* 表頭 */}
-              <div className="cart_card">
-                <div className="cart_table_head_1">
-                  <span>商品</span>
-                  <span>尺寸</span>
-                  <span>價格</span>
-                  <span>數量</span>
-                  <span>小計</span>
-                </div>
-              </div>
-
-              {/* 商品列 */}
-              {(showAllItems ? cartItems : cartItems.slice(0, 3)).map(
-                (item, index) => (
-
-                  <div className="cart_table_row" key={index}>
-                    {/* 0. 圖片＋名稱（一般商品可點、客製化不可點） */}
-                    {!item.isCustom ? (
-                      <Link
-                        to={`/Product/${item.seriesKey}/${item.productIndex}`}
-                        className="cart_product_info clickable"
-                        title="查看商品頁"
-                      >
-                        <img src={item.image} alt={item.name} />
-                        <p>{item.name}</p>
-                      </Link>
-                    ) : (
-                      /* ===== 客製化：純 div，沒有 hover、沒有指標 ===== */
-                      <div className="cart_product_info no-hover">
-                        <img src={item.image} alt={item.name} />
-                        <p>{item.name}</p>
-                      </div>
-                    )}
-
-                    {/* 1. 尺寸 */}
-                    <div className="cart_product_size">
-                      {/* 串珠尺寸 */}
-                      串珠&nbsp;
-                      {typeof item.size === 'number'      // 客製化 → 數字
-                        ? `${item.size}mm`
-                        : item.size                       // 其他商品 → 已含 mm
-                      }
-                      <br />
-
-                      {/* 手圍尺寸 */}
-                      手圍&nbsp;
-                      {typeof item.wrist === 'number'
-                        ? `${item.wrist}cm`
-                        : item.wrist
-                      }
-                    </div>
-
-                    {/* 2. 單價 */}
-                    <div className="cart_product_price">
-                      NT${item.price.toLocaleString()}
-                    </div>
-
-                    {/* 3. 數量 */}
-                    <select
-                      className="cart_qty_select"
-                      value={item.quantity}
-                      onChange={e => updateQuantity(index, Number(e.target.value))}
-                    >
-                      {[...Array(5)].map((_, n) =>
-                        <option key={n + 1} value={n + 1}>{n + 1}</option>
-                      )}
-                    </select>
-
-                    {/* 4. 小計 */}
-                    <div className="cart_subtotal">
-                      NT${(item.price * item.quantity).toLocaleString()}
-                    </div>
-
-                    {/* 5. 刪除 */}
-                    <div
-                      className="cart_cross_btn"
-                      onClick={() => removeFromCart(index)}
-                      title="刪除"
-                    >
-                      <img
-                        src="./images/ShoppingCart/shoppingcart-btn_cross.svg"
-                        alt="刪除"
-                      />
+          {isMobile ? (
+            /* ───────── 手機版 ───────── */
+            mobileStep === 0 ? (
+              /* ---------- Step 0：商品清單 ---------- */
+              <>
+                <section className="cart_purchase_items">
+                  {/* 表頭 */}
+                  <div className="cart_card">
+                    <div className="cart_table_head_1">
+                      <h2>商品細項</h2>
                     </div>
                   </div>
-                )
-              )}
+
+                  {/* 商品列 */}
+                  {(showAllItems ? cartItems : cartItems.slice(0, 3)).map(
+                    (item, index) => (
+
+                      <div className="cart_table_row_mobile" key={index}>
+                        {/* 0. 圖片＋名稱（一般商品可點、客製化不可點） */}
+                        {!item.isCustom ? (
+                          <Link
+                            to={`/Product/${item.seriesKey}/${item.productIndex}`}
+                            className="cart_product_info"
+                            title="查看商品頁"
+                          >
+                            <img src={item.image} alt={item.name} />
+                          </Link>
+                        ) : (
+                          /* ===== 客製化：純 div，沒有 hover、沒有指標 ===== */
+                          <div className="cart_product_info">
+                            <img src={item.image} alt={item.name} />
+                          </div>
+                        )}
+
+                        <div className="cart_product_list">
+                          {/* 1. 商品名稱/刪除 */}
+                          <div className="cart_product_name_cross">
+                            <p>{item.name}</p>
+                            <div
+                              className="cart_cross_btn"
+                              onClick={() => removeFromCart(index)}
+                              title="刪除"
+                            >
+                              <img
+                                src="./images/ShoppingCart/shoppingcart-btn_cross.svg"
+                                alt="刪除"
+                              />
+                            </div>
+                          </div>
+
+                          {/* 2. 尺寸 */}
+                          <div className="cart_product_size"> 
+                            {/* 手圍尺寸 */}
+                            手圍&nbsp;
+                            {typeof item.wrist === 'number'
+                              ? `${item.wrist}cm`
+                              : item.wrist
+                            }
+                            <p>|</p>
+                            {/* 串珠尺寸 */}
+                            串珠&nbsp;
+                            {typeof item.size === 'number'      // 客製化 → 數字
+                              ? `${item.size}mm`
+                              : item.size                       // 其他商品 → 已含 mm
+                            }
+                          </div>
+
+                          {/* 3. 數量 */}
+                          <select
+                            className="cart_qty_select"
+                            value={item.quantity}
+                            onChange={e => updateQuantity(index, Number(e.target.value))}
+                          >
+                            {[...Array(5)].map((_, n) =>
+                              <option key={n + 1} value={n + 1}>{n + 1}</option>
+                            )}
+                          </select>
+
+                          {/* 4. 小計 */}
+                          <div className="cart_subtota">
+                            NT${(item.price * item.quantity).toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                    )
+                  )}
 
 
-              {/* 空購物車 */}
-              {!cartItems.length && (
-                <div className="cart_shopping_tip">
-                  <p>購物車目前是空的喔！</p>
-                </div>
-              )}
+                  {/* 空購物車 */}
+                  {!cartItems.length && (
+                    <div className="cart_shopping_tip">
+                      <p>購物車目前是空的喔！</p>
+                    </div>
+                  )}
 
-              {/* 展開／收合 */}
-              {cartItems.length > 3 && (
-                <div className="cart_toggle">
-                  <button
-                    className="cart_toggle_btn"
-                    onClick={() => setShowAllItems(!showAllItems)}
-                  >
-                    {showAllItems
-                      ? '收起購物清單'
-                      : `查看完整購物清單（共 ${cartItems.length} 件）`}
-                    <img
-                      src={
-                        showAllItems
-                          ? './images/S-Btn/triangle_btn_close.svg'
-                          : './images/S-Btn/triangle_btn_open.svg'
-                      }
-                      alt="展開收合按鈕"
-                      className="cart_toggle_icon"
-                    />
-                  </button>
-                </div>
-              )}
-            </section>
+                  {/* 展開／收合 */}
+                  {cartItems.length > 3 && (
+                    <div className="cart_toggle">
+                      <button
+                        className="cart_toggle_btn"
+                        onClick={() => setShowAllItems(!showAllItems)}
+                      >
+                        {showAllItems
+                          ? '收起購物清單'
+                          : `查看完整購物清單（共 ${cartItems.length} 件）`}
+                        <img
+                          src={
+                            showAllItems
+                              ? './images/S-Btn/triangle_btn_close.svg'
+                              : './images/S-Btn/triangle_btn_open.svg'
+                          }
+                          alt="展開收合按鈕"
+                          className="cart_toggle_icon"
+                        />
+                      </button>
+                    </div>
+                  )}
+                </section>
 
-            {/* 送貨 & 收件表單 */}
-            <section className="cart_info_area">
-              {/* 送貨及付款方式 */}
-              <DeliveryOptions
-                onPlaceChange={setPlaceState}
-                onMethodChange={setDeliveryMethod}  /* 🆕 */
-              />
+                {/* 下一步按鈕 */}
+                <button
+                  className="cart_btn_next"
+                  onClick={() => setMobileStep(1)}
+                  disabled={!cartItems.length}
+                >
+                  填寫資料
+                  <img src="./images/S-Btn/btn_next_white.svg" alt="填寫資料" className="cart_btn" />
+                </button>
+              </>
+            ) : (
+              /* ---------- Step 1：表單＋訂單資訊 ---------- */
+              <>
+                <section className="cart_info_area">
+                  {/* 送貨及付款方式 */}
+                  <DeliveryOptions
+                    onPlaceChange={setPlaceState}
+                    onMethodChange={setDeliveryMethod}  /* 🆕 */
+                  />
 
-              {/* 收件人資料 */}
-              <form className="cart_info_card">
+                  {/* 收件人資料 */}
+                  <form className="cart_info_card">
+                    <div className="cart_table_head">
+                      <div className="cart_diamond">
+                        <img
+                          src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                          alt="收件人資料"
+                        />
+                        <img
+                          src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                          alt="收件人資料"
+                        />
+                      </div>
+                      <h2>收件人資料</h2>
+                    </div>
+
+                    <div className="cart_options_area">
+                      {/* 姓名 */}
+                      <label>*收件人姓名
+                        <input
+                          type="text"
+                          placeholder={
+                            placeState === '海外'
+                              ? 'Please enter your full name in English'
+                              : '例如：張美美'
+                          }
+                          required
+                        />
+                      </label>
+
+                      {/* 電話 */}
+                      <label>*聯絡電話
+                        <input
+                          type="tel"
+                          placeholder={
+                            placeState === '海外'
+                              ? 'e.g. +1-234-567-8901'
+                              : '例如：0912345678'
+                          }
+                          required
+                        />
+                      </label>
+
+                      {/* 發票資訊 */}
+                      {placeState === '台灣' ? (
+                        <>
+                          <label>*發票資訊
+                            <select
+                              value={invoiceType}
+                              onChange={(e) => {
+                                setInvoiceType(e.target.value);
+                                setInvoiceValue('');
+                              }}
+                              required
+                            >
+                              <option value="" disabled>請選擇發票類型</option>
+                              <option>個人發票</option>
+                              <option>公司用發票</option>
+                              <option>捐贈發票</option>
+                            </select>
+                          </label>
+
+                          {invoiceType && (
+                            <label>{invoiceLabel}
+                              <input
+                                type="text"
+                                placeholder={invoicePlaceholder}
+                                value={invoiceValue}
+                                onChange={(e) => setInvoiceValue(e.target.value)}
+                                required
+                              />
+                            </label>
+                          )}
+                        </>
+                      ) : (
+                        <label>＊發票資訊
+                          <input
+                            type="text"
+                            value="No invoice available for international orders"
+                            disabled
+                          />
+                        </label>
+                      )}
+                    </div>
+                  </form>
+                </section>
+                <section className="cart_right">
+                  <div className="cart_table_head">
+                    <div className="cart_diamond">
+                      <img
+                        src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                        alt="訂單資訊"
+                      />
+                      <img
+                        src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                        alt="訂單資訊"
+                      />
+                      <img
+                        src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                        alt="訂單資訊"
+                      />
+                    </div>
+                    <h2>訂單資訊</h2>
+                  </div>
+
+                  <div className="cart_detail_area">
+                    <ul>
+                      <li className="cart_subtotal">
+                        <span>小計：</span>
+                        <span>{formatCurrency(subtotal)}</span>
+                      </li>
+                      <li className="cart_fee">
+                        <span>運費：</span>
+                        <span>{formatCurrency(shipping)}</span>
+                      </li>
+
+                      {/* 🆕 優惠輸入 */}
+                      <li>
+                        <label htmlFor="coupon">
+                          優惠代碼：
+                          <input
+                            id="coupon"
+                            type="text"
+                            placeholder="請輸入代碼"
+                            value={couponCode}
+                            onChange={(e) => setCouponCode(e.target.value)}
+                          />
+                        </label>
+                      </li>
+
+                      {/* 🆕 折扣列（僅輸入正確代碼時顯示） */}
+                      {discount > 0 && (
+                        <li className="cart_discount">
+                          <span>優惠折抵：</span>
+                          <span>-{formatCurrency(discount)}</span>
+                        </li>
+                      )}
+
+                      <hr />
+                      <li className="cart_total">
+                        <span>合計：</span>
+                        <span className="cart_totalnum">
+                          {formatCurrency(total)}
+                        </span>
+                      </li>
+                    </ul>
+
+                    <button
+                      className="cart_btn_checkout"
+                      onClick={handleCheckout}
+                      disabled={!cartItems.length}
+                    >
+                      確認結帳
+                    </button>
+                  </div>
+                </section>
+
+                {/* 返回按鈕 */}
+                <button
+                  className="cart_btn_prev"
+                  onClick={() => setMobileStep(0)}
+                >
+                  <img src="./images/S-Btn/btn_back.svg" alt="返回商品明細" className="cart_btn_back" />
+                  返回購物車
+                </button>
+              </>
+            )
+          ) : (
+            <>
+
+              {/* ───────── 桌機／平板保持原樣 ───────── */}
+              {/* ===== 左側：商品清單 + 表單 ===== */}
+              <section className="cart_left">
+                {/* 購物車清單 */}
+                <section className="cart_purchase_items">
+                  {/* 表頭 */}
+                  <div className="cart_card">
+                    <div className="cart_table_head_1">
+                      <span>商品</span>
+                      <span>尺寸</span>
+                      <span>價格</span>
+                      <span>數量</span>
+                      <span>小計</span>
+                    </div>
+                  </div>
+
+                  {/* 商品列 */}
+                  {(showAllItems ? cartItems : cartItems.slice(0, 3)).map(
+                    (item, index) => (
+
+                      <div className="cart_table_row" key={index}>
+                        {/* 0. 圖片＋名稱（一般商品可點、客製化不可點） */}
+                        {!item.isCustom ? (
+                          <Link
+                            to={`/Product/${item.seriesKey}/${item.productIndex}`}
+                            className="cart_product_info clickable"
+                            title="查看商品頁"
+                          >
+                            <img src={item.image} alt={item.name} />
+                            <p>{item.name}</p>
+                          </Link>
+                        ) : (
+                          /* ===== 客製化：純 div，沒有 hover、沒有指標 ===== */
+                          <div className="cart_product_info no-hover">
+                            <img src={item.image} alt={item.name} />
+                            <p>{item.name}</p>
+                          </div>
+                        )}
+
+                        {/* 1. 尺寸 */}
+                        <div className="cart_product_size">
+                          {/* 串珠尺寸 */}
+                          串珠&nbsp;
+                          {typeof item.size === 'number'      // 客製化 → 數字
+                            ? `${item.size}mm`
+                            : item.size                       // 其他商品 → 已含 mm
+                          }
+                          <br />
+
+                          {/* 手圍尺寸 */}
+                          手圍&nbsp;
+                          {typeof item.wrist === 'number'
+                            ? `${item.wrist}cm`
+                            : item.wrist
+                          }
+                        </div>
+
+                        {/* 2. 單價 */}
+                        <div className="cart_product_price">
+                          NT${item.price.toLocaleString()}
+                        </div>
+
+                        {/* 3. 數量 */}
+                        <select
+                          className="cart_qty_select"
+                          value={item.quantity}
+                          onChange={e => updateQuantity(index, Number(e.target.value))}
+                        >
+                          {[...Array(5)].map((_, n) =>
+                            <option key={n + 1} value={n + 1}>{n + 1}</option>
+                          )}
+                        </select>
+
+                        {/* 4. 小計 */}
+                        <div className="cart_subtotal">
+                          NT${(item.price * item.quantity).toLocaleString()}
+                        </div>
+
+                        {/* 5. 刪除 */}
+                        <div
+                          className="cart_cross_btn"
+                          onClick={() => removeFromCart(index)}
+                          title="刪除"
+                        >
+                          <img
+                            src="./images/ShoppingCart/shoppingcart-btn_cross.svg"
+                            alt="刪除"
+                          />
+                        </div>
+                      </div>
+                    )
+                  )}
+
+
+                  {/* 空購物車 */}
+                  {!cartItems.length && (
+                    <div className="cart_shopping_tip">
+                      <p>購物車目前是空的喔！</p>
+                    </div>
+                  )}
+
+                  {/* 展開／收合 */}
+                  {cartItems.length > 3 && (
+                    <div className="cart_toggle">
+                      <button
+                        className="cart_toggle_btn"
+                        onClick={() => setShowAllItems(!showAllItems)}
+                      >
+                        {showAllItems
+                          ? '收起購物清單'
+                          : `查看完整購物清單（共 ${cartItems.length} 件）`}
+                        <img
+                          src={
+                            showAllItems
+                              ? './images/S-Btn/triangle_btn_close.svg'
+                              : './images/S-Btn/triangle_btn_open.svg'
+                          }
+                          alt="展開收合按鈕"
+                          className="cart_toggle_icon"
+                        />
+                      </button>
+                    </div>
+                  )}
+                </section>
+
+                {/* 送貨 & 收件表單 */}
+                <section className="cart_info_area">
+                  {/* 送貨及付款方式 */}
+                  <DeliveryOptions
+                    onPlaceChange={setPlaceState}
+                    onMethodChange={setDeliveryMethod}  /* 🆕 */
+                  />
+
+                  {/* 收件人資料 */}
+                  <form className="cart_info_card">
+                    <div className="cart_table_head">
+                      <div className="cart_diamond">
+                        <img
+                          src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                          alt="收件人資料"
+                        />
+                        <img
+                          src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                          alt="收件人資料"
+                        />
+                      </div>
+                      <h2>收件人資料</h2>
+                    </div>
+
+                    <div className="cart_options_area">
+                      {/* 姓名 */}
+                      <label>*收件人姓名
+                        <input
+                          type="text"
+                          placeholder={
+                            placeState === '海外'
+                              ? 'Please enter your full name in English'
+                              : '例如：張美美'
+                          }
+                          required
+                        />
+                      </label>
+
+                      {/* 電話 */}
+                      <label>*聯絡電話
+                        <input
+                          type="tel"
+                          placeholder={
+                            placeState === '海外'
+                              ? 'e.g. +1-234-567-8901'
+                              : '例如：0912345678'
+                          }
+                          required
+                        />
+                      </label>
+
+                      {/* 發票資訊 */}
+                      {placeState === '台灣' ? (
+                        <>
+                          <label>*發票資訊
+                            <select
+                              value={invoiceType}
+                              onChange={(e) => {
+                                setInvoiceType(e.target.value);
+                                setInvoiceValue('');
+                              }}
+                              required
+                            >
+                              <option value="" disabled>請選擇發票類型</option>
+                              <option>個人發票</option>
+                              <option>公司用發票</option>
+                              <option>捐贈發票</option>
+                            </select>
+                          </label>
+
+                          {invoiceType && (
+                            <label>{invoiceLabel}
+                              <input
+                                type="text"
+                                placeholder={invoicePlaceholder}
+                                value={invoiceValue}
+                                onChange={(e) => setInvoiceValue(e.target.value)}
+                                required
+                              />
+                            </label>
+                          )}
+                        </>
+                      ) : (
+                        <label>＊發票資訊
+                          <input
+                            type="text"
+                            value="No invoice available for international orders"
+                            disabled
+                          />
+                        </label>
+                      )}
+                    </div>
+                  </form>
+                </section>
+              </section>
+
+              {/* ===== 右側：訂單資訊 ===== */}
+              <section className="cart_right">
                 <div className="cart_table_head">
                   <div className="cart_diamond">
                     <img
                       src="./images/ShoppingCart/shoppingcart_ diamond.svg"
-                      alt="收件人資料"
+                      alt="訂單資訊"
                     />
                     <img
                       src="./images/ShoppingCart/shoppingcart_ diamond.svg"
-                      alt="收件人資料"
+                      alt="訂單資訊"
+                    />
+                    <img
+                      src="./images/ShoppingCart/shoppingcart_ diamond.svg"
+                      alt="訂單資訊"
                     />
                   </div>
-                  <h2>收件人資料</h2>
+                  <h2>訂單資訊</h2>
                 </div>
 
-                <div className="cart_options_area">
-                  {/* 姓名 */}
-                  <label>*收件人姓名
-                    <input
-                      type="text"
-                      placeholder={
-                        placeState === '海外'
-                          ? 'Please enter your full name in English'
-                          : '例如：張美美'
-                      }
-                      required
-                    />
-                  </label>
+                <div className="cart_detail_area">
+                  <ul>
+                    <li className="cart_subtotal">
+                      <span>小計：</span>
+                      <span>{formatCurrency(subtotal)}</span>
+                    </li>
+                    <li className="cart_fee">
+                      <span>運費：</span>
+                      <span>{formatCurrency(shipping)}</span>
+                    </li>
 
-                  {/* 電話 */}
-                  <label>*聯絡電話
-                    <input
-                      type="tel"
-                      placeholder={
-                        placeState === '海外'
-                          ? 'e.g. +1-234-567-8901'
-                          : '例如：0912345678'
-                      }
-                      required
-                    />
-                  </label>
-
-                  {/* 發票資訊 */}
-                  {placeState === '台灣' ? (
-                    <>
-                      <label>*發票資訊
-                        <select
-                          value={invoiceType}
-                          onChange={(e) => {
-                            setInvoiceType(e.target.value);
-                            setInvoiceValue('');
-                          }}
-                          required
-                        >
-                          <option value="" disabled>請選擇發票類型</option>
-                          <option>個人發票</option>
-                          <option>公司用發票</option>
-                          <option>捐贈發票</option>
-                        </select>
+                    {/* 🆕 優惠輸入 */}
+                    <li>
+                      <label htmlFor="coupon">
+                        優惠代碼：
+                        <input
+                          id="coupon"
+                          type="text"
+                          placeholder="請輸入代碼"
+                          value={couponCode}
+                          onChange={(e) => setCouponCode(e.target.value)}
+                        />
                       </label>
+                    </li>
 
-                      {invoiceType && (
-                        <label>{invoiceLabel}
-                          <input
-                            type="text"
-                            placeholder={invoicePlaceholder}
-                            value={invoiceValue}
-                            onChange={(e) => setInvoiceValue(e.target.value)}
-                            required
-                          />
-                        </label>
-                      )}
-                    </>
-                  ) : (
-                    <label>＊發票資訊
-                      <input
-                        type="text"
-                        value="No invoice available for international orders"
-                        disabled
-                      />
-                    </label>
-                  )}
+                    {/* 🆕 折扣列（僅輸入正確代碼時顯示） */}
+                    {discount > 0 && (
+                      <li className="cart_discount">
+                        <span>優惠折抵：</span>
+                        <span>-{formatCurrency(discount)}</span>
+                      </li>
+                    )}
+
+                    <hr />
+                    <li className="cart_total">
+                      <span>合計：</span>
+                      <span className="cart_totalnum">
+                        {formatCurrency(total)}
+                      </span>
+                    </li>
+                  </ul>
+
+                  <button
+                    className="cart_btn_checkout"
+                    onClick={handleCheckout}
+                    disabled={!cartItems.length}
+                  >
+                    確認結帳
+                  </button>
                 </div>
-              </form>
-            </section>
-          </section>
-
-          {/* ===== 右側：訂單資訊 ===== */}
-          <section className="cart_right">
-            <div className="cart_table_head">
-              <div className="cart_diamond">
-                <img
-                  src="./images/ShoppingCart/shoppingcart_ diamond.svg"
-                  alt="訂單資訊"
-                />
-                <img
-                  src="./images/ShoppingCart/shoppingcart_ diamond.svg"
-                  alt="訂單資訊"
-                />
-                <img
-                  src="./images/ShoppingCart/shoppingcart_ diamond.svg"
-                  alt="訂單資訊"
-                />
-              </div>
-              <h2>訂單資訊</h2>
-            </div>
-
-            <div className="cart_detail_area">
-              <ul>
-                <li className="cart_subtotal">
-                  <span>小計：</span>
-                  <span>{formatCurrency(subtotal)}</span>
-                </li>
-                <li className="cart_fee">
-                  <span>運費：</span>
-                  <span>{formatCurrency(shipping)}</span>
-                </li>
-
-                {/* 🆕 優惠輸入 */}
-                <li>
-                  <label htmlFor="coupon">
-                    優惠代碼：
-                    <input
-                      id="coupon"
-                      type="text"
-                      placeholder="請輸入代碼"
-                      value={couponCode}
-                      onChange={(e) => setCouponCode(e.target.value)}
-                    />
-                  </label>
-                </li>
-
-                {/* 🆕 折扣列（僅輸入正確代碼時顯示） */}
-                {discount > 0 && (
-                  <li className="cart_discount">
-                    <span>優惠折抵：</span>
-                    <span>-{formatCurrency(discount)}</span>
-                  </li>
-                )}
-
-                <hr />
-                <li className="cart_total">
-                  <span>合計：</span>
-                  <span className="cart_totalnum">
-                    {formatCurrency(total)}
-                  </span>
-                </li>
-              </ul>
-
-              <button
-                className="cart_btn_checkout"
-                onClick={handleCheckout}
-                disabled={!cartItems.length}
-              >
-                確認結帳
-              </button>
-            </div>
-          </section>
+              </section>
+            </>
+          )}
         </section>
 
         {/* 結帳完成彈窗 */}
@@ -674,6 +995,9 @@ export default function ShoppingCart() {
       <footer className="cart_footer">
         <BgDark />
         <FooterTrn />
+      </footer>
+      <footer className="cart_footer_mobile">
+        <small>2025&nbsp;&copy;&nbsp;Crystalholic&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERVED.</small>
       </footer>
     </>
   );
