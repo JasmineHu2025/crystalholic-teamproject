@@ -418,11 +418,10 @@
     .p_product_crystal_area p,
     .p_product_size,.p_product_hand,
     /* collection */.p_product_price{
-        /* 中文/內文2 */
         font-family: "Noto Sans TC";
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-style: normal;
-        font-weight: 350;
+        font-weight: 400;
         line-height: 150%; /* 21px */
         letter-spacing: 0.088rem;
     }
@@ -460,5 +459,8 @@
         width: 73%;
         flex: 0 0 auto;        /* ✅ 讓卡片不自動壓縮成多欄 */
         scroll-snap-align: start;  /* ✅ 可選：滑動對齊開頭 */
+    }
+    .p_product_buy {
+        gap: 0.5rem;
     }
 }
