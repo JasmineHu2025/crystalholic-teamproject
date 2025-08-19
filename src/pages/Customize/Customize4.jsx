@@ -790,7 +790,9 @@ export default function Customize4() {
 
       <main className={style.index}>
         <div className={style.preload} />
+        {/* 左邊 */}
         <div className={style.boxs}>
+          {/* 手鍊取名區塊 */}
           <div className={style.name}>
             <div className={style.titleName}>
               <p>✦ 幫我取個名吧 ✦</p>
@@ -809,10 +811,12 @@ export default function Customize4() {
           {/* 尺寸設定 */}
           <div className={style.sizeAndBeads}>
             <div className={style.sizeBox}>
+              {/* 標題 */}
               <div className={style["title-size"]}>
                 <p>尺寸設定</p>
               </div>
               <hr className={style.line} />
+              {/* 水晶大小 */}
               <div className={style.crystalSizeBox}>
                 <div className={style.crystalSize}>
                   <p>水晶大小：</p>
@@ -828,7 +832,9 @@ export default function Customize4() {
                     </button>
                   ))}
                 </div>
-              </div><div className={style.ringSizeBox}>
+              </div>
+              {/* 手圍尺寸 */}
+              <div className={style.ringSizeBox}>
                 <div className={style.ringSize}>
                   <p>手圍尺寸：</p>
                 </div>
@@ -847,6 +853,7 @@ export default function Customize4() {
                   <p className={style.sizeValue}>{wristSize}cm</p>
                 </div>
               </div>
+              {/* 手鍊配飾 */}
               <div className={style.ringJewelryBox}>
                 <div className={style.ringJewelry}>
                   <p>手鍊配飾：</p>
@@ -865,19 +872,48 @@ export default function Customize4() {
             </div>
           </div>
 
-
+          {/* 水晶欄 */}
           <div id={style.beadWindow}>
-            <nav className={style.tabs}>
-              {Object.keys(crystalData).map((category) => (
+            {/* 水晶系列分類標籤 */}
+            {/* <nav className={style.tabs}>
+              {Object.keys(crystalData).map((category, index) => (
                 <button
                   key={category}
                   className={`${style.tab} ${selectedCategory === category ? style.active : ""}`}
                   onClick={() => setSelectedCategory(category)}
-                >
+                > */}
+            {/* 第一個<hr />刪除 */}
+            {/* {index !== 0 && <div className={style.tabLine}></div>}
+
                   {category}
                 </button>
               ))}
+            </nav> */}
+
+            {/* test */}
+            <nav className={style.tabs}>
+              {Object.keys(crystalData).map((category, index, array) => {
+                const isSelected = selectedCategory === category;
+                const isNextToSelected =
+                  array[index - 1] === selectedCategory;
+
+                return (
+                  <button
+                    key={category}
+                    className={`${style.tab} ${isSelected ? style.active : ""}`}
+                    onClick={() => setSelectedCategory(category)}
+                  >
+                    {/* 不是第一個，且不是選中的 tab 或其右邊的 tab 才顯示 tabLine */}
+                    {index !== 0 && !isSelected && !isNextToSelected && (
+                      <div className={style.tabLine}></div>
+                    )}
+                    {category}
+                  </button>
+                );
+              })}
             </nav>
+
+            {/* 水晶 */}
             <div className={style.beadGrid}>
               {crystalData[selectedCategory].map((imgSrc, index) => (
                 <img
@@ -892,8 +928,12 @@ export default function Customize4() {
             </div>
           </div>
         </div>
+
+        {/* 中間＆右邊 */}
         <div className={style.boxs3}>
+          {/* 中間 */}
           <div className={style.boxs2}>
+            {/* 手鍊 */}
             <div className={style.bracelet}
               style={{
                 width: `${braceletRadius * 2 * scale}px`,
@@ -953,6 +993,7 @@ export default function Customize4() {
                 <div className={style.btnSave} onClick={handleSaveBracelet}></div>
               </div>
             </div>
+            {/* 價錢區塊 */}
             <div className={style.priceBox}>
               <input
                 className={style.price}
@@ -963,16 +1004,24 @@ export default function Customize4() {
               />
             </div>
           </div>
+
+          {/* 右邊 */}
           <div className={style.align}>
+            {/* 工具欄：小視窗 */}
             <div className={style.iconPanelWrapper}>
 
               {openPanel && (
+                // 小視窗位置
                 <div
                   className={style.panelOverlay}
                 >
+
+                  {/* 小視窗區塊 */}
                   <div
                     className={style.panelContent}
                   >
+
+                    {/* 小視窗關閉鈕 */}
                     <div className={style.closeBtnWrapper}>
                       <button className={style.closeBtn} onClick={() => {
                         setOpenPanel(null);
@@ -980,13 +1029,18 @@ export default function Customize4() {
                       }}>✕</button>
                     </div>
 
-
-
+                    {/* 手圍測量 */}
                     {openPanel === "measure" && (
-                      <div>
+                      <div className={style.panelInner}>
                         <div className={style.panelHeader}>
                           <h2 className={style.panelTitle}>✦ 手圍測量 ✦</h2>
-                          <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                          {/* 裝飾線 */}
+                          <div className={style.decoDividerMobile2}>
+                            <img className={style.dividerLeft} src="images/Custom/deco-divider_purple-left.svg" alt="divider-left" />
+                            <hr />
+                            <img className={style.dividerRight} src="images/Custom/deco-divider_purple-right.svg" alt="divider-right" />
+                          </div>
+                          {/* <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" /> */}
                         </div>
 
                         <div className={style.overlayContent}>
@@ -1035,11 +1089,18 @@ export default function Customize4() {
                       </div>
                     )}
 
+                    {/* 注意事項 */}
                     {openPanel === "note" && (
                       <div className={style.panelInner}>
                         <div className={style.panelHeader}>
                           <h2 className={style.panelTitle}>✦ 注意事項 ✦</h2>
-                          <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                          {/* 裝飾線 */}
+                          <div className={style.decoDividerMobile2}>
+                            <img className={style.dividerLeft} src="images/Custom/deco-divider_purple-left.svg" alt="divider-left" />
+                            <hr />
+                            <img className={style.dividerRight} src="images/Custom/deco-divider_purple-right.svg" alt="divider-right" />
+                          </div>
+                          {/* <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" /> */}
                         </div>
                         <div className={style.overlayContent}>
                           <p>▸ 客製商品需 先付款 才會開始製作，請耐心等待製作時間約 5–7 個工作天。</p>
@@ -1054,11 +1115,18 @@ export default function Customize4() {
                       </div>
                     )}
 
+                    {/* 測驗結果 */}
                     {openPanel === "result" && (
                       <div className={style.panelInner}>
                         <div className={style.panelHeader}>
                           <h2 className={style.panelTitle}>✦ 測驗結果 ✦</h2>
-                          <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                          {/* 裝飾線 */}
+                          <div className={style.decoDividerMobile2}>
+                            <img className={style.dividerLeft} src="images/Custom/deco-divider_purple-left.svg" alt="divider-left" />
+                            <hr />
+                            <img className={style.dividerRight} src="images/Custom/deco-divider_purple-right.svg" alt="divider-right" />
+                          </div>
+                          {/* <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" /> */}
                         </div>
                         <div className={style.overlayContent}>
                           {!lifePathNumber ? (
@@ -1120,11 +1188,18 @@ export default function Customize4() {
                       </div>
                     )}
 
+                    {/* 水晶百科 */}
                     {openPanel === "wiki" && (
                       <div className={style.panelInner}>
                         <div className={style.panelHeader}>
                           <h2 className={style.panelTitle}>✦ 水晶分類 ✦</h2>
-                          <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                          {/* 裝飾線 */}
+                          <div className={style.decoDividerMobile2}>
+                            <img className={style.dividerLeft} src="images/Custom/deco-divider_purple-left.svg" alt="divider-left" />
+                            <hr />
+                            <img className={style.dividerRight} src="images/Custom/deco-divider_purple-right.svg" alt="divider-right" />
+                          </div>
+                          {/* <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" /> */}
                         </div>
                         <div className={style.overlayContent}>
                           {Object.entries(categorizedCrystalInfo).map(([category, crystals]) => (
@@ -1185,11 +1260,19 @@ export default function Customize4() {
                         </div>
                       </div>
                     )}
+
+                    {/* 特別訂製 */}
                     {openPanel === "custom" && (
                       <div className={style.panelInner}>
                         <div className={style.panelHeader}>
                           <h2 className={style.panelTitle}>✦ 特別訂製 ✦</h2>
-                          <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                          {/* 裝飾線 */}
+                          <div className={style.decoDividerMobile2}>
+                            <img className={style.dividerLeft} src="images/Custom/deco-divider_purple-left.svg" alt="divider-left" />
+                            <hr />
+                            <img className={style.dividerRight} src="images/Custom/deco-divider_purple-right.svg" alt="divider-right" />
+                          </div>
+                          {/* <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" /> */}
                         </div>
 
                         <div className={style.overlayContent}>
@@ -1220,9 +1303,10 @@ export default function Customize4() {
                       </div>
                     )}
                   </div>
-
                 </div>
+
               )}
+              {/* 特別訂製彈跳視窗(未填資訊) */}
               {showRequestErrorModal && (
                 <div className={style.modalOverlay}>
                   <div className={style.modalContent}>
@@ -1236,6 +1320,7 @@ export default function Customize4() {
                   </div>
                 </div>
               )}
+              {/* 特別訂製彈跳視窗(已填資訊) */}
               {showRequestModal && (
                 <div className={style.modalOverlay}>
                   <div className={style.modalContent}>
@@ -1244,8 +1329,9 @@ export default function Customize4() {
                   </div>
                 </div>
               )}
-              <div className={style.iconBox2}>
 
+              {/* 工具欄 */}
+              <div className={style.iconBox2}>
                 <div className={style.icon1Box}>
                   <div className={style.icon1} onClick={() => handlePanelClick("measure")}>
                     <div className={`${style.iconBtn1} ${activePanel === "measure" ? style.active : ""}`}></div>
@@ -1279,6 +1365,8 @@ export default function Customize4() {
 
               </div>
             </div>
+
+            {/* 清除彈跳視窗 */}
             {showConfirmModal && (
               <div className={style.modalOverlay}>
                 <div className={style.modalContent}>
@@ -1290,6 +1378,7 @@ export default function Customize4() {
                 </div>
               </div>
             )}
+            {/* 儲存彈跳視窗 */}
             {showCustomModal && (
               <div className={style.modalOverlay}>
                 <div className={style.modalContent}>
@@ -1298,7 +1387,7 @@ export default function Customize4() {
                 </div>
               </div>
             )}
-
+            {/* 購物車按鈕(未製作手鍊)彈跳視窗 */}
             {showIncompleteModal && (
               <div className={style.modalOverlay}>
                 <div className={style.modalContent}>
@@ -1309,10 +1398,14 @@ export default function Customize4() {
             )}
 
 
+            {/* 加入購物車按鈕 */}
             <div
               className={style.icon2}
               onClick={handleAddToCart}
             >
+              <div className={style.btnCart}></div>
+              {/* <img src="./images/Custom/btn_cart.svg" alt="btn_cart" /> */}
+              <p>加購物車</p>
             </div>
           </div>
         </div>
@@ -1320,16 +1413,19 @@ export default function Customize4() {
 
 
 
-
+        {/* 加入購物車彈跳視窗 */}
         {showCartModal && (
           <div className={style.modalOverlay}>
             <div className={style.modalContentLarge}>
+              {/* 標題 */}
               <div className={style.previewtopic}>
                 <h2>✦ 確認客製化手鍊 ✦</h2>
               </div>
 
+              {/* 預覽商品圖片 */}
               <img src={previewImage} alt="手鍊預覽圖" className={style.previewImg} />
 
+              {/* 商品資訊 */}
               <div className={style.infoBox}>
                 <p><strong>名稱 | </strong>{braceletName || '尚未命名'}</p>
                 <p><strong>尺寸 | </strong>手圍 {wristSize}cm   串珠{selectedSize}mm</p>
@@ -1425,15 +1521,18 @@ export default function Customize4() {
               </div>
             </div>
           </div>
-
         )}
 
 
+        {/* 如何設計彈跳視窗 */}
         {showCrystalGuide && (
           <div className={style.crystalGuideOverlay}>
             <div className={style.crystalGuideContent}>
+              {/* 標題 */}
               <h3>✦ 如何設計？ ✦</h3>
               <img className={style.decorLine} src="./images/ShoppingCart/finshed_deco.svg" alt="裝飾線" />
+
+              {/* 內文 */}
               <ul>
                 <li>
                   <p>1. 點選手鍊上的大顆珠珠再點水晶(可多選)</p>
@@ -1448,6 +1547,7 @@ export default function Customize4() {
                 </li>
               </ul>
 
+              {/* 按鈕 */}
               <button
                 className={style.guideCloseBtn}
                 onClick={() => setShowCrystalGuide(false)}
