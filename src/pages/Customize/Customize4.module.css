@@ -178,7 +178,7 @@
 }
 
 .boxs2 {
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem; */
     display: flex;
     align-content: center;
     gap: 1.87rem;
@@ -218,6 +218,9 @@
     flex-flow: column;
     align-items: center;
     width: 80%;
+}
+.nametop {
+    display: none;
 }
 
 .price {
@@ -689,6 +692,9 @@
     border: 1px solid #A67CEB;
     background: rgba(254, 250, 255, 0.60);
     box-shadow: 0 0 10px 0 rgba(233, 166, 160, 0.25);
+}
+.icon2Mobile {
+    display: none;
 }
 .btnCart {
     background-image: url(/images/Custom/btn_cart.svg);
@@ -1290,10 +1296,12 @@
 
     /* 左邊＆中間 */
     .boxs2, .boxs {
-        width: 50%;
+        /* width: 50%; */
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1.25rem;
     }
 
     /* 中間＆右邊 */
@@ -1304,6 +1312,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        margin: 4rem 0;
     }
 
     /* 右邊 */
@@ -1313,20 +1322,13 @@
         align-items: flex-end;
         margin-left: -4.5rem;
         margin-top: -2rem; */
-        display: none;
+        /* display: none; */
     }
 
     /* 工具欄 */
     .iconBox2 {
         order: 1;
         margin-top: -30px;
-    }
-
-    /* 加購物車扭 */
-    .icon2 {
-        /* order: 2;
-        transform: translateX(32px); */
-        display: none;
     }
 
     /* 尺問設定欄 */
@@ -1339,7 +1341,7 @@
         width: 100%;
         max-width: 800px;
     }
-
+    
     /* 尺寸設定欄＆水晶欄 */
     .sizeBox,
     #beadWindow {
@@ -1347,6 +1349,57 @@
         min-width: 280px; */
         padding: 1.25rem 1.75rem;
         height: 100%;
+    }
+    
+    /* 加購物車扭 */
+    .icon2 {
+        /* order: 2;
+        transform: translateX(32px); */
+        display: none;
+    }
+    .icon2Mobile {
+        display: flex;
+        color: #A67CEB;
+        padding: 1rem 5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 999px;
+        border: 1px solid #A67CEB;
+        background: rgba(254, 250, 255, 0.60);
+        box-shadow: 0 0 10px 0 rgba(233, 166, 160, 0.25);
+        margin-top: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+    .btnCart {
+        background-image: url(/images/Custom/btn_cart.svg);
+        background-size: 1.25rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        display: flex;
+    }
+    .icon2Mobile:hover {
+        background: #A67CEB;
+        box-shadow: 0 0 15px 0 rgba(233, 166, 160, 0.25);
+        color: #fff;
+}
+    .icon2Mobile:hover .btnCart {
+        background-image: url(/images/Custom/btn_cart-hover.svg);
+    }
+
+    
+    /* 手鍊取名區塊 */
+    .nametop {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 80%;
+    }
+    .name {
+        display: none;
+    }
+    .inputNameBox {
+        width: 60%;
     }
 
     /* 手鍊 */
@@ -1357,6 +1410,7 @@
     /* 價錢區域 */
     .priceBox {
         order: 3;
+        width: 70%;
     }
 
     /* 工具欄：小視窗 */
@@ -1365,10 +1419,6 @@
         margin-top: 1rem;
     }
 
-    /* 珠子頁籤列 */
-    .name {
-        margin-top: 4rem;
-    }
 
     /* 水晶頁籤 */
     .tabs {
@@ -1435,6 +1485,11 @@
         outline-offset: 0px;
         border-radius: 50%;
         z-index: 10;
+    }
+
+    /* 文字 */
+    .icon2Mobile {
+        letter-spacing: 0.15rem;
     }
 }
 

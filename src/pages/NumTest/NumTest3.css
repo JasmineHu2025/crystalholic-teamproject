@@ -420,7 +420,6 @@
         width: 100%;
         flex-direction: row;
         align-items: flex-start;
-        gap: 5%;
         margin: 7% auto;
     }
 
@@ -441,7 +440,7 @@
 
     .imgp0-box {
         justify-content: center;
-        margin: auto 2%;
+        margin: auto 0;
         width: 100%;
     }
 

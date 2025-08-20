@@ -927,12 +927,37 @@ export default function Customize4() {
               ))}
             </div>
           </div>
+
+          {/* 加入購物車按鈕 */}
+          <div
+            className={style.icon2Mobile}
+            onClick={handleAddToCart}
+          >
+            <div className={style.btnCart}></div>
+            <p>加購物車</p>
+          </div>
         </div>
 
         {/* 中間＆右邊 */}
         <div className={style.boxs3}>
           {/* 中間 */}
           <div className={style.boxs2}>
+            {/* 手鍊取名區塊 */}
+            <div className={style.nametop}>
+              <div className={style.titleName}>
+                <p>✦ 幫我取個名吧 ✦</p>
+              </div>
+              <div className={style.inputNameBox}>
+                <input
+                  type="text"
+                  className={style.inputName}
+                  value={braceletName}
+                  onChange={(e) => setBraceletName(e.target.value)}
+                  placeholder="－請輸入手鍊名稱－"
+                />
+              </div>
+            </div>
+
             {/* 手鍊 */}
             <div className={style.bracelet}
               style={{
