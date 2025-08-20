@@ -1030,6 +1030,7 @@ export default function Customize4() {
             </div>
           </div>
 
+
           {/* 右邊 */}
           <div className={style.align}>
             {/* 工具欄：小視窗 */}
@@ -1433,6 +1434,12 @@ export default function Customize4() {
               <p>加購物車</p>
             </div>
           </div>
+
+          {/* 隱藏按鈕：推薦設計款(手機版) */}
+            <button className={style.buttonMobile}>
+              <p className={style.recommendDesign}>工具列</p>
+              <img src="./images/Numtest/icon-arrow.svg" alt="" />
+            </button>
         </div>
 
 

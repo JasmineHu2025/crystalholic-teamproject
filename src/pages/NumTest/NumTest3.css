@@ -567,9 +567,9 @@
         transform: scale(1.08);
     }
     .bracelet-box-mobile, .button-mobile {
-        background: rgba(255, 255, 255, 0.70);
+        background: rgba(255, 255, 255, 0.8);
         box-shadow: 0 0 11.485px 0 rgba(233, 166, 160, 0.25);
-        backdrop-filter: blur(5.742547035217285px);
+        backdrop-filter: blur(5px);
 
         /* 定位 */
         position:fixed;
