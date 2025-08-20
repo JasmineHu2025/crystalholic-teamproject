@@ -63,18 +63,18 @@
 }
 @keyframes scrollDiamondAnim {
   0% {
-    top: 10px;
+    top: 5%;
     opacity: 0;
   }
   20% {
     opacity: 1;
   }
   80% {
-    top: 40px;
+    top: 40%;
     opacity: 1;
   }
   100% {
-    top: 40px;
+    top: 50%;
     opacity: 0;
   }
 }
@@ -113,9 +113,11 @@ button {
     height: 162.5vh;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .coverbg .bgdark1 {
-    height: 160.5vh;
+    height: 155vh;
+    clip-path: ellipse(160% 100% at 50% 0%);
+    padding-bottom: 50px;
   }
 }
 .coverbg .bgdark2 {
@@ -157,10 +159,10 @@ button {
     top: 380.6vh;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .coverbg .bgdark2 {
-    height: 59.5vh;
-    top: 400.6vh;
+    height: 120vh;
+    top: 420vh;
   }
 }
 
@@ -207,6 +209,12 @@ button {
   align-items: center;
   position: relative;
 }
+@media (max-width:767px) {
+  .cover-stack .first-cover {
+    align-items: start;
+    padding-top: 120px;
+  }
+}
 .cover-stack .first-cover .cover1 {
   position: absolute;
 }
@@ -223,11 +231,11 @@ button {
     top: 47vh;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .cover-stack .first-cover .cover1.deco1 {
     width: 50px;
     left: 15vw;
-    top: 49vh;
+    top: 38vh;
   }
 }
 .cover-stack .first-cover .cover1.deco2 {
@@ -243,11 +251,11 @@ button {
     top: 45vh;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .cover-stack .first-cover .cover1.deco2 {
     width: 30px;
     left: 70vw;
-    top: 43vh;
+    top: 31vh;
   }
 }
 .cover-stack .first-cover .cover1.deco3 {
@@ -263,11 +271,11 @@ button {
     top: 70vh;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .cover-stack .first-cover .cover1.deco3 {
     width: 40px;
     left: 76vw;
-    top: 79vh;
+    top: 68vh;
   }
 }
 .cover-stack .first-cover .home_p1_h2 {
@@ -277,9 +285,11 @@ button {
   grid-template-rows: 1fr;
   column-gap: 60px;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .cover-stack .first-cover .home_p1_h2 {
+    grid-template-rows: auto;
     column-gap: 30px;
+    align-items: start;
   }
 }
 .cover-stack .first-cover .home_p1_h2 .home_p1_title1,
@@ -308,6 +318,11 @@ button {
   justify-content: center;
   align-items: center;
 }
+@media (max-width:767px) {
+  .cover-stack .second-cover {
+    justify-content: flex-start;
+  }
+}
 .cover-stack .second-cover .startbox1 {
   position: relative;
   width: 100%;
@@ -316,9 +331,9 @@ button {
   align-items: center;
   margin-bottom: -60px;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .cover-stack .second-cover .startbox1 {
-    margin-bottom: -34px;
+    margin-bottom: 8px;
   }
 }
 .cover-stack .second-cover .startbox1 .hand-number {
@@ -335,6 +350,21 @@ button {
     width: 85vw;
   }
 }
+@media (max-width:767px) {
+  .cover-stack .second-cover .startbox1 .hand-number {
+    display: none;
+  }
+}
+.cover-stack .second-cover .startbox1 .hand-number-mobile {
+  display: none;
+}
+@media (max-width:767px) {
+  .cover-stack .second-cover .startbox1 .hand-number-mobile {
+    display: flex;
+    width: 76vw;
+    z-index: 1;
+  }
+}
 .cover-stack .second-cover .startbox1 .startbtn {
   position: absolute;
   z-index: 2;
@@ -344,6 +374,11 @@ button {
   pointer-events: auto;
   /* 點擊權 */
   margin-bottom: -25px;
+}
+@media (max-width:767px) {
+  .cover-stack .second-cover .startbox1 .startbtn {
+    margin-bottom: -170px;
+  }
 }
 .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap {
   position: relative;
@@ -359,6 +394,11 @@ button {
 @media (max-width:1025px) {
   .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap {
     width: 20vw;
+  }
+}
+@media (max-width:767px) {
+  .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap {
+    width: 33vw;
   }
 }
 .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap .startbtn_img {
@@ -410,9 +450,9 @@ button {
     padding-top: 0.1rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .cover-stack .second-cover .startbox1 .startbtn .startbtn_title {
-    font-size: 0.75rem;
+    font-size: 1rem;
     letter-spacing: 0.09rem;
   }
 }
@@ -423,6 +463,9 @@ button {
   justify-content: center;
 }
 .cover-stack .second-cover .startbox2 .startbtn_title2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   text-shadow: 0px 0px 10px rgba(233, 166, 160, 0.8);
   /* 中文/霞鶩文楷/標題4 */
@@ -444,9 +487,11 @@ button {
     font-size: 1rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   .cover-stack .second-cover .startbox2 .startbtn_title2 {
-    font-size: 0.75rem;
+    flex-direction: column;
+    font-size: 0.875rem;
+    gap: 4px;
   }
 }
 .cover-stack .second-cover .startbox2 .scroll-indicator {
@@ -455,6 +500,11 @@ button {
   z-index: 1;
   overflow: hidden;
 }
+@media (max-width:767px) {
+  .cover-stack .second-cover .startbox2 .scroll-indicator {
+    height: 50px;
+  }
+}
 .cover-stack .second-cover .startbox2 .scroll-indicator .scroll-line {
   width: 100%;
   height: 100%;
@@ -462,14 +512,17 @@ button {
 }
 .cover-stack .second-cover .startbox2 .scroll-indicator .scroll-diamond {
   position: absolute;
-  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 35px;
-  opacity: 0;
   animation: scrollDiamondAnim 2.4s infinite ease-in-out;
   pointer-events: none;
   z-index: 2;
+}
+@media (max-width:767px) {
+  .cover-stack .second-cover .startbox2 .scroll-indicator .scroll-diamond {
+    width: 25px;
+  }
 }
 
 /*憑直覺抽一張吧*/
@@ -506,7 +559,7 @@ button {
     margin-top: 20%;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-tarotcard #tarotcard-title {
     font-size: 1.25rem;
     gap: 6%;
@@ -518,7 +571,7 @@ button {
 #section-tarotcard #tarotcard-title .dimond-right {
   width: 40px;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-tarotcard #tarotcard-title .dimond-left,
   #section-tarotcard #tarotcard-title .dimond-right {
     width: 9%;
@@ -563,9 +616,46 @@ button {
     padding-left: 4%;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-tarotcard #tarotcard-box {
-    padding-left: 6%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    /* 視實際牌面高度調整 */
+  }
+}
+#section-tarotcard #tarotcard-box .tc-arrow {
+  display: none; /* 桌機／平板隱藏 */
+}
+@media (max-width:767px) {
+  #section-tarotcard #tarotcard-box .tc-arrow {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 2px solid #9d84ff;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
+  }
+  #section-tarotcard #tarotcard-box .tc-arrow.left {
+    left: 6%;
+  }
+  #section-tarotcard #tarotcard-box .tc-arrow.right {
+    right: 6%;
+  }
+  #section-tarotcard #tarotcard-box .tc-arrow img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    pointer-events: none;
   }
 }
 #section-tarotcard #tarotcard-box .Rcard {
@@ -574,6 +664,27 @@ button {
   transform: rotate(-11deg);
   cursor: pointer;
   /* 讓 3D 效果能夠產生 */
+}
+@media (max-width:767px) {
+  #section-tarotcard #tarotcard-box .Rcard {
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s;
+  }
+  #section-tarotcard #tarotcard-box .Rcard:nth-of-type(1) {
+    z-index: 3;
+    transform: translateX(0) scale(1);
+  }
+  #section-tarotcard #tarotcard-box .Rcard:nth-of-type(2) {
+    z-index: 2;
+    transform: translateX(-40%) scale(0.9);
+  }
+  #section-tarotcard #tarotcard-box .Rcard:nth-of-type(3) {
+    z-index: 2;
+    transform: translateX(40%) scale(0.9);
+  }
+  #section-tarotcard #tarotcard-box .Rcard:nth-of-type(n + 4) {
+    display: none;
+  }
 }
 #section-tarotcard #tarotcard-box .card-inner {
   width: 100%;
@@ -620,9 +731,10 @@ button {
     margin-top: 100px;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-tarotcard #tcbtn {
     margin-top: 39px;
+    width: 45%;
   }
 }
 #section-tarotcard #tcbtn #tarotcard-btn {
@@ -646,11 +758,12 @@ button {
   line-height: 150%;
   letter-spacing: 0.1rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-tarotcard #tcbtn #tarotcard-btn {
-    width: 180px;
-    height: 60px;
+    width: 100%;
+    height: 35px;
     font-size: 1rem;
+    border: 1.5px solid #8750BF;
   }
 }
 #section-tarotcard #tcbtn #tarotcard-btn:hover {
@@ -930,7 +1043,7 @@ button {
     width: 100%;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom {
     width: 100%;
   }
@@ -947,7 +1060,7 @@ button {
     gap: 1.5rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custom-title {
     gap: 0.75rem;
   }
@@ -959,7 +1072,7 @@ button {
   align-items: center;
   gap: 1rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custom-title #custom-titlebox {
     flex-direction: column;
     gap: 0.625rem;
@@ -971,7 +1084,7 @@ button {
   align-items: center;
   gap: 1rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custom-title #custom-titlebox .custom-titlebox1 {
     flex-direction: column;
     gap: 0;
@@ -991,7 +1104,7 @@ button {
     font-size: 2rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custom-title #custom-titlebox .custom-titlebox1 .eh {
     font-size: 1.5rem;
   }
@@ -1010,7 +1123,7 @@ button {
     font-size: 2rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custom-title #custom-titlebox .custom-titlebox1 .ch {
     font-size: 1.5rem;
   }
@@ -1024,7 +1137,7 @@ button {
   line-height: 150%;
   letter-spacing: 0.113rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custom-title #custom-titlebox > h3 {
     font-size: 0.875rem;
   }
@@ -1034,7 +1147,7 @@ button {
   width: 9%;
   max-width: 65px;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custom-title .dimond-left,
   #custom .custom-title .dimond-right {
     width: 8%;
@@ -1061,7 +1174,7 @@ button {
   line-height: 150%;
   letter-spacing: 0.1rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #custom .custombtn {
     width: 180px;
     height: 60px;
@@ -1169,7 +1282,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .crystal-display .circlebox .circle .btn-left,
   #section-crystaldiscovery .crystal-display .circlebox .circle .btn-right {
     width: 3rem;
@@ -1190,7 +1303,7 @@ button {
     height: 2.3rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .crystal-display .circlebox .circle .btn-left img,
   #section-crystaldiscovery .crystal-display .circlebox .circle .btn-right img {
     width: 1.5rem;
@@ -1206,7 +1319,7 @@ button {
     left: -4.3rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .crystal-display .circlebox .circle .btn-left {
     left: -3.3rem;
   }
@@ -1220,7 +1333,7 @@ button {
     right: -4.3rem;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .crystal-display .circlebox .circle .btn-right {
     right: -3.3rem;
   }
@@ -1292,7 +1405,7 @@ button {
     margin: 43% auto;
   }
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery {
     margin: 50% auto;
   }
@@ -1322,7 +1435,7 @@ button {
   color: #8750BF;
   text-align: center;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery header .titlediscovery {
     font-size: 1.25rem;
     margin: auto 2%;
@@ -1334,7 +1447,7 @@ button {
   font-style: italic;
   white-space: nowrap;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery header .titlediscovery .en {
     font-size: 1.25rem;
   }
@@ -1372,7 +1485,7 @@ button {
   border: 0.75px solid #8750BF;
   margin: 12px 0;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .crystal-line {
     margin: 6px 0;
   }
@@ -1392,7 +1505,7 @@ button {
   /* 線 */
   /* 內文 */
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .covercrystal {
     flex-direction: column;
     padding: 0.75rem 1.313rem;
@@ -1409,7 +1522,7 @@ button {
   /* 英文字 */
   /* 中文字 */
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .covercrystal .crystal-name {
     flex-direction: row;
     justify-content: flex-start;
@@ -1422,7 +1535,7 @@ button {
   font-weight: 400;
   letter-spacing: 0.125rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .covercrystal .crystal-name .en {
     font-size: 1rem;
     margin-right: 2%;
@@ -1434,7 +1547,7 @@ button {
   font-weight: 400;
   letter-spacing: 0 0.2625rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .covercrystal .crystal-name .ch {
     font-size: 1.125rem;
   }
@@ -1443,7 +1556,7 @@ button {
   border: 0.75px solid #8750BF;
   margin: 4px 16px;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .covercrystal .crystal-line1 {
     margin: 6px 0;
   }
@@ -1458,7 +1571,7 @@ button {
   font-weight: 400;
   color: #8750BF;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .covercrystal .discovery-content p {
     font-size: 0.875rem;
   }
@@ -1482,7 +1595,7 @@ button {
   /* 內文 */
   /* 線 */
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p1 {
     padding: 0.75rem 1.313rem;
     border-radius: 1.5rem;
@@ -1493,7 +1606,7 @@ button {
   font-weight: 500;
   letter-spacing: 0.0625rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p1 h2 {
     font-size: 1.125rem;
   }
@@ -1503,7 +1616,7 @@ button {
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p1 p {
     font-size: 0.875rem;
   }
@@ -1526,7 +1639,7 @@ button {
   /* 標題 */
   /* 線 */
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p2 {
     padding: 0.75rem 1.313rem;
     border-radius: 1.5rem;
@@ -1537,7 +1650,7 @@ button {
   font-weight: 500;
   letter-spacing: 0.0625rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p2 h2 {
     font-size: 1.125rem;
   }
@@ -1547,7 +1660,7 @@ button {
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p2 p {
     font-size: 0.875rem;
   }
@@ -1567,7 +1680,7 @@ button {
   /* 標題 */
   /* 三顆水晶 */
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p3 {
     padding: 0.75rem 1.313rem;
     border-radius: 1.5rem;
@@ -1581,7 +1694,7 @@ button {
   color: #8750BF;
   margin-right: 5%;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p3 h2 {
     font-size: 1rem;
   }
@@ -1596,7 +1709,7 @@ button {
   height: 45px;
   border-radius: 50%;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .discovery-p3 .discovery-imgbox .discovery-img {
     width: 35px;
     height: 35px;
@@ -1660,7 +1773,7 @@ button {
   justify-content: center;
   /* 英文字 */
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-feedback .feedback-displaytitle .fbtitle {
     font-size: 1.5rem;
     width: 36%;
@@ -1671,7 +1784,7 @@ button {
   font-family: "Lora", serif;
   font-style: italic;
 }
-@media (max-width:640px) {
+@media (max-width:767px) {
   #section-feedback .feedback-displaytitle .fbtitle .en {
     font-size: 1.25rem;
   }

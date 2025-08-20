@@ -6,22 +6,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { div } from 'framer-motion/client';
 
-import BgDark from '../../components/BgDark'
+import BgDark from '../../components/BgDark';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
-import '../../App.scss/css/Style.min.css'
-import BackToTopBtn from '../../components/BackToTopBtn'
+import '../../App.scss/css/Style.min.css';
+import BackToTopBtn from '../../components/BackToTopBtn';
 
 /*feedback*/
 const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/1.png" className="member-img" alt="" /></span>
+            <span><img src="./images/HomePage/avatar/1.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/feedback/feedback_6.png" className="review-img" alt="" /></span>
+            <span><img src="./images/HomePage/feedback/feedback_6.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -39,9 +38,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/coffee.png" className="member-img" alt="" /></span>
+            <span><img src="./images/HomePage/avatar/coffee.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/feedback/feedback_2.png" className="review-img" alt="" /></span>
+            <span><img src="./images/HomePage/feedback/feedback_2.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -59,9 +58,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/2.png" className="member-img" alt="" /></span>
+            <span><img src="./images/HomePage/avatar/2.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/feedback/feedback_3.png" className="review-img" alt="" /></span>
+            <span><img src="./images/HomePage/feedback/feedback_3.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -79,9 +78,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/3.png" className="member-img" alt="" /></span>
+            <span><img src="./images/HomePage/avatar/3.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/feedback/feedback_4.png" className="review-img" alt="" /></span>
+            <span><img src="./images/HomePage/feedback/feedback_4.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -99,9 +98,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/p4.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images/HomePage/avatar/p4.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/feedback/feedback_5.png" className="review-img" alt="" /></span>
+            <span><img src="./images/HomePage/feedback/feedback_5.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -119,9 +118,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/woman.png" className="member-img" alt="" /></span>
+            <span><img src="./images/HomePage/avatar/woman.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/feedback/feedback_1.png" className="review-img" alt="" /></span>
+            <span><img src="./images/HomePage/feedback/feedback_1.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -139,9 +138,9 @@ const slides = [
     // <div className="feedback">
     //     <div className="review-pic">
 
-    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
     //     </div>
     //     <div className="feedback-left">
     //         {/* 水晶5星評價 */}
@@ -159,9 +158,9 @@ const slides = [
     // <div className="feedback">
     //     <div className="review-pic">
 
-    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
     //     </div>
     //     <div className="feedback-left">
     //         {/* 水晶5星評價 */}
@@ -179,9 +178,9 @@ const slides = [
     // <div className="feedback">
     //     <div className="review-pic">
 
-    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
     //     </div>
     //     <div className="feedback-left">
     //         {/* 水晶5星評價 */}
@@ -199,9 +198,9 @@ const slides = [
     // <div className="feedback">
     //     <div className="review-pic">
 
-    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
     //     </div>
     //     <div className="feedback-left">
     //         {/* 水晶5星評價 */}
@@ -219,9 +218,9 @@ const slides = [
     // <div className="feedback">
     //     <div className="review-pic">
 
-    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
     //     </div>
     //     <div className="feedback-left">
     //         {/* 水晶5星評價 */}
@@ -239,9 +238,9 @@ const slides = [
     // <div className="feedback">
     //     <div className="review-pic">
 
-    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
     //     </div>
     //     <div className="feedback-left">
     //         {/* 水晶5星評價 */}
@@ -259,9 +258,9 @@ const slides = [
     // <div className="feedback">
     //     <div className="review-pic">
 
-    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
     //     </div>
     //     <div className="feedback-left">
     //         {/* 水晶5星評價 */}
@@ -277,7 +276,6 @@ const slides = [
     //     </div>
     // </div>
 ];
-
 
 export default function Cover() {
     const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -366,9 +364,23 @@ export default function Cover() {
     };
 
     /* -------------- Tarot & Crystal 狀態／邏輯 -------------- */
+    const [carouselStart, setCarouselStart] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [hoveredCard, setHoveredCard] = useState(null);
     const [selectedCardIndex, setSelectedCardIndex] = useState(null);
+
+    const prevCard = () => {
+        setCarouselStart((prev) =>
+            (prev - 1 + tarotDescriptions.length) % tarotDescriptions.length
+        );
+    };
+
+    const nextCard = () => {
+        setCarouselStart((prev) =>
+            (prev + 1) % tarotDescriptions.length
+        );
+    };
+
     const tarotDescriptions = [
         <div className="lbcontent">
             <h2 className="lbh2">沁藍之澗</h2>
@@ -547,6 +559,7 @@ export default function Cover() {
                                 <div className="startbox1">
                                     {/* 手、數字 */}
                                     <img className="hand-number" src="./images/HomePage/hand-number.png" alt="手與生命靈數" />
+                                    <img className="hand-number-mobile" src="./images/HomePage/hand-number-mobile.png" alt="手與生命靈數" />
                                     {/* 鑽石、開始測驗 */}
                                     <div className="startbtn">
                                         <Link to="Numtest1">
@@ -574,7 +587,10 @@ export default function Cover() {
                                 </div>
 
                                 <div className="startbox2">
-                                    <h4 className="startbtn_title2">讓水晶傾聽心聲，編織你獨一無二的手鍊。</h4>
+                                    <div className="startbtn_title2">
+                                        <h4>讓水晶傾聽心聲，</h4>
+                                        <h4>編織你獨一無二的手鍊。</h4>
+                                    </div>
 
                                     <div className="scroll-indicator">
                                         <img className="scroll-line" src="./images/HomePage/scroll-line.png" alt="往下滾動" />
@@ -599,7 +615,10 @@ export default function Cover() {
                     </div>
                     {/* 塔羅牌 */}
                     <div id="tarotcard-box">
-                        {tarotDescriptions.map((desc, index) => (
+                        <button className="tc-arrow left" onClick={prevCard}>
+                            <img src="./images/S-Btn/btnup.png" alt="上一張" />
+                        </button>
+                        {/* {tarotDescriptions.map((desc, index) => (
                             <div key={index} className="Rcard">
                                 <div className="card-inner">
                                     <div className="card-front">
@@ -620,7 +639,39 @@ export default function Cover() {
                                     </div>
                                 </div>
                             </div>
-                        ))}
+                        ))} */}
+
+                        {tarotDescriptions.map((desc, index) => {
+                            // 依 carouselStart 重新計算「真正要拿哪一張」的索引
+                            const realIndex = (index + carouselStart) % tarotDescriptions.length;
+
+                            return (
+                                <div key={index} className="Rcard">
+                                    <div className="card-inner">
+                                        <div className="card-front">
+                                            <img
+                                                src="./images/HomePage/tarot-back.png"
+                                                className={index === 0 ? 'trcardchild-1' : 'trcard'}
+                                                alt={`tarot card ${realIndex + 1}`}
+                                                onClick={() => handleCardClick(realIndex)}
+                                            />
+                                        </div>
+                                        <div className="card-back">
+                                            <img
+                                                src={tarotBackImages[realIndex]}
+                                                className={index === 0 ? 'trcardchild-1' : 'trcard'}
+                                                alt={`tarot card ${realIndex + 1}`}
+                                                onClick={() => handleCardClick(realIndex)}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+
+                        <button className="tc-arrow right" onClick={nextCard}>
+                            <img src="./images/S-Btn/btndown.png" alt="下一張" />
+                        </button>
                     </div>
                     {/* 按鈕 */}
                     <div id='tcbtn'>
@@ -777,7 +828,7 @@ export default function Cover() {
                         </div>
                     </div>
                 </section>
-                <BackToTopBtn />
+                {/* <BackToTopBtn /> */}
             </main>
 
             <footer className="home_footer">
@@ -786,9 +837,6 @@ export default function Cover() {
         </>
     )
 }
-
-
-
 
 /*水晶小百科*/
 function renderCrystalContent(id) {
@@ -1040,14 +1088,14 @@ function renderCrystalContent(id) {
             </article>
             <article className="discovery-p1">
                 <h2>主要功效</h2>
-                <hr className="crystal-line"/>
+                <hr className="crystal-line" />
                 <p className="discovery-p1content">
                     {crystal.benefits.map((item, idx) => <span key={idx}>{item}<br /></span>)}
                 </p>
             </article>
             <article className="discovery-p2">
                 <h2>適合人群</h2>
-                <hr className="crystal-line"/>
+                <hr className="crystal-line" />
                 <p className="discovery-p2content">
                     {crystal.people.map((item, idx) => <span key={idx}>{item}<br /></span>)}
                 </p>
@@ -1067,6 +1115,7 @@ function renderCrystalContent(id) {
         </>
     );
 }
+
 
 
 {/* jquery CDN 要先執行 */ }

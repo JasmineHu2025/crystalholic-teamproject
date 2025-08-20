@@ -55,7 +55,9 @@ button {
         }
 
         @media ($media-sm) {
-            height: 160.5vh;
+            height: 155vh;
+            clip-path: ellipse(160% 100% at 50% 0%);
+            padding-bottom: 50px;
         }
     }
 
@@ -102,8 +104,8 @@ button {
         }
 
         @media ($media-sm) {
-            height: 59.5vh;
-            top: 400.6vh;
+            height: 120vh;
+            top: 420vh;
         }
 
 
@@ -175,6 +177,11 @@ button {
         align-items: center;
         position: relative;
 
+        @media ($media-sm) {
+            align-items: start;
+            padding-top: 120px;
+        }
+
         // 鑽石位置
         .cover1 {
             position: absolute;
@@ -194,7 +201,8 @@ button {
                 @media ($media-sm) {
                     width: 50px;
                     left: 15vw;
-                    top: 49vh;
+                    // top: 49vh;
+                    top: 38vh;
                 }
             }
 
@@ -213,7 +221,8 @@ button {
                 @media ($media-sm) {
                     width: 30px;
                     left: 70vw;
-                    top: 43vh;
+                    // top: 43vh;
+                    top: 31vh;
                 }
             }
 
@@ -232,7 +241,8 @@ button {
                 @media ($media-sm) {
                     width: 40px;
                     left: 76vw;
-                    top: 79vh;
+                    // top: 79vh;
+                    top: 68vh;
                 }
             }
         }
@@ -246,7 +256,9 @@ button {
             column-gap: 60px;
 
             @media ($media-sm) {
+                grid-template-rows: auto;
                 column-gap: 30px;
+                align-items: start;
             }
 
             .home_p1_title1,
@@ -282,6 +294,10 @@ button {
         justify-content: center;
         align-items: center;
 
+        @media ($media-sm) {
+            justify-content: flex-start;
+        }
+
         .startbox1 {
             position: relative;
             width: 100%;
@@ -292,7 +308,7 @@ button {
             margin-bottom: -60px;
 
             @media ($media-sm) {
-                margin-bottom: -34px;
+                margin-bottom: 8px;
             }
 
             .hand-number {
@@ -305,6 +321,20 @@ button {
 
                 @media ($media-lg) {
                     width: 85vw;
+                }
+
+                @media ($media-sm) {
+                    display: none;
+                }
+            }
+
+            .hand-number-mobile {
+                display: none;
+
+                @media ($media-sm) {
+                    display: flex;
+                    width: 76vw;
+                    z-index: 1;
                 }
             }
 
@@ -319,6 +349,10 @@ button {
                 /* 點擊權 */
                 margin-bottom: -25px;
 
+                @media ($media-sm) {
+                    margin-bottom: -170px;
+                }
+
                 // 外層包裝圖片和 glow 的容器
                 .startbtn_imgwrap {
                     position: relative;
@@ -332,6 +366,10 @@ button {
 
                     @media ($media-lg) {
                         width: 20vw;
+                    }
+
+                    @media ($media-sm) {
+                        width: 33vw;
                     }
 
                     // 鑽石圖片
@@ -392,7 +430,7 @@ button {
                     }
 
                     @media ($media-sm) {
-                        font-size: 0.75rem;
+                        font-size: 1rem;
                         letter-spacing: 0.09rem;
                     }
 
@@ -407,6 +445,9 @@ button {
             justify-content: center;
 
             .startbtn_title2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: #fff;
                 text-shadow: 0px 0px 10px rgba(233, 166, 160, 0.80);
 
@@ -429,8 +470,9 @@ button {
                 }
 
                 @media ($media-sm) {
-                    font-size: 0.75rem;
-
+                    flex-direction: column;
+                    font-size: 0.875rem;
+                    gap: 4px;
                 }
             }
 
@@ -440,6 +482,10 @@ button {
                 z-index: 1;
                 overflow: hidden;
 
+                @media ($media-sm) {
+                    height: 50px;
+                }
+
                 .scroll-line {
                     width: 100%;
                     height: 100%;
@@ -448,14 +494,16 @@ button {
 
                 .scroll-diamond {
                     position: absolute;
-                    top: 10px;
                     left: 50%;
                     transform: translateX(-50%);
                     width: 35px;
-                    opacity: 0;
                     animation: scrollDiamondAnim 2.4s infinite ease-in-out;
                     pointer-events: none;
                     z-index: 2;
+
+                    @media ($media-sm) {
+                        width: 25px;
+                    }
                 }
             }
         }
@@ -587,9 +635,49 @@ button {
         }
 
         @media ($media-sm) {
-            padding-left: 6%;
+            // padding-left: 6%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 280px;
+            /* 視實際牌面高度調整 */
         }
 
+        .tc-arrow {
+            display: none;  /* 桌機／平板隱藏 */
+
+            @media ($media-sm) {
+                display: flex; 
+                position: absolute;
+                top: 50%;
+                width: 64px;
+                height: 64px;
+                padding: 0;
+                border: 2px solid #9d84ff;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, .15);
+                backdrop-filter: blur(4px);
+                transform: translateY(-50%);
+                justify-content: center;
+                align-items: center;
+
+                &.left {
+                    left: 6%;
+                }
+
+                &.right {
+                    right: 6%;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    object-fit: contain;
+                    pointer-events: none;
+                }
+            }
+        }
 
         /*旋轉效果用*/
         .Rcard {
@@ -607,6 +695,33 @@ button {
             //     width: 21%;
 
             // }
+            @media ($media-sm) {
+                position: absolute;
+                transition: transform .3s ease, opacity .3s;
+
+                &:nth-of-type(1) {
+                    // 中間那張
+                    z-index: 3;
+                    transform: translateX(0) scale(1);
+                }
+
+                &:nth-of-type(2) {
+                    // 左後方
+                    z-index: 2;
+                    transform: translateX(-40%) scale(.9);
+                }
+
+                &:nth-of-type(3) {
+                    // 右後方
+                    z-index: 2;
+                    transform: translateX(40%) scale(.9);
+                }
+
+                &:nth-of-type(n + 4) {
+                    // 第 4 張之後隱藏
+                    display: none;
+                }
+            }
         }
 
         .card-inner {
@@ -719,21 +834,9 @@ button {
     }
 
     #tcbtn {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         z-index: 2;
         margin-top: 60px;
 
-        // @media ($media-xlg-h) {
-        //     // air 橫向
-        //     margin-top: 35%;
-        // }
-
-        // @media ($media-xlg-h-pro) {
-        //     //pro 橫向
-        //     margin-top: 42%;
-        // }
         @media ($media-xxlg) {
             margin-top: 8px;
         }
@@ -743,13 +846,9 @@ button {
             margin-top: 100px;
         }
 
-        // @media ($media-lg-h) {
-        //     //mini 橫
-        //     margin-top: 25%;
-        // }
-
         @media ($media-sm) {
             margin-top: 39px;
+            width: 45%;
         }
 
         #tarotcard-btn {
@@ -779,10 +878,10 @@ button {
             letter-spacing: 0.1rem;
 
             @media ($media-sm) {
-                width: 180px;
-                height: 60px;
+                width: 100%;
+                height: 35px;
                 font-size: 1rem;
-
+                border: 1.5px solid #8750BF;
             }
 
             &:hover {
