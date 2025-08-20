@@ -421,13 +421,15 @@
         flex-direction: row;
         align-items: flex-start;
         margin: 7% auto;
+        gap: 1rem;
     }
 
     .box-numtest3 {
         height: 100%;
         gap: 1rem;
-        width: 85%;
+        width: 75%;
         align-items: flex-end;
+        padding: 0;
     }
 
     #hashtag-box2 {
