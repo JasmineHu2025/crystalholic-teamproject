@@ -115,7 +115,7 @@ button {
 }
 @media (max-width:767px) {
   .coverbg .bgdark1 {
-    height: 140vh;
+    height: 135vh;
     clip-path: ellipse(160% 100% at 50% 0%);
     padding-bottom: 50px;
   }
@@ -539,7 +539,7 @@ button {
 }
 @media (max-width:767px) {
   #section-tarotcard {
-    height: 75vh;
+    height: 60vh;
   }
 }
 #section-tarotcard #tarotcard-title {
@@ -717,7 +717,7 @@ button {
 @media (max-width:767px) {
   #section-tarotcard #tcbtn #tarotcard-btn {
     width: 170px;
-    height: 35px;
+    height: 40px;
     font-size: 1rem;
     border: 1px solid #8750BF;
   }
@@ -1124,7 +1124,7 @@ button {
 @media (max-width:767px) {
   #custom .custombtn {
     width: 170px;
-    height: 35px;
+    height: 40px;
     font-size: 1rem;
   }
 }
