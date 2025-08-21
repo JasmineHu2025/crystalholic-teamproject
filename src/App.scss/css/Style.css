@@ -115,7 +115,7 @@ button {
 }
 @media (max-width:767px) {
   .coverbg .bgdark1 {
-    height: 150vh;
+    height: 140vh;
     clip-path: ellipse(160% 100% at 50% 0%);
     padding-bottom: 50px;
   }
@@ -398,7 +398,7 @@ button {
 }
 @media (max-width:767px) {
   .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap {
-    width: 33vw;
+    width: 40vw;
   }
 }
 .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap .startbtn_img {
@@ -452,7 +452,7 @@ button {
 }
 @media (max-width:767px) {
   .cover-stack .second-cover .startbox1 .startbtn .startbtn_title {
-    font-size: 1rem;
+    font-size: 1.125rem;
     letter-spacing: 0.09rem;
   }
 }
@@ -490,7 +490,7 @@ button {
 @media (max-width:767px) {
   .cover-stack .second-cover .startbox2 .startbtn_title2 {
     flex-direction: column;
-    font-size: 0.875rem;
+    font-size: 1rem;
     gap: 4px;
   }
 }
@@ -569,7 +569,7 @@ button {
     font-size: 1.25rem;
     gap: 6%;
     margin-bottom: 9%;
-    margin-top: 30%;
+    margin-top: 0;
   }
 }
 #section-tarotcard #tarotcard-title .dimond-left,
