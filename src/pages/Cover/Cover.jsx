@@ -314,7 +314,6 @@ export default function Cover() {
         });
     }, []);
 
-
     /* 封面 1 & 2 動畫狀態 */
     const [pageIndex, setPageIndex] = useState(0); // 0: 第一頁, 1: 第二頁
     const [hideFirstCover, setHideFirstCover] = useState(false);   // 淡出第一段封面
@@ -363,24 +362,10 @@ export default function Cover() {
         }
     };
 
-    /* -------------- Tarot & Crystal 狀態／邏輯 -------------- */
-    const [carouselStart, setCarouselStart] = useState(0);
+ /* -------------- Tarot & Crystal 狀態／邏輯 -------------- */
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [hoveredCard, setHoveredCard] = useState(null);
     const [selectedCardIndex, setSelectedCardIndex] = useState(null);
-
-    const prevCard = () => {
-        setCarouselStart((prev) =>
-            (prev - 1 + tarotDescriptions.length) % tarotDescriptions.length
-        );
-    };
-
-    const nextCard = () => {
-        setCarouselStart((prev) =>
-            (prev + 1) % tarotDescriptions.length
-        );
-    };
-
     const tarotDescriptions = [
         <div className="lbcontent">
             <h2 className="lbh2">沁藍之澗</h2>
@@ -505,7 +490,7 @@ export default function Cover() {
     const currentCrystal = crystals[0];
 
     const [isHoveredOrClicked, setIsHoveredOrClicked] = useState(false);
-
+    
     return (
         <>
             {/* menu bar*/}
@@ -604,7 +589,6 @@ export default function Cover() {
                     </AnimatePresence>
                 </div>
 
-
                 {/* 憑直覺抽一張吧 */}
                 <section id="section-tarotcard">
                     {/* title */}
@@ -615,41 +599,28 @@ export default function Cover() {
                     </div>
                     {/* 塔羅牌 */}
                     <div id="tarotcard-box">
-                        <button className="tc-arrow left" onClick={prevCard}>
-                            <img src="./images/S-Btn/btnup.png" alt="上一張" />
-                        </button>
-
-                        {tarotDescriptions.map((desc, index) => {
-                            // 依 carouselStart 重新計算「真正要拿哪一張」的索引
-                            const realIndex = (index + carouselStart) % tarotDescriptions.length;
-
-                            return (
-                                <div key={index} className="Rcard">
-                                    <div className="card-inner">
-                                        <div className="card-front">
-                                            <img
-                                                src="./images/HomePage/tarot-back.png"
-                                                className={index === 0 ? 'trcardchild-1' : 'trcard'}
-                                                alt={`tarot card ${realIndex + 1}`}
-                                                onClick={() => handleCardClick(realIndex)}
-                                            />
-                                        </div>
-                                        <div className="card-back">
-                                            <img
-                                                src={tarotBackImages[realIndex]}
-                                                className={index === 0 ? 'trcardchild-1' : 'trcard'}
-                                                alt={`tarot card ${realIndex + 1}`}
-                                                onClick={() => handleCardClick(realIndex)}
-                                            />
-                                        </div>
+                        {tarotDescriptions.map((desc, index) => (
+                            <div key={index} className="Rcard">
+                                <div className="card-inner">
+                                    <div className="card-front">
+                                        <img
+                                            src="./images/HomePage/tarot-back.png"
+                                            className={index === 0 ? 'trcardchild-1' : 'trcard'}
+                                            alt={`tarot card ${index + 1}`}
+                                            onClick={() => handleCardClick(index)}
+                                        />
+                                    </div>
+                                    <div className="card-back">
+                                        <img
+                                            src={tarotBackImages[index]}
+                                            className={index === 0 ? 'trcardchild-1' : 'trcard'}
+                                            alt={`tarot card ${index + 1}`}
+                                            onClick={() => handleCardClick(index)}
+                                        />
                                     </div>
                                 </div>
-                            );
-                        })}
-
-                        <button className="tc-arrow right" onClick={nextCard}>
-                            <img src="./images/S-Btn/btndown.png" alt="下一張" />
-                        </button>
+                            </div>
+                        ))}
                     </div>
                     {/* 按鈕 */}
                     <div id='tcbtn'>
