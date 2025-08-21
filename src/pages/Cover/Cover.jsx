@@ -618,28 +618,6 @@ export default function Cover() {
                         <button className="tc-arrow left" onClick={prevCard}>
                             <img src="./images/S-Btn/btnup.png" alt="上一張" />
                         </button>
-                        {/* {tarotDescriptions.map((desc, index) => (
-                            <div key={index} className="Rcard">
-                                <div className="card-inner">
-                                    <div className="card-front">
-                                        <img
-                                            src="./images/HomePage/tarot-back.png"
-                                            className={index === 0 ? 'trcardchild-1' : 'trcard'}
-                                            alt={`tarot card ${index + 1}`}
-                                            onClick={() => handleCardClick(index)}
-                                        />
-                                    </div>
-                                    <div className="card-back">
-                                        <img
-                                            src={tarotBackImages[index]}
-                                            className={index === 0 ? 'trcardchild-1' : 'trcard'}
-                                            alt={`tarot card ${index + 1}`}
-                                            onClick={() => handleCardClick(index)}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        ))} */}
 
                         {tarotDescriptions.map((desc, index) => {
                             // 依 carouselStart 重新計算「真正要拿哪一張」的索引
@@ -1115,6 +1093,8 @@ function renderCrystalContent(id) {
         </>
     );
 }
+
+
 
 
 

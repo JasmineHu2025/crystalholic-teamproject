@@ -633,15 +633,6 @@ button {
   #section-tarotcard #tarotcard-box .tc-arrow {
     display: flex;
     position: absolute;
-    top: 50%;
-    width: 64px;
-    height: 64px;
-    padding: 0;
-    border: 2px solid #9d84ff;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(4px);
-    transform: translateY(-50%);
     justify-content: center;
     align-items: center;
   }
@@ -652,10 +643,11 @@ button {
     right: 6%;
   }
   #section-tarotcard #tarotcard-box .tc-arrow img {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: auto;
     object-fit: contain;
     pointer-events: none;
+    transform: rotate(90deg);
   }
 }
 #section-tarotcard #tarotcard-box .Rcard {
