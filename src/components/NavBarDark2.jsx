@@ -138,7 +138,9 @@ export default function NavBarDark() {
                   console.log('✅ 漢堡選單點到了');
                   openMenu();
                 }}
-              ></button>
+              >
+                <img src="./images/S-NavBar/navicon_bgrbtn.svg" alt="menu" />
+              </button>
             </li>
           </ul>
         </nav>

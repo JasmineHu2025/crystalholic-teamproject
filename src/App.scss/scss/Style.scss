@@ -140,6 +140,11 @@ button {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+
+    // 手機版直接跳到塔羅頁面
+    @media ($media-sm) {
+        scroll-snap-type: y mandatory;
+    }
 }
 
 /* ---------- 疊放容器：兩段封面重疊在同一畫面 ---------- */
@@ -529,15 +534,15 @@ button {
     position: sticky;
     z-index: 2;
 
+    @media ($media-lg-up) {
+        scroll-snap-align: start; // 直接跳到塔羅頁面
+    }
+
     @media ($media-sm) {
         height: 60vh;
     }
 
     #tarotcard-title {
-        // border: 2px yellow solid;
-        //width: 27.5%; // 344px;
-        //margin-top: 1%;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -557,26 +562,9 @@ button {
         line-height: 150%;
         letter-spacing: 0.15rem;
 
-
-        // @media ($media-xlg-h) {
-        //     //pro/ air 橫向
-        //     width: 28.5%;
-        //     margin-top: 4%;
-        //     margin-bottom: 9%;
-
-        // }
-
         @media ($media-lg) {
-            //pro / air / mini 直向
             margin-top: 20%;
-            // margin-bottom: 6%;
         }
-
-        // @media ($media-lg-h) {
-        //     //mini 橫
-        //     width: 33%;
-        //     margin-bottom: 9%;
-        // }
 
         @media ($media-sm) {
             font-size: 1.25rem;
@@ -596,67 +584,33 @@ button {
     }
 
     #tarotcard-box {
-        // border: #68e221 10px solid;
-        // width: 1279;
-        // height: 427px;
-        // border: 1px solid white; 
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 51%;
+        // height: 51%;
+        height: auto;
         padding-left: 4%;
-        // margin-bottom: 4.2%;
-
-        @media ($media-xxlg) {
-            margin-bottom: 7%;
-        }
-
-        @media ($media-xlg-h-pro) {
-            // pro 橫向
-            height: 36%;
-        }
-
-        @media ($media-xlg-h) {
-            //pro / air 橫
-            height: 39%;
-        }
-
-        @media ($media-lg) {
-            //pro 直向
-            height: 20%;
-        }
-
-        @media ($media-lg-h) {
-            //mini橫向
-            height: 37%;
-        }
-
-        @media ($media-md) {
-            //air / mini 直向
-            padding-left: 4%;
-        }
+        overflow: visible;
 
         @media ($media-sm) {
-            padding-left: 7%;
+            padding-left: 6%;
         }
-
 
         /*旋轉效果用*/
         .Rcard {
             // border: #2fcf3d 2px solid;
             width: 19%;
-            // height: 100%;
+            height: auto;
+            aspect-ratio: 50 / 81;
+            max-width: 400px;
             margin-left: -5%;
 
             transform: rotate(-11deg);
             cursor: pointer;
-            // perspective: 1000px;
+            perspective: 1000px;
             /* 讓 3D 效果能夠產生 */
 
-            // @media ($media-lg) {
-            //     width: 21%;
-
-            // }
             @media ($media-sm) {
                 width: 27%;
             }
@@ -671,7 +625,7 @@ button {
         .card-inner {
             // border: #cf2f2f 2px solid;
             width: 100%;
-            // height: 0%;
+            height: auto;
             position: relative;
             transition: transform 0.8s;
             transform-style: preserve-3d;
@@ -692,124 +646,26 @@ button {
         .card-back {
             position: absolute;
             width: 100%;
-            // height: 100%;
+            height: auto;
             backface-visibility: hidden;
             border-radius: 0.75rem;
             overflow: hidden;
             // box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
         }
 
-        // .card-front img,
-        // .card-back img {
-        //     width: 100%;
-        //     height: 100%;
-        //     // object-fit: cover;
-        // }
-
         .card-back {
             transform: rotateY(180deg);
             /* 背面也要轉 180 度，對齊正面翻轉後的角度 */
         }
 
-        /*最原始沒有翻牌效果*/
-        .trcardchild-1 {
-            width: 100%;
-            // height: 455px;
-            margin-left: 0;
-
-            // /*hover發亮*/
-            // &:hover {
-            //     filter: drop-shadow(0px 0px 22px #FFF);
-            // }
-
-            // @media ($media-xlg-h) {
-            //     width: 100%;
-            // }
-
-
-            // @media ($media-lg) {
-            //     width: 100%;
-            //     // height: 455px;
-            // }
-
-            // @media ($media-md) {
-            //     width: 100%;
-            //     // height: 455px;
-            // }
-
-            // @media ($media-sm) {
-            //     width: 100%;
-            //     // height: 455px;
-            // }
-        }
-
         .trcard {
             width: 100%;
-            // height: 455px;
-            // margin-left: -8%;
-
-            /*hover發亮*/
-            // &:hover {
-            //     filter: drop-shadow(0px 0px 22px #FFF);
-            // }
-
-            // @media ($media-xlg-h) {
-            //     width: 100%;
-            // }
-
-            // @media ($media-lg) {
-            //     width: 100%;
-            //     // height: 455px;
-            // }
-
-            // @media ($media-md) {
-            //     //ipad mini 1024*768 抓不到
-            //     width: 100%;
-            //     // height: 455px;
-            // }
-
-            // @media ($media-sm) {
-            //     width: 190px;
-            //     height: 455px;
-            // }
-
+            height: auto;
         }
-
     }
 
     #tcbtn {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        z-index: 2;
-        margin-top: 60px;
-
-        // @media ($media-xlg-h) {
-        //     // air 橫向
-        //     margin-top: 35%;
-        // }
-
-        // @media ($media-xlg-h-pro) {
-        //     //pro 橫向
-        //     margin-top: 42%;
-        // }
-        @media ($media-xxlg) {
-            margin-top: 8px;
-        }
-
-        @media ($media-lg) {
-            //pro /air /mini 直
-            margin-top: 100px;
-        }
-
-        // @media ($media-lg-h) {
-        //     //mini 橫
-        //     margin-top: 25%;
-        // }
-
-        @media ($media-sm) {
-            margin-top: 35px;
-        }
+        margin-top: 6vh;
 
         #tarotcard-btn {
             width: 280px;
@@ -864,8 +720,12 @@ button {
 
     /* 卡片 */
     .lightbox-content {
+        max-width: 1000px;
+        // min-width: 850px;
+        aspect-ratio: 17 / 11;
         width: 59%;
-        height: 69%;
+        height: auto;
+        padding: 12.5px;
 
         border-radius: 2.5rem;
         background-color: rgba(66, 53, 75, 0.8);
@@ -876,35 +736,19 @@ button {
         align-items: center;
         position: relative;
 
-        padding: 12.5px;
+        @media ($media-xlg-up) {
+            width: 80%;
+        }
 
-        // @media ($media-xlg-h) {
-        //     //ipad air/pro 橫向
-        //     width: 69.25%;
-        //     height: 69.12%;
-        // }
+        @media ($media-md) {
+            width: 90%;
+        }
 
-        // @media ($media-lg) {
-        //     //要留
-        //     width: 86.125%; //825px;
-        //     height: 48.25%; //525px;
-        // }
-
-        // @media ($media-lg-h) {
-        //     //ipad mini橫向
-        //     width: 85.125%; //825px;
-        //     height: 64.25%; //525px;
-        // }
-
-        // @media ($media-md-up) {
-        //     width: 86.125%; //825px;
-        //     height: 48.25%; //525px;
-        // }
-
-        // @media ($media-sm) {
-        //     width: 59%;
-        //     height: 69%;
-        // }
+        @media ($media-sm) {
+            height: 100%;
+            width: 100%;
+            border-radius: 0;
+        }
 
         /* 外框線 */
         .lbborder1 {
@@ -913,13 +757,6 @@ button {
             padding: 7.5px;
             border-radius: 1.875rem;
             border: 0.75px solid rgba(227, 210, 255, 0.50);
-            // width: 59.25%; //850px
-            // height: 69.12%; //550px
-            // border-radius: 1.875rem; //30px;
-            // margin: 0.781rem; //12.5px;
-
-            // width: 97.125%; //825px;
-            // height: 95.5%; //525px;
 
             display: flex;
             justify-content: center;
@@ -927,88 +764,68 @@ button {
 
             /* 內框線 */
             .lbborder2 {
-                // width: 98.125%; 
-                // height: 97.25%; 
                 width: 100%;
                 height: 100%;
                 border-radius: 1.563rem;
                 border: 2px solid rgba(227, 210, 255, 0.50);
-                // margin: 7.5px;
 
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: relative;
 
-                // @media ($media-xxlg) {
-                //     //1920
-                //     width: 98%; //825px;
-                //     height: 97%; //525px;
-                //     margin: 11px;
-                // }
+                padding: 4%;
+                gap: 2.8vw;
 
-                // @media ($media-xxlg-up-h) {
-                //     //1680
-                //     width: 98%; //825px;
-                //     height: 97.5%; //525px;
-                //     margin: 9px;
-                // }
-
-                // @media ($media-xlg-h) {
-                //     //ipad air/pro 橫向
-                //     height: 97.6%;
-                // }
+                @media ($media-sm) {
+                    flex-direction: column;
+                }
 
                 /* 關閉按鈕 */
                 .lightbox-close {
                     position: absolute;
-                    top: 0.5rem;
-                    right: 1.5rem;
+                    width: 48px;
+                    height: 48px;
+                    top: 20px;
+                    right: 20px;
 
-                    font-family: "Noto Sans TC";
-                    font-size: 2.5rem;
-                    font-weight: 100;
+                    background-image: url(/images/S-Btn/btn_close.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: transparent;
 
-                    background: transparent;
-                    border: none;
-                    color: #fff;
                     cursor: pointer;
 
                     &:hover {
-                        color: #e3d2ff;
+                        background-image: url(/images/S-Btn/btn_close_hover.svg);
+                    }
+
+                    @media ($media-sm) {
+                        width: 30px;
+                        height: 30px;
+                        top: 15px;
+                        right: 15px;
                     }
                 }
 
                 /* 商品卡片 */
                 .lbimg {
-                    width: 45%;
-                    margin: 0 0 0 4%;
-
-                    @media ($media-xxlg) {
-                        //1920
-                        width: 38%;
-                        margin: 0 0 0 7%;
-                    }
-
-                    @media ($media-lg-h) {
-                        //ipad mini橫向
-                        width: 40%;
-                        margin: 0 0 0 7%;
-                    }
-
-                    @media ($media-md-up) {
-                        width: 49%;
-                    }
+                    height: 100%;
 
                     .trimg {
-                        width: 100%;
+                        width: auto;
                         height: 100%;
+                    }
+
+                    @media ($media-sm) {
+                        height: 45%;
                     }
                 }
 
                 /* 商品名稱、介紹文字區 */
                 .lightbox-text {
-                    // width: 80%;
+                    height: 100%;
 
                     /* 商品名稱、介紹文字區(第二層) */
                     .lbcontent {
@@ -1016,131 +833,106 @@ button {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        // margin: 20%;
-                        // width: 77%; 
-                        // height: 350px;
-                        // margin-left: 80px; //18%
-                        // margin-right: 5px;
-                        margin-left: 11%;
+                        height: 100%;
+                        gap: 5vh;
 
-                        @media ($media-xlg-h) {
-                            width: 83%;
-                            margin-left: 8%;
+                        @media ($media-sm) {
+                            gap: 3vh;
                         }
 
-                        @media ($media-lg-h) {
-                            //ipad mini橫向
-                            width: 73%;
-                        }
-
-                        h2,
-                        p,
-                        .lbbtn {
-                            // text-align: center;
-                            // font-size: 1rem;
-
-                            @media ($media-lg) {
-                                font-size: 1rem;
-                            }
-
-                            @media ($media-md-up) {
-                                font-size: 0.875rem;
-                            }
-
-                        }
-
-                        /* 商品名稱 */
-                        .lbh2 {
-                            //RWD字大小要改
-
-                            /* 中文/霞鶩文楷/標題3 */
-                            font-family: "LXGW WenKai Mono TC";
-                            font-size: 1.75rem;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 150%;
-                            letter-spacing: 0.175rem;
-
-                            color: #E3D2FF;
-                            position: relative;
-                            margin-bottom: 2%; //14px;
-
-                            @media ($media-lg) {
-                                font-size: 1.25rem; //20px
-                            }
-                        }
-
-                        /* 裝飾線 */
-                        .lbdeco {
+                        .lb-info {
                             display: flex;
-                            align-items: center;
+                            flex-direction: column;
                             justify-content: center;
-                            width: 100%;
-                            margin-bottom: 20px;
+                            align-items: center;
+                            text-align: center;
 
-                            .lb_decorate-left,
-                            .lb_decorate-right {
-                                width: 1.5rem;
-                                height: auto;
+                            /* 商品名稱 */
+                            .lbh2 {
+                                /* 中文/霞鶩文楷/標題3 */
+                                font-family: "LXGW WenKai Mono TC";
+                                font-size: 1.75rem; //28px
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 150%;
+                                letter-spacing: 0.175rem;
+
+                                color: #E3D2FF;
+                                position: relative;
+
+                                @media ($media-lg) {
+                                    font-size: 1.625rem; //26px
+                                }
                             }
 
-                            hr {
-                                height: 1.5px;
+                            /* 裝飾線 */
+                            .lbdeco {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
                                 width: 100%;
-                                border-color: #e3d2ff;
-                                margin: 0 -0.1rem;
-                            }
-                        }
+                                // margin: 12px 0 20px;
+                                margin: 2.5% 0 5%;
 
-                        /* 主石 */
-                        .p1 {
-                            color: #E3D2FF;
-                            width: 23.75rem; //380px;
-                            width: 95%; //380px;
-                            margin-bottom: 15px;
+                                .lb_decorate-left,
+                                .lb_decorate-right {
+                                    width: 1.5rem;
+                                    height: auto;
+                                }
 
-                            /* 中文/思源黑體/小標題3 */
-                            font-family: "Noto Sans TC";
-                            font-size: 1.25rem;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 150%;
-                            letter-spacing: 0.063rem;
+                                hr {
+                                    height: 1.5px;
+                                    width: 100%;
+                                    border-color: #e3d2ff;
+                                    margin: 0 -0.1rem;
+                                }
 
-                        }
-
-                        /* 內文 */
-                        .p2 {
-                            width: 95%;
-                            color: #FFF;
-                            margin-bottom: 18%;
-
-
-                            /* 中文/思源黑體/內文1 */
-                            font-family: "Noto Sans TC";
-                            font-size: 16px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 160%;
-                            /* 25.6px */
-                            letter-spacing: 1.6px;
-
-                            @media ($media-lg-h) {
-                                //ipad mini橫向
-                                width: 100%; //380px;
+                                @media ($media-sm) {
+                                    margin: 2% 0 3%;
+                                }
                             }
 
-                            @media ($media-md-up) {
-                                width: 100%; //380px;
+                            /* 主石 */
+                            .p1 {
+                                color: #E3D2FF;
+                                margin-bottom: 16px;
+
+                                /* 中文/思源黑體/小標題3 */
+                                font-family: "Noto Sans TC";
+                                font-size: 1.25rem; //20px
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 150%;
+                                letter-spacing: 0.063rem;
+
+                                @media ($media-lg) {
+                                    font-size: 1.125rem; //18px
+                                }
+
+                                @media ($media-sm) {
+                                    margin-bottom: 12px;
+                                }
                             }
 
+                            /* 內文 */
+                            .p2 {
+                                width: 90%;
+                                color: #FFF;
 
+                                /* 中文/思源黑體/內文1 */
+                                font-family: "Noto Sans TC";
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 160%;
+                                letter-spacing: 1.6px;
+                            }
                         }
 
                         /* 按鈕 */
                         .lbbtn {
-                            width: 200px;
-                            height: 44px;
+                            width: 48%;
+                            height: 48px;
                             border-radius: 99px;
                             background-color: #A67CEB;
                             color: #FFF;
@@ -1163,6 +955,10 @@ button {
 
                             &:active {
                                 background-color: #6E3BBF;
+                            }
+
+                            @media ($media-sm) {
+                                height: 40px;
                             }
                         }
                     }

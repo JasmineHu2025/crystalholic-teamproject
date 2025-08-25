@@ -1,7 +1,6 @@
   /* 導覽列 */
   #navbar2 {
     display: flex;
-    /* flex:橫排 */
     justify-content: space-between;
     align-items: center;
     height: 70px;
@@ -33,54 +32,31 @@
   .icon2 a {
     width: 34px;
     height: 34px;
-    margin: 0px;
     background-size: contain;
     background-repeat: no-repeat;
   }
 
-  /* icon */
-  .icon-search {
-    background-image: url(../images/S-NavBar/navicon_search.svg);
-  }
-
-  .icon-cart {
-    background-image: url(../images/S-NavBar/navicon_cart.svg);
-  }
-
-  .icon-member {
-    background-image: url(../images/S-NavBar/navicon_member.svg);
-    display: block;
+  /*  member icon 按鈕樣式 */
+  .member-button2,
+  .icon-menu {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 34px;
     height: 34px;
-    background-size: contain;
-    /* background-repeat: no-repeat; */
   }
 
-  .icon-menu {
-    background-image: url(../images/S-NavBar/navicon_bgrbtn.svg);
+  .member-button2 img {
+    width: 34px;
+    height: 34px;
+    display: block;
   }
 
-
-  /*  member icon 按鈕樣式 */
-.member-button2 {
-  all: unset;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-}
-
-.member-button2 img {
-  width: 34px;
-  height: 34px;
-  display: block;
-}
-
-.member-button2:focus {
-  outline: none;
-}
+  .member-button2:focus {
+    outline: none;
+  }
 
   /* 登入後的會員選單 */
   .member-dropdown {
@@ -132,125 +108,129 @@
   }
 
   /* 🔍 原本的搜尋按鈕（展開時會消失） */
-.search-btn {
-  all: unset;
-  cursor: pointer;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* 展開的搜尋匡容器 */
-.navbar-searchbox {
-  position: absolute;
-  top: 12px;
-  right: 200px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 260px;
-  padding: 6px 12px 6px 20px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateX(20px) scaleX(0);
-  transform-origin: right center;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  z-index: 98;
-}
-
-/* 顯示動畫 */
-.navbar-searchbox.show {
-  opacity: 1;
-  transform: translateX(0) scaleX(1);
-  pointer-events: auto;
-}
-
-/* 輸入框本體 */
-.navbar-search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  font-family: 'Noto Sans TC';
-  background: transparent;
-  color: #333;
-  padding: 4px 0;
-  border-bottom: 1px solid transparent;
-  transition: border 0.2s ease;
-}
-
-/* Hover/Focus 效果 */
-.navbar-searchbox:hover .navbar-search-input,
-.navbar-search-input:focus {
-  border-bottom: 1px solid #8750bf;
-}
-
-/* 內嵌的搜尋 icon 按鈕 */
-.search-inner-btn {
-  all: unset;
-  width: 34px;
-  height: 34px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search-inner-btn img {
-  width: 34px;
-  height: 34px;
-  margin-right: 9px;
-}
-
-/* RWD：小螢幕不顯示 */
-
-
-/* 手機螢幕 ≤ 767px */
-@media (max-width: 767px) {
-  .search-li {
-    display: none;
+  .search-btn {
+    all: unset;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .logo2 img {
-    margin-left: 20px;
+
+  /* 展開的搜尋匡容器 */
+  .navbar-searchbox {
+    position: absolute;
+    top: 12px;
+    right: 200px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 260px;
+    padding: 6px 12px 6px 20px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(20px) scaleX(0);
+    transform-origin: right center;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 98;
   }
-  .icon2 {
-    margin-right: 20px;
-    gap: 8px;
+
+  /* 顯示動畫 */
+  .navbar-searchbox.show {
+    opacity: 1;
+    transform: translateX(0) scaleX(1);
+    pointer-events: auto;
   }
-  .icon2 a,.member-button2,.icon-menu {
-    width: 30px;
-    height: 30px;
+
+  /* 輸入框本體 */
+  .navbar-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Noto Sans TC';
+    background: transparent;
+    color: #333;
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+    transition: border 0.2s ease;
   }
-}
+
+  /* Hover/Focus 效果 */
+  .navbar-searchbox:hover .navbar-search-input,
+  .navbar-search-input:focus {
+    border-bottom: 1px solid #8750bf;
+  }
+
+  /* 內嵌的搜尋 icon 按鈕 */
+  .search-inner-btn {
+    all: unset;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-inner-btn img {
+    width: 34px;
+    height: 34px;
+    margin-right: 9px;
+  }
+
+  /* RWD：小螢幕不顯示 */
+
+
+  /* 手機螢幕 ≤ 767px */
+  @media (max-width: 767px) {
+    .search-li {
+      display: none;
+    }
+
+    .logo2 img {
+      margin-left: 20px;
+    }
+
+    .icon2 {
+      margin-right: 20px;
+      gap: 8px;
+    }
+
+    .icon2 a,
+    .member-button2,
+    .icon-menu {
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   /* === 購物車數量(右上角) === */
   .cart-badge {
     position: absolute;
     top: -2px;
     right: -10px;
-  
+
     transform: translateX(0);
     transform-origin: left center;
-  
+
     min-width: 1.25rem;
     height: 1.25rem;
     padding: 0 4px;
     border-radius: 999px;
     background: #FF9D60;
     color: #FFF;
-  
+
     font-family: "Noto Sans TC";
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.25rem;
     text-align: center;
-  
+
     pointer-events: none;
     transition: all 0.2s ease;
   }
-  

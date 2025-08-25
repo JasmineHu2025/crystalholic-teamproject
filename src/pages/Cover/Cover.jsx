@@ -362,6 +362,8 @@ export default function Cover() {
         }
     };
 
+
+
     /* -------------- Tarot & Crystal 狀態／邏輯 -------------- */
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [hoveredCard, setHoveredCard] = useState(null);
@@ -369,80 +371,92 @@ export default function Cover() {
     const tarotDescriptions = [
         /* 商品名稱、介紹文字區(第二層) */
         <div className="lbcontent">
-            {/* 商品名稱 */}
-            <h2 className="lbh2">沁藍之澗</h2>
-            {/* 裝飾線 */}
-            <div className='lbdeco'>
-                <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾"/>
-                <hr />
-                <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾"/>
+            <div className="lb-info">
+                {/* 商品名稱 */}
+                <h2 className="lbh2">沁藍之澗</h2>
+                {/* 裝飾線 */}
+                <div className='lbdeco'>
+                    <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾" />
+                    <hr />
+                    <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾" />
+                </div>
+                {/* 主石 */}
+                <p className="p1">主石：海藍寶  平靜溝通之石</p>
+                {/* 內文 */}
+                <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+                    海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
             </div>
-            {/* 主石 */}
-            <p className="p1">主石：海藍寶  平靜溝通之石</p>
-            {/* 內文 */}
-            <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
-                海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
             {/* 按鈕 */}
             <Link to="/Product/blue/0" className="lbbtn">看看手鍊</Link>
         </div>,
         <div className="lbcontent">
-            <h2 className="lbh2">金魚泡泡</h2>
-                        <div className='lbdeco'>
-                <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾"/>
-                <hr />
-                <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾"/>
+            <div className="lb-info">
+                <h2 className="lbh2">金魚泡泡</h2>
+                <div className='lbdeco'>
+                    <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾" />
+                    <hr />
+                    <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾" />
+                </div>
+                <p className="p1">主石：黃水晶  快樂創造之石</p>
+                <p className="p2">靈感來自陽光下閃耀的金魚泡泡，透出童趣與溫柔，點亮生活中的快樂時刻與心靈亮點。<br />
+                    黃水晶激發創造力與內在自信，協助釋放壓力與情緒，讓你自在表達與快樂學習。</p>
             </div>
-            <p className="p1">主石：黃水晶  快樂創造之石</p>
-            <p className="p2">靈感來自陽光下閃耀的金魚泡泡，透出童趣與溫柔，點亮生活中的快樂時刻與心靈亮點。<br />
-                黃水晶激發創造力與內在自信，協助釋放壓力與情緒，讓你自在表達與快樂學習。</p>
             <Link to="/Product/blue/2" className="lbbtn">看看手鍊</Link>
         </div>,
         <div className="lbcontent">
-            <h2 className="lbh2">沈睡王國</h2>
-                        <div className='lbdeco'>
-                <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾"/>
-                <hr />
-                <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾"/>
+            <div className="lb-info">
+                <h2 className="lbh2">沈睡王國</h2>
+                <div className='lbdeco'>
+                    <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾" />
+                    <hr />
+                    <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾" />
+                </div>
+                <p className="p1">主石：菱錳礦  溫柔療癒之石</p>
+                <p className="p2">宛如沉睡中的療癒王國，靈感源自熱帶珊瑚礁，柔軟包覆情緒，讓內在獲得深層休息。<br />
+                    菱錳礦如愛人般溫柔，搭配藍晶石提升靈性直覺，是撫慰孤單與焦躁的靜心能量。</p>
             </div>
-            <p className="p1">主石：菱錳礦  溫柔療癒之石</p>
-            <p className="p2">宛如沉睡中的療癒王國，靈感源自熱帶珊瑚礁，柔軟包覆情緒，讓內在獲得深層休息。<br />
-                菱錳礦如愛人般溫柔，搭配藍晶石提升靈性直覺，是撫慰孤單與焦躁的靜心能量。</p>
             <Link to="/Product/blue/1" className="lbbtn">看看手鍊</Link>
         </div>,
         <div className="lbcontent">
-            <h2 className="lbh2">靜謐雪森</h2>
-                        <div className='lbdeco'>
-                <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾"/>
-                <hr />
-                <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾"/>
+            <div className="lb-info">
+                <h2 className="lbh2">靜謐雪森</h2>
+                <div className='lbdeco'>
+                    <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾" />
+                    <hr />
+                    <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾" />
+                </div>
+                <p className="p1">主石：藍玉髓  寧靜療癒之石</p>
+                <p className="p2">靈感源自雪落林間的畫面，靜謐又溫潤，為心靈打造一處安靜轉化的冬日療癒空間。<br />
+                    藍玉髓柔化情緒、引導內在修復，結合隕石與虎眼石，穩定能量流動與靈性覺察。</p>
             </div>
-            <p className="p1">主石：藍玉髓  寧靜療癒之石</p>
-            <p className="p2">靈感源自雪落林間的畫面，靜謐又溫潤，為心靈打造一處安靜轉化的冬日療癒空間。<br />
-                藍玉髓柔化情緒、引導內在修復，結合隕石與虎眼石，穩定能量流動與靈性覺察。</p>
             <Link to="/Product/seasons/2" className="lbbtn">看看手鍊</Link>
         </div>,
         <div className="lbcontent">
-            <h2 className="lbh2">薄荷之吻</h2>
-                        <div className='lbdeco'>
-                <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾"/>
-                <hr />
-                <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾"/>
+            <div className="lb-info">
+                <h2 className="lbh2">薄荷之吻</h2>
+                <div className='lbdeco'>
+                    <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾" />
+                    <hr />
+                    <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾" />
+                </div>
+                <p className="p1">主石：捷克隕石  清新啟動之石</p>
+                <p className="p2">靈感來自 Mojito 的清新氣息，宛如一口沁涼薄荷，輕盈地為混沌心緒注入宇宙能量。<br />
+                    捷克隕石開啟內在感知與意識轉化，在釋放壓力的同時，讓你重新找回精神的平衡。</p>
             </div>
-            <p className="p1">主石：捷克隕石  清新啟動之石</p>
-            <p className="p2">靈感來自 Mojito 的清新氣息，宛如一口沁涼薄荷，輕盈地為混沌心緒注入宇宙能量。<br />
-                捷克隕石開啟內在感知與意識轉化，在釋放壓力的同時，讓你重新找回精神的平衡。</p>
             <Link to="/Product/cocktail/0" className="lbbtn">看看手鍊</Link>
         </div>,
         <div className="lbcontent">
-            <h2 className="lbh2">極圈探險家</h2>
-                        <div className='lbdeco'>
-                <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾"/>
-                <hr />
-                <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾"/>
+            <div className="lb-info">
+                <h2 className="lbh2">極圈探險家</h2>
+                <div className='lbdeco'>
+                    <img className="lb_decorate-left" src="./images/HomePage/deco-divider_light-left.svg" alt="左裝飾" />
+                    <hr />
+                    <img className="lb_decorate-right" src="./images/HomePage/deco-divider_light-right.svg" alt="右裝飾" />
+                </div>
+                <p className="p1">主石：藍晶石  覺醒與直覺之石</p>
+                <p className="p2">靈感來自極地孤寂與冷靜，適合自我探索與思緒沉澱，是尋找方向時的精神向導。<br />
+                    藍晶石幫助釐清混亂與煩躁，穩定能量場與界線，是靈性成長中重要的陪伴之石。</p>
             </div>
-            <p className="p1">主石：藍晶石  覺醒與直覺之石</p>
-            <p className="p2">靈感來自極地孤寂與冷靜，適合自我探索與思緒沉澱，是尋找方向時的精神向導。<br />
-                藍晶石幫助釐清混亂與煩躁，穩定能量場與界線，是靈性成長中重要的陪伴之石。</p>
             <Link to="/Product/adventure/2" className="lbbtn">看看手鍊</Link>
         </div>
     ];
@@ -669,7 +683,8 @@ export default function Cover() {
                                 {/* 內框線 */}
                                 <div className='lbborder2'>
                                     {/* 關閉按鈕 */}
-                                    <button className="lightbox-close" onClick={closeLightbox}>×</button>
+                                    {/* <button className="lightbox-close" onClick={closeLightbox}>×</button> */}
+                                    <button className="lightbox-close" onClick={closeLightbox}></button>
                                     {/* 商品卡片 */}
                                     <div className='lbimg'>{tarotImg[selectedCardIndex]}</div>
                                     {/* 商品名稱、介紹文字區 */}

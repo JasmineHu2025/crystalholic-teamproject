@@ -4,7 +4,8 @@ import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
 import { useAuth } from '../context/AuthContext';
 import { useUI } from '../context/UIContext';
 import { useRef, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom'; // ← 要補上這行
+import { useLocation, useNavigate } from 'react-router-dom';
+import useScrollDirection from '../hooks/useScrollDirection.js';
 
 
 /* 🆕 取得購物車內容 */
@@ -74,9 +75,11 @@ export default function NavBarLight() {
       navigate("/"); // 若非首頁，就導向首頁
     }
   };
+
+  const scrollDir = useScrollDirection({ threshold: 8 });
   return (
     <>
-      <header id="navbar">
+      <header id="navbar" className={scrollDir === 'down' ? 'nav--hidden' : 'nav--shown'}>
         <Link className="logo1" to="/" onClick={handleLogoClick}>
           <img src="./images/S-NavBar/logotext_nav2.svg" alt="首頁" />
         </Link>
@@ -144,7 +147,9 @@ export default function NavBarLight() {
                   console.log('✅ 漢堡選單點到了');
                   openMenu();
                 }}
-              ></button>
+              >
+                <img src="./images/S-NavBar/navicon_bgrbtn.svg" alt="menu" />
+              </button>
             </li>
           </ul>
         </nav>
