@@ -140,11 +140,6 @@ button {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-
-    // 手機版直接跳到塔羅頁面
-    @media ($media-sm) {
-        scroll-snap-type: y mandatory;
-    }
 }
 
 /* ---------- 疊放容器：兩段封面重疊在同一畫面 ---------- */
@@ -484,7 +479,8 @@ button {
 
             .scroll-indicator {
                 position: relative;
-                height: 85px;
+                height: 100%;
+                width: 100%;
                 z-index: 1;
                 overflow: hidden;
 
@@ -533,10 +529,6 @@ button {
     //方便顯示框線 RWD觀賞用
     position: sticky;
     z-index: 2;
-
-    @media ($media-lg-up) {
-        scroll-snap-align: start; // 直接跳到塔羅頁面
-    }
 
     @media ($media-sm) {
         height: 60vh;

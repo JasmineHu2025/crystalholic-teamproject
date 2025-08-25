@@ -622,8 +622,7 @@ export default function Cover() {
                                     </div>
 
                                     <div className="scroll-indicator">
-                                        <img className="scroll-line" src="./images/HomePage/scroll-line.png" alt="往下滾動" />
-                                        {/* <div className="scroll-line"></div> */}
+                                        <img className="scroll-line" src="./images/HomePage/scroll-line.svg" alt="往下滾動" />
                                         <img className="scroll-diamond" src="./images/HomePage/scroll-diamond.png" alt="往下滾動" />
                                     </div>
                                 </div>

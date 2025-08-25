@@ -175,11 +175,6 @@ button {
   display: flex;
   flex-direction: column;
 }
-@media (max-width:767px) {
-  .home_main {
-    scroll-snap-type: y mandatory;
-  }
-}
 
 /* ---------- 疊放容器：兩段封面重疊在同一畫面 ---------- */
 .cover-stack {
@@ -502,7 +497,8 @@ button {
 }
 .cover-stack .second-cover .startbox2 .scroll-indicator {
   position: relative;
-  height: 85px;
+  height: 100%;
+  width: 100%;
   z-index: 1;
   overflow: hidden;
 }
@@ -542,11 +538,6 @@ button {
   align-items: center;
   position: sticky;
   z-index: 2;
-}
-@media (min-width:1026px) {
-  #section-tarotcard {
-    scroll-snap-align: start;
-  }
 }
 @media (max-width:767px) {
   #section-tarotcard {
