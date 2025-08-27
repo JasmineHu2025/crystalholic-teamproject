@@ -67,7 +67,7 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     font-family: 'Noto Sans TC';
     width: 450px;
-    height: 300px;
+    /* height: 300px; */
 }
 
 .crystalGuideContent h3 {
@@ -140,7 +140,7 @@
     display: flex;
     justify-content: flex-end;
     /* 按鈕靠右 */
-    /* align-items: center; */
+    align-items: center;
     /* gap: 1rem; */
     position: relative;
     /* 讓 panelOverlay 能絕對定位在這裡面 */
@@ -639,16 +639,22 @@
     flex-direction: column;
     align-items: center;
     gap: 1.875rem;
-    height: 31rem;
+    /* height: 31rem; */
     right: 10%;
+
+    border-radius: 0.938rem;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    backdrop-filter: blur(5px);
 }
 
 .icon1Box {
-    width: 2.5rem;
-    border-radius: 0.938rem;
-    background: rgba(254, 250, 255, 0.8);
+    /* width: 2.5rem; */
+    /* border-radius: 0.938rem; */
+    
+    /* background: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
     z-index: 10;
     position: relative;
     padding: 1.25rem 0.75rem;
@@ -659,7 +665,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.buttonMobile {
+.buttonMobile, .arrowMobile, .line3 {
     display: none;
 }
 
@@ -757,6 +763,7 @@
 .iconBtn5 {
     background-image: url(../images/Custom/btn_dum_tool.svg);
 }
+
 
 /* hover */
 .iconBtn1:hover,
@@ -915,9 +922,9 @@
     max-width: 90vw;
     z-index: 32;
     border-radius: 40px 0px 0px 40px;
-    background: rgba(254, 250, 255, 0.85);
+    background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
     padding: 0rem 1.2rem 2rem;
     animation: slideIn 0.3s ease forwards;
     scrollbar-width: thin;
@@ -1365,6 +1372,11 @@
         padding: 1.25rem 1.75rem;
         height: 100%;
     }
+
+    /* 小視窗：關閉鈕 */
+    .closeBtn {
+        font-size: 1.75rem;
+    }
     
     /* 加購物車扭 */
     .icon2 {
@@ -1393,11 +1405,12 @@
         height: 1.25rem;
         display: flex;
     }
+
     .icon2Mobile:hover {
         background: #A67CEB;
         box-shadow: 0 0 15px 0 rgba(233, 166, 160, 0.25);
         color: #fff;
-}
+    }
     .icon2Mobile:hover .btnCart {
         background-image: url(/images/Custom/btn_cart-hover.svg);
     }
@@ -1509,9 +1522,70 @@
 }
 
 
-/* RWD 斷點： ≥ 780 */
-@media (max-width: 780px) {
+/* RWD 斷點： ≥ 767 */
+@media (max-width: 767px) {
+    /* 左邊 */
     .boxs {
         width: 90%;
+    }
+
+    /* 隱藏按鈕：工具欄 */
+    .iconBox2 {
+        gap: 0;
+    }
+    .arrowMobileIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .arrowMobile {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        /* border-radius: 1rem 0 0 1rem;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 11.485px 0 rgba(233, 166, 160, 0.25);
+        backdrop-filter: blur(5px); */
+    }
+    .buttonMobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 20px 16px;
+        border-radius: 1rem 0 0 1rem;
+        z-index: 999;
+        right: 0;
+        top: 13rem;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 11.485px 0 rgba(233, 166, 160, 0.25);
+        backdrop-filter: blur(5px);
+        color: #8284A2;
+    }
+    .buttonMobile img {
+        width: 1.25rem;
+        height: 1.25rem;
+        padding-top: 0.25rem;
+    }
+    .recommendDesign {
+        writing-mode: vertical-lr;
+        white-space: nowrap;
+    }
+    .line3 {
+        height: 1.5px;
+        width: 100%;
+        /* border-color: #8750BF; */
+        border-color: red;
+        margin: 0 -0.1rem;
+    }
+
+    /* 隱藏按鈕：動畫 */
+
+
+    /* 文字大小&間距 */
+    .recommendDesign {
+        font-size: 1rem;
+        letter-spacing: 0.25rem;
     }
 }
