@@ -80,13 +80,16 @@ export default function NumTest2() {
             <section className="num2-numtest">
               {/* 第一個標題 */}
               <div className="num2-title-1">
-                <img className="num2-decorate-left" src="./images/Numtest/decorate-left.svg" alt="左裝飾" />
+                <img className="num2-decorate-left" src="./images/Custom/deco-divider_purple-left.svg" alt="左裝飾" />
+                <hr className="num2-hr" />
                 <h3 className="num2-decorate-title">探索適合的水晶</h3>
-                <img className="num2-decorate-right" src="./images/Numtest/decorate-right.svg" alt="右裝飾" />
+                <hr className="num2-hr" />
+                <img className="num2-decorate-right" src="./images/Custom/deco-divider_purple-right.svg" alt="右裝飾" />
               </div>
 
               {/* 第二個:主標題 */}
               <h1 className="num2-title-2">請輸入您的西元出生年月日</h1>
+              <h1 className="num2-title-2-mobile">請輸入您的出生年月日</h1>
 
               {/* 出生年月日選單 + 日曆 */}
               <div className="num2-date">
@@ -127,7 +130,9 @@ export default function NumTest2() {
                 </div>
 
                 {/* 日曆 icon + 隱藏 input[type=date] */}
-                <div className="num2-calendar-wrapper">
+                <div className="num2-calendar-wrapper" onClick={() =>
+    dateInputRef.current?.showPicker?.() ||   // 新版 Chrome
+    dateInputRef.current?.click()}>
                   <input
                     type="date"
                     className="num2-date-input"
@@ -138,7 +143,7 @@ export default function NumTest2() {
                     className="num2-calendar"
                     src="./images/Numtest/numtest-2_calendar.svg"
                     alt="請選擇您的西元出生年月日"
-                    onClick={() => dateInputRef.current?.showPicker?.() || dateInputRef.current?.click()}
+                    // onClick={() => dateInputRef.current?.showPicker?.() || dateInputRef.current?.click()}
                   />
                 </div>
               </div>

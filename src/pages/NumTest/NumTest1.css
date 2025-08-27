@@ -3,12 +3,9 @@
 /* 🟣 整頁容器（扣掉固定 Navbar 70px） --------------------- */
 .numtest1 {
     width: 100%;
-    height: 100vh;
-    /* 🟣 剛好一整視窗高（含 padding） */
-    padding-top: 70px;
-    /* 🟣 下推內容，避免被 navbar 壓住 */
-    box-sizing: border-box;
-    /* 🟣 讓 padding 計入 100vh */
+    height: 100vh;/* 🟣 剛好一整視窗高（含 padding） */
+    padding-top: 70px;/* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;/* 🟣 讓 padding 計入 100vh */
     display: flex;
 }
 
@@ -28,34 +25,32 @@
     align-items: center;
 
     margin-bottom: 3.25rem;
-    /* 52px */
 }
 
+/* 標題 */
 .num1-decorate-title {
     color: #8750BF;
 
     /* 中文/霞鶩文楷/標題3 */
     font-family: "LXGW WenKai Mono TC";
     font-size: 1.75rem;
-    /* 28px */
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.175rem;
-    /* 2.8px */
 
     margin: 0 2rem;
 }
 
+/* 左右裝飾 */
 .num1-decorate-left,
 .num1-decorate-right {
     width: 1rem;
     height: auto;
 }
-
 .num1-hr {
     height: 1.5px;
-    width: 10.5vw;
+    width: 4.7vw;
     border-color: #8750BF;
     margin: 0 -0.1rem;
 }
@@ -66,17 +61,13 @@
 
     /* 中文/霞鶩文楷/標題1 */
     font-family: "LXGW WenKai Mono TC";
-    font-size: 2.25rem;
-    /* 36px */
+    font-size: 2.25rem;/* 36px */
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: 0.225rem;
-    /* 3.6px */
+    letter-spacing: 0.225rem;/* 3.6px */
 
-    margin-bottom: 3.25rem;
-    /* 52px */
-
+    margin-bottom: 3.25rem;/* 52px */
 }
 
 /* ---------- 按鈕 ---------- */
@@ -118,25 +109,29 @@
 }
 
 /* ========================================================= */
-/* ---------- RWD 斷點：≤ 1024px ---------- */
-@media (max-width: 1024px) {
-    .num1-decorate-title {
-        margin: 0 1.5rem;
-    }
-}
 
-/* ---------- RWD 斷點：≤ 767px ---------- */
+/* 手機：≤ 767px */
 @media (max-width: 767px) {
     .num1-decorate-title {
         font-size: 1.5rem;
         letter-spacing: 0.15rem;
         margin: 0 1rem;
     }
+    .num1-hr {
+      width: 10.2vw;
+    }
+    .num1-title-2 {
+        font-size: 1.875rem;
+        letter-spacing: 0.188rem;
+    }
     .num1-button {
         font-size: 1.375rem;
-        
+
         width: 16.25rem;
         height: auto;
         padding: 0.5rem 0;
+    }
+    .num1-title-1 ,.num1-title-2 {
+        margin-bottom: 3.75rem;
     }
 }
