@@ -1109,7 +1109,7 @@ function renderCrystalContent(id) {
                     ))}
                 </div>
             </article>
-            <div>
+            <div className="discovery-p4">
                 <Link to="/KnowledgeCrystal" className="moreinfo">更多水晶介紹 &gt;</Link>
             </div >
 

@@ -1,13 +1,13 @@
 //RWD斷點  @media()
 $media-xxlg: "min-width:1919px"; //1920
-$media-xxlg-up: "min-width:1680px"; //1680 & 1920 可以共用的頁面用這個 cover1
+$media-xxlg-up: "min-width:1680px"; // ⭐️⭐️目前1680以上的電腦版⭐️⭐️ 1680 & 1920 可以共用的頁面用這個 cover1
 $media-xxlg-up-h: "(min-width:1680px) and (max-height:1051px)"; //1680 小百科
 $media-xlg-up: "max-width:1365px";  //iPad Air 1180*820(橫向) /iPad Mini 1024*768(橫向) iPad Pro 1024*1366(直向)
 $media-xlg-h: "(max-width:1367px)  and (min-height:820px)";  //iPad Air1180*820 /pro 1366*1024(橫向) *cover1用*
 $media-xlg-h-pro: "(max-width:1367px)  and (min-height:1024px)";  //ipad pro 1366*1024(橫向) *cover1用*
 
 $media-lg-up: "min-width:1026px";
-$media-lg: "max-width:1025px"; //iPad Air??好像沒用到(待檢查)/ 小百科小百科pro(直向)/mini(橫向) ; tarotcard pro/air/mini 直
+$media-lg: "max-width:1025px"; // ⭐️⭐️目前的平板版⭐️⭐️  iPad Air??好像沒用到(待檢查)/ 小百科小百科pro(直向)/mini(橫向) ; tarotcard pro/air/mini 直
 
 $media-lg-h:"(max-width:1023px) and (max-height:769px)"; //ipad mini(橫向)
 
@@ -16,7 +16,7 @@ $media-md: "max-width:820px"; // cover1 iPad Mini/air 768*1024(直向)
 
 $media-sm-up: "min-width:641px"; //手機板以上
 
-$media-sm: "max-width:767px"; // i12 Pro ***
+$media-sm: "max-width:767px"; // i12 Pro ***  ⭐️⭐️目前手機版⭐️⭐️
 $media-ml: "(min-width: 768px) and (max-width: 1023px)"; //ipad
 
 
