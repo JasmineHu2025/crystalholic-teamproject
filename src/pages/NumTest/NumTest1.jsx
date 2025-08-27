@@ -17,9 +17,11 @@ export default function NumTest1() {
           <section className="num1-numtest">
             {/* 第一個標題 */}
             <div className="num1-title-1">
-              <img className="num1-decorate-left" src="./images/Numtest/decorate-left.svg" alt="左裝飾" />
+              <img className="num1-decorate-left" src="./images/Custom/deco-divider_purple-left.svg" alt="左裝飾" />
+              <hr className="num1-hr" />
               <h3 className="num1-decorate-title">探索適合的水晶</h3>
-              <img className="num1-decorate-right" src="./images/Numtest/decorate-right.svg" alt="右裝飾" />
+              <hr className="num1-hr" />
+              <img className="num1-decorate-right" src="./images/Custom/deco-divider_purple-right.svg" alt="右裝飾" />
             </div>
 
             {/* 第二個標題 */}
