@@ -2,7 +2,7 @@ import './BgDark.css';
 import { useEffect, useRef } from 'react';
 import { createStarsBackground } from '../../public/background-star22';
 
-export default function BgDark() {
+export default function BgDark({ embed = false }) {
     const bgRef = useRef(null);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function BgDark() {
     }, []);
 
     return (
-        <main> {/* 不必再包一層 div */}
+        <div className={embed ? 'bgdark-embed' : 'bgdark-embed as-main'}>
             {/* 星星特效背景 */}
             <div id="bg-container" ref={bgRef} aria-hidden="true" />
 
@@ -49,6 +49,6 @@ export default function BgDark() {
                     <div className="interactive" />
                 </div>
             </div>
-        </main>
+        </div>
     );
 }

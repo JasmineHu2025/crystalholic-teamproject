@@ -233,7 +233,7 @@ export default function ProductCollection() {
       </main>
 
       <footer className="pc_footer">
-        <BgDark />
+        <BgDark embed /> 
         <FooterTrn />
       </footer>
     </>

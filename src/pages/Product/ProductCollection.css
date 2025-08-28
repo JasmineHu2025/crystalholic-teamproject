@@ -213,11 +213,11 @@
     position: relative;
 
     clip-path: ellipse(70% 100% at 50% 100%);
-    padding-top: 9.0625rem;/* 145px */
-
+    padding-top: 9.75%;
     margin-top:-10rem; 
 
-    z-index: 2;
+    z-index: 1;
+    overflow: hidden;
 }
 
 /* ----- 商品對話框＋三角型 各系列顏色 ----- */
@@ -457,8 +457,8 @@
 
     /* footer */
     .pc_footer {
-        clip-path: ellipse(170% 150% at 50% 150%);
-        padding-top: 3rem;
+        clip-path: ellipse(144% 100% at 50% 100%);
+        padding-top: 12.4%;
         margin-top: -17rem;
     }
 }

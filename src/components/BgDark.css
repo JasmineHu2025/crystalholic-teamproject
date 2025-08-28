@@ -26,9 +26,12 @@
 
 /* 背景 */
 .gradient-bg{
-  position:fixed;inset:0;
-  width:100vw;min-height:100vh;
-  z-index:-99;overflow:hidden;
+  position:fixed;
+  inset:0;
+  width:100vw;
+  min-height:100vh;
+  z-index:-99;
+  overflow:hidden;
 
   /* 多層 background，最上面是 5 顆光暈，再疊噪點材質，最後才是線性漸層 */
   background:
@@ -131,6 +134,20 @@
 /* ---------- stars ---------- */
 #bg-container{position:fixed;inset:0;z-index:-97;pointer-events:none;}
 #bg{position:absolute;inset:0}
+
+
+/* BgDark.css 末尾或任何全域檔 */
+.bgdark-embed{
+  position: absolute;   /* 離開文件流，不撐高 */
+  inset: 0;             /* 撐滿父層 */
+  pointer-events: none; /* 不阻擋點擊 */
+  z-index: -1;          /* 蓋在最底 */
+}
+/* 只有 hero 那塊才需要把父層撐到 100vh */
+.bgdark-embed.as-main{
+  position: fixed;      /* 原本的滿版行為 */
+}
+
 
 
 
