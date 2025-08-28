@@ -487,8 +487,7 @@ export default function Customize4() {
         image: "./images/S-CrystalSingle/crystal-tridacna.png",
         desc: "帶來純淨能量，清除雜念與焦慮。"
       }
-    ]
-    ,
+    ],
     "放鬆冥想": [
       {
         name: "粉方解石",
@@ -1059,8 +1058,7 @@ export default function Customize4() {
             <div className={`${style.align} ${window.matchMedia('(max-width: 767px)').matches
               ? (animating ? style.slideOut : style.slideIn)
               : ''
-              }`}
-              onClick={toggleTools}>
+              }`}>
               {/* 工具欄：小視窗 */}
               <div className={style.iconPanelWrapper}>
 
@@ -1421,9 +1419,9 @@ export default function Customize4() {
                   <hr className={style.line3} />
 
                   {/* 收起箭頭(手機版) */}
-                  <div className={style.arrowMobile}>
+                  <div className={style.arrowMobile} onClick={toggleTools}>
                     <p>收回</p>
-                    <img className={style.arrowMobileIcon} src="./images/Numtest/icon-arrow.svg" alt="" />
+                    <img className={style.arrowMobileIcon} src="./images/Custom/icon-arrow-purple.svg" alt="" />
                   </div>
                 </div>
 

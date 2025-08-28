@@ -117,10 +117,9 @@
 }
 
 .boxs3 {
-    display: flex;
-    flex-direction: row;
-    /* width: 85rem; */
-    gap: 1.25rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
 }
 
 .sizeAndBeads {
@@ -141,20 +140,13 @@
     justify-content: flex-end;
     /* 按鈕靠右 */
     align-items: center;
-    /* gap: 1rem; */
     position: relative;
-    /* 讓 panelOverlay 能絕對定位在這裡面 */
-    /* height: 100%; */
-    /* 確保有空間定位 */
     z-index: 20;
 }
 
 .align {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    width: auto;
+    right:0;
+    z-index:98; 
 }
 
 .boxs,
@@ -182,6 +174,7 @@
     display: flex;
     align-content: center;
     gap: 1.87rem;
+    margin-right: 2%;
 }
 
 
@@ -636,9 +629,9 @@
 /* 右側欄 */
 .iconBox2 {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    gap: 1.875rem;
+    /* gap: 1.875rem; */
     /* height: 31rem; */
     right: 10%;
 
@@ -665,7 +658,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.buttonMobile, .arrowMobile, .line3 {
+.buttonMobile, .arrowMobile {
     display: none;
 }
 
@@ -882,15 +875,8 @@
 
 /* 側邊滑入視窗 */
 .panelOverlay {
-    position: relative;
-    width: auto;
-    /* 由 panelContent 撐開即可 */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    pointer-events: none;
-    /* 讓 panelContent 自己控制互動 */
-    z-index: 10;
+    position:absolute;
+    right:100%;
 }
 
 .panelInner {
@@ -920,7 +906,6 @@
     width: 18.75rem;
     height: 26.125rem;
     max-width: 90vw;
-    z-index: 32;
     border-radius: 40px 0px 0px 40px;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
@@ -930,6 +915,9 @@
     scrollbar-width: thin;
     scrollbar-color: #FFF #E4DEED;
     margin-right: -0.25rem;
+    right: 60%;
+    z-index: 0;
+    top: -200px;
 }
 
 .overlayContent {
@@ -1531,21 +1519,27 @@
 
     /* 隱藏按鈕：工具欄 */
     .iconBox2 {
-        gap: 0;
+        border-radius: 0.938rem 0 0 0.938rem;
+        flex-direction: column;
     }
     .arrowMobileIcon {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
     }
     .arrowMobile {
         display: flex;
         width: 100%;
         height: 100%;
         justify-content: center;
-        /* border-radius: 1rem 0 0 1rem;
-        background: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 11.485px 0 rgba(233, 166, 160, 0.25);
-        backdrop-filter: blur(5px); */
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    .arrowMobile p {
+        color: #A67CEB;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        margin-right: 0.125rem;
     }
     .buttonMobile {
         display: flex;
@@ -1572,11 +1566,12 @@
         writing-mode: vertical-lr;
         white-space: nowrap;
     }
+    /* 線(可刪？) */
     .line3 {
-        height: 1.5px;
+        height: 2px;
         width: 100%;
         /* border-color: #8750BF; */
-        border-color: red;
+        border-color: rgba(130, 132, 162, 0.4);
         margin: 0 -0.1rem;
     }
 
