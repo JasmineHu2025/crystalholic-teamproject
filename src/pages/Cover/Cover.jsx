@@ -17,9 +17,11 @@ import BackToTopBtn from '../../components/BackToTopBtn';
 const slides = [
     <div className="feedback">
         <div className="review-pic">
-
+            {/* 頭貼 */}
             <span><img src="./images/HomePage/avatar/1.png" className="member-img" alt="" /></span>
-
+            {/* 使用者名稱 */}
+            <p className="member-name">Ann</p>
+            {/* 商品照 */}
             <span><img src="./images/HomePage/feedback/feedback_6.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
@@ -37,9 +39,11 @@ const slides = [
     </div>,
     <div className="feedback">
         <div className="review-pic">
-
+            {/* 頭貼 */}
             <span><img src="./images/HomePage/avatar/coffee.png" className="member-img" alt="" /></span>
-
+            {/* 使用者名稱 */}
+            <p className="member-name">Jasmine</p>
+            {/* 商品照 */}
             <span><img src="./images/HomePage/feedback/feedback_2.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
@@ -57,9 +61,11 @@ const slides = [
     </div>,
     <div className="feedback">
         <div className="review-pic">
-
+            {/* 頭貼 */}
             <span><img src="./images/HomePage/avatar/2.png" className="member-img" alt="" /></span>
-
+            {/* 使用者名稱 */}
+            <p className="member-name">Ruby</p>
+            {/* 商品照 */}
             <span><img src="./images/HomePage/feedback/feedback_3.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
@@ -77,9 +83,11 @@ const slides = [
     </div>,
     <div className="feedback">
         <div className="review-pic">
-
+            {/* 頭貼 */}
             <span><img src="./images/HomePage/avatar/3.png" className="member-img" alt="" /></span>
-
+            {/* 使用者名稱 */}
+            <p className="member-name">Jack</p>
+            {/* 商品照 */}
             <span><img src="./images/HomePage/feedback/feedback_4.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
@@ -97,9 +105,11 @@ const slides = [
     </div>,
     <div className="feedback">
         <div className="review-pic">
-
+            {/* 頭貼 */}
             <span><img src="./images/HomePage/avatar/p4.jpg" className="member-img" alt="" /></span>
-
+            {/* 使用者名稱 */}
+            <p className="member-name">Emma</p>
+            {/* 商品照 */}
             <span><img src="./images/HomePage/feedback/feedback_5.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
@@ -117,9 +127,11 @@ const slides = [
     </div>,
     <div className="feedback">
         <div className="review-pic">
-
+            {/* 頭貼 */}
             <span><img src="./images/HomePage/avatar/woman.png" className="member-img" alt="" /></span>
-
+            {/* 使用者名稱 */}
+            <p className="member-name">Nova</p>
+            {/* 商品照 */}
             <span><img src="./images/HomePage/feedback/feedback_1.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
