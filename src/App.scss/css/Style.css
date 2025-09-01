@@ -759,6 +759,9 @@ button {
 @media (max-width:767px) {
   .lightbox .lightbox-content .lbborder1 .lbborder2 {
     flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    padding: 3%;
   }
 }
 .lightbox .lightbox-content .lbborder1 .lbborder2 .lightbox-close {
@@ -812,7 +815,7 @@ button {
 }
 @media (max-width:767px) {
   .lightbox .lightbox-content .lbborder1 .lbborder2 .lightbox-text .lbcontent {
-    gap: 3vh;
+    gap: 2.5vh;
   }
 }
 .lightbox .lightbox-content .lbborder1 .lbborder2 .lightbox-text .lbcontent .lb-info {
@@ -862,7 +865,7 @@ button {
 }
 @media (max-width:767px) {
   .lightbox .lightbox-content .lbborder1 .lbborder2 .lightbox-text .lbcontent .lb-info .lbdeco {
-    margin: 2% 0 3%;
+    margin: 1% 0 2%;
   }
 }
 .lightbox .lightbox-content .lbborder1 .lbborder2 .lightbox-text .lbcontent .lb-info .p1 {

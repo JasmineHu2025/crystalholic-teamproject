@@ -770,6 +770,9 @@ button {
 
                 @media ($media-sm) {
                     flex-direction: column;
+                    justify-content: space-between;
+                    gap: 0;
+                    padding: 3%;
                 }
 
                 /* 關閉按鈕 */
@@ -828,7 +831,7 @@ button {
                         gap: 5vh;
 
                         @media ($media-sm) {
-                            gap: 3vh;
+                            gap: 2.5vh;
                         }
 
                         .lb-info {
@@ -879,7 +882,7 @@ button {
                                 }
 
                                 @media ($media-sm) {
-                                    margin: 2% 0 3%;
+                                    margin: 1% 0 2%;
                                 }
                             }
 

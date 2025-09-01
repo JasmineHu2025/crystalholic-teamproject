@@ -9,7 +9,7 @@ import BgDark from '../../components/BgDark';
 export default function About() {
   return (
     <>
-      <NavBarWrapper variant="light" />
+      <NavBarWrapper variant="light"/>
 
       <main className="about-main">
 

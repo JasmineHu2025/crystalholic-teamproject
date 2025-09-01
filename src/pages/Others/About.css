@@ -3,7 +3,7 @@
 .about-main {
   width: 100%;
   min-height:100vh;
-  padding-top: 70px;             /* 🟣 下推內容，避免被 navbar 壓住 */
+  /* padding-top: 70px;             🟣 下推內容，避免被 navbar 壓住 */
   box-sizing: border-box;        /* 🟣 讓 padding 計入 100vh */
   display:flex;
   flex-direction:column;  
@@ -73,6 +73,9 @@
   letter-spacing: 1.6px;
 }
 
+/* .about-navbar {
+  position: relative;
+} */
 
 /* 品牌 */
 .about-hero {
@@ -80,10 +83,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
   clip-path: ellipse(78% 100% at 50% 0%);
   padding-bottom: 9.75%;
-  padding-top: 60px;
+  padding-top: 130px;
 }
 .about-hero-title,.about-hero-title-intro {
   z-index: 1;
@@ -228,11 +232,12 @@
   }
   .about-hero {
     clip-path: ellipse(125% 100% at 50% 0%);
-    padding-bottom: 22%;
-    padding-top: 24px;
+    padding-bottom: 23%;
+    padding-top: 94px;
   }
   .about-content-area {
     margin: 60px 20px;
+    gap: 80px;
   }
   /* 內容 */
   .about-content {
@@ -240,7 +245,7 @@
     gap: 24px;
   }
   .about-content-img {
-    width: 65%;
+    width: 70%;
   }
   .about-content-img-1 {
     display: none;
@@ -251,10 +256,16 @@
     height: 100%;
   }
   .about-content-intro {
-    width: 90%;
+    width: 95%;
+  }
+  .about-content-title {
+    letter-spacing: 0.1rem;
+  }
+  .about-content-depiction {
+    width: 95%;
   }
   .about-content-list {
-    width: 80%;
+    width: 85%;
   }
   .about-footer {
     clip-path: ellipse(144% 100% at 50% 100%);
