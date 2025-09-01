@@ -982,10 +982,11 @@ export default function Customize4() {
 
             {/* 手鍊 */}
             <div className={style.bracelet}
-              style={{
-                width: `${braceletRadius * 2 * scale}px`,
-                height: `${braceletRadius * 2 * scale}px`,
-              }}>
+              // style={{
+              //   width: `${braceletRadius * 2 * scale}px`,
+              //   height: `${braceletRadius * 2 * scale}px`,
+              // }}
+              >
               {(() => {
                 let accumulatedAngle = 0;
                 return braceletBeads.map((bead, index) => {

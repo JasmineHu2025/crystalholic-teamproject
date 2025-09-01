@@ -175,6 +175,8 @@
     align-content: center;
     gap: 1.87rem;
     margin-right: 2%;
+
+    justify-content: center;
 }
 
 
@@ -431,8 +433,6 @@
     padding: 1.5rem 1.25rem;
     padding-top: calc(1.25rem + 0.625rem/2);
     /* 給頁籤留位置 */
-
-    /* test */
 }
 
 /* 珠子頁籤列 */
@@ -1335,7 +1335,7 @@
     /* 工具欄 */
     .iconBox2 {
         order: 1;
-        /* margin-top: -30px; */
+        border-radius: 0.938rem 0 0 0.938rem;
     }
     .icon1Box {
         border-radius: 1rem 0 0 1rem;
@@ -1576,6 +1576,7 @@
     }
 
     /* 隱藏按鈕：動畫 */
+    
 
 
     /* 文字大小&間距 */
