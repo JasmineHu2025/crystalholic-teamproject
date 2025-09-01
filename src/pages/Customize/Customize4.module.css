@@ -439,7 +439,8 @@
 .tabs {
     display: flex;
     justify-content: flex-start;
-    width: 24rem;
+    /* width: 24rem; */
+    width: 20rem;
     position: absolute;
     /* top: -1.15rem; */
     /* left: 50%; */
@@ -507,8 +508,11 @@
     height: 60%;
     margin-top: auto;
     background-color: #8750BF;
-    margin-right: 0.45rem;
-    margin-left: -0.5rem;
+    /* margin-right: 0.45rem;
+    margin-left: -0.5rem; */
+    margin-right: 1rem;
+    margin-left: -1rem;
+
 }
 
 
@@ -815,12 +819,15 @@
 .ringSize,
 .sizeValue,
 .ringJewelry,
-.tab,
 .price,
 .icon1 p,
 .icon2 p {
     font-family: "Noto Sans TC";
     letter-spacing: 0.08rem;
+}
+.tab {
+    font-family: "Noto Sans TC";
+    letter-spacing: 0.125rem;
 }
 
 /* 字重 */
@@ -1442,7 +1449,7 @@
 
 
     /* 水晶頁籤 */
-    .tabs {
+    /* .tabs { */
         /* position: static;
         transform: none;
         width: 32rem;
@@ -1451,8 +1458,8 @@
         justify-content: center;
         gap: 0.5rem;
         margin-top: 1.5rem; */
-        width: 26rem;
-    }
+        /* width: 26rem; */
+    /* } */
 
     /* .tab.active {
         color: var(--color-primary1);
@@ -1520,6 +1527,45 @@
     /* 左邊 */
     .boxs {
         width: 90%;
+    }
+    /* 名稱欄 */
+    .inputNameBox {
+        width: 80%;
+    }
+    /* 尺寸設定視窗 */
+    .crystalSizeBox,
+    .ringSizeBox,
+    .ringJewelryBox,
+    .imagesBox {
+        gap: 0.5rem;
+    }
+    .sizeBox, #beadWindow {
+        padding: 1.25rem;
+    }
+
+    .imagesBox {
+        gap: 0.5rem;
+        margin: 0;
+    }
+    /* 珠子網格 */
+    .beadGrid {
+        /* gap: 0.25rem; */
+        grid-template-columns: repeat(6, 36.8px);
+        grid-template-rows: repeat(2, 36.8px);
+    }
+    .bead {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* 中間 */
+    .boxs3 {
+        margin-bottom: 1.5rem;
+    }
+
+    /* 價錢區域 */
+    .priceBox {
+        width: 100%;
     }
 
     /* 隱藏按鈕：工具欄 */
@@ -1593,6 +1639,11 @@
         width: 2.5rem;
         height: 2.5rem;
     }
+    /* 儲存/刪除按鈕 */
+    .btnDel, .btnSave {
+        width: 4rem;
+        height: 4rem;
+    }
 
     /* 隱藏按鈕：動畫 */
     
@@ -1603,6 +1654,10 @@
         font-size: 1rem;
         letter-spacing: 0.25rem;
     }
+    .inputName {
+        font-size: 1.25rem;
+    }
+
 }
 
 
@@ -1611,11 +1666,13 @@
 @media (max-width:601px) {
     .bracelet {
         transform: scale(0.8);
+        margin: 0;
     }
 }
 /* 手鍊大小：≥ 450 */
 @media (max-width:451px) {
     .bracelet {
         transform: scale(0.65);
+        margin: -10% 0;
     }
 }

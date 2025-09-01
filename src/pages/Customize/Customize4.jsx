@@ -120,10 +120,10 @@ export default function Customize4() {
   }, [braceletBeads, selectedSize]);
 
   const [openPanel, setOpenPanel] = useState(null); // null 或 "measure", "result", "wiki", "note", "custom"
-  const [selectedCategory, setSelectedCategory] = useState("靈性直覺"); // 預設分類
+  const [selectedCategory, setSelectedCategory] = useState("靈感"); // 預設分類
 
   const crystalData = {
-    靈性直覺: [
+    靈感: [
       "./images/S-CrystalSingle/crystal-kyanite.png",
       "./images/S-CrystalSingle/crystal-labradorite.png",
       "./images/S-CrystalSingle/crystal-lapislazuli.png",
@@ -136,7 +136,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-moonstone.png",
       "./images/S-CrystalSingle/crystal-clearquartz.png"
     ],
-    專注工作: [
+    專心: [
       "./images/S-CrystalSingle/crystal-citrine.png",
       "./images/S-CrystalSingle/crystal-rutile-quartz.png",
       "./images/S-CrystalSingle/crystal-aquamarine.png",
@@ -148,7 +148,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-green-phantom.png",
       "./images/S-CrystalSingle/crystal-carnelian.png"
     ],
-    愛與人際: [
+    人緣: [
       "./images/S-CrystalSingle/crystal-iolite.png",
       "./images/S-CrystalSingle/crystal-lilac-amethyst.png",
       "./images/S-CrystalSingle/crystal-pinkquartz.png",
@@ -161,7 +161,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-oceanjasper.png"
 
     ],
-    能量防護: [
+    守護: [
       "./images/S-CrystalSingle/crystal-blackobsidian.png",
       "./images/S-CrystalSingle/crystal-goldobsidian.png",
       "./images/S-CrystalSingle/crystal-blacktourmaline.png",
@@ -172,7 +172,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-bloodstone.png",
       "./images/S-CrystalSingle/crystal-tridacna.png",
     ],
-    放鬆冥想: [
+    靜心: [
       "./images/S-CrystalSingle/crystal-pinkcalcite.png",
       "./images/S-CrystalSingle/crystal-amethyst.png",
       "./images/S-CrystalSingle/crystal-iolite.png",
@@ -252,7 +252,7 @@ export default function Customize4() {
   // };
 
   const categorizedCrystalInfo = {
-    "靈性直覺": [
+    "靈感": [
       {
         name: "藍晶石",
         en: "Kyanite",
@@ -299,7 +299,7 @@ export default function Customize4() {
         name: "紫水晶",
         en: "Amethyst",
         image: "./images/S-CrystalSingle/crystal-amethyst.png",
-        desc: "協助專注與情緒平衡，提升靈性直覺。"
+        desc: "協助專注與情緒平衡，提升靈感。"
       },
       {
         name: "白月光鈣長石",
@@ -320,7 +320,7 @@ export default function Customize4() {
         desc: "放大能量，協助靈性提升與淨化。"
       }
     ],
-    "專注工作": [
+    "專心": [
       {
         name: "黃水晶",
         en: "Citrine",
@@ -382,7 +382,7 @@ export default function Customize4() {
         desc: "注入活力與行動力，激發創造與熱情。"
       }
     ],
-    "愛與人際": [
+    "人緣": [
       {
         name: "堇青石",
         en: "Iolite",
@@ -432,7 +432,7 @@ export default function Customize4() {
         desc: "穩定情緒與和諧交流。"
       }
     ],
-    "能量防護": [
+    "守護": [
       {
         name: "黑曜石",
         en: "Black Obsidian",
@@ -488,7 +488,7 @@ export default function Customize4() {
         desc: "帶來純淨能量，清除雜念與焦慮。"
       }
     ],
-    "放鬆冥想": [
+    "靜心": [
       {
         name: "粉方解石",
         en: "Pink Calcite",
@@ -499,7 +499,7 @@ export default function Customize4() {
         name: "紫水晶",
         en: "Amethyst",
         image: "./images/S-CrystalSingle/crystal-amethyst.png",
-        desc: "協助專注與情緒平衡，提升靈性直覺。"
+        desc: "協助專注與情緒平衡，提升靈感。"
       },
       {
         name: "堇青石",
