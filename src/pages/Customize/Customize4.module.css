@@ -1302,7 +1302,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .boxs {
         gap: 1.25rem;
+    }
+    .boxs2 {
+        gap: 2rem;
     }
 
     /* 中間＆右邊 */
@@ -1518,6 +1523,9 @@
     }
 
     /* 隱藏按鈕：工具欄 */
+    .align {
+        top: 7.5rem;
+    }
     .iconBox2 {
         border-radius: 0.938rem 0 0 0.938rem;
         flex-direction: column;
@@ -1556,6 +1564,7 @@
         box-shadow: 0 0 11.485px 0 rgba(233, 166, 160, 0.25);
         backdrop-filter: blur(5px);
         color: #8284A2;
+        top: 7.5rem;
     }
     .buttonMobile img {
         width: 1.25rem;
@@ -1575,6 +1584,16 @@
         margin: 0 -0.1rem;
     }
 
+    /* 工具欄icon */
+    .iconBtn1,
+    .iconBtn2,
+    .iconBtn3,
+    .iconBtn4,
+    .iconBtn5 {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
     /* 隱藏按鈕：動畫 */
     
 
@@ -1583,5 +1602,20 @@
     .recommendDesign {
         font-size: 1rem;
         letter-spacing: 0.25rem;
+    }
+}
+
+
+
+/* 手鍊大小：≥ 600 */
+@media (max-width:601px) {
+    .bracelet {
+        transform: scale(0.8);
+    }
+}
+/* 手鍊大小：≥ 450 */
+@media (max-width:451px) {
+    .bracelet {
+        transform: scale(0.65);
     }
 }
