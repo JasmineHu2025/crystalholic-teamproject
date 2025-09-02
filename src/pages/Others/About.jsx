@@ -1,7 +1,6 @@
 import './About.css';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
-import '../../components/BgLight.css';
 import BgDark from '../../components/BgDark';
 // import BackToTopBtn from '../../components/BackToTopBtn'
 // const base = import.meta.env.BASE_URL;

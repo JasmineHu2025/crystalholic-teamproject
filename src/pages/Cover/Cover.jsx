@@ -574,13 +574,13 @@ export default function Cover() {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.8 }}
                             >
-                                <img className="cover1 deco1" src="./images/HomePage/deco1-diamond.png" alt="" />
+                                <img className="cover1 deco1" src="./images/HomePage/deco1-diamond.png" alt="裝飾鑽石" />
                                 <h2 className="home_p1_h2">
                                     <span className="home_p1_title1">匠心嚴選‧靈韻手作</span>
                                     <span className="home_p1_title2">打造專屬你的能量水晶</span>
                                 </h2>
-                                <img className="cover1 deco2" src="./images/HomePage/deco2-diamond.png" alt="" />
-                                <img className="cover1 deco3" src="./images/HomePage/deco3-diamond.png" alt="" />
+                                <img className="cover1 deco2" src="./images/HomePage/deco2-diamond.png" alt="裝飾鑽石" />
+                                <img className="cover1 deco3" src="./images/HomePage/deco3-diamond.png" alt="裝飾鑽石" />
                             </motion.section>
                         )}
 
