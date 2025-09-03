@@ -1,8 +1,8 @@
-const categories = ["靈性直覺", "專注工作", "愛與人際", "能量防護", "放鬆冥想"];
+const categories = ["靈感智慧", "專注自信", "愛情人緣", "平安守護", "放鬆靜心"];
 
 export default function CategoryTabs({ current, onClick }) {
   return (
-    <ul className="category-k">
+    <ul className="know-crystal-category-menu">
       {categories.map((cat) => (
         <li
           key={cat}

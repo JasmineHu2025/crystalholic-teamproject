@@ -1,7 +1,7 @@
 const base = import.meta.env.BASE_URL;
 
 const crystalsData = {
-    靈性直覺: [
+    靈感智慧: [
         {
             name: "藍晶石",
             englishName: "Kyanite",
@@ -13,19 +13,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-angelite.png`,
                     alt: "天使石",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "天使石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-amethyst.png`,
                     alt: "紫水晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "紫水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-sunstone.png`,
                     alt: "太陽石",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "太陽石"
                 }
             ]
@@ -34,26 +34,26 @@ const crystalsData = {
             name: "拉長石",
             englishName: "Labradorite",
             image: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
-            description: "拉長石是一種帶有彩虹光澤的神秘水晶，常用於靈性覺醒與能量防護，能幫助打開潛意識的大門。",
-            effects: "直覺啟動：提升對能量與情緒的敏銳度。\n靈視開發：增強靈視與第六感。\n能量防護：穩定氣場，抵禦外在干擾。",
+            description: "拉長石是一種帶有彩虹光澤的神秘水晶，常用於靈性覺醒與平安守護，能幫助打開潛意識的大門。",
+            effects: "直覺啟動：提升對能量與情緒的敏銳度。\n靈視開發：增強靈視與第六感。\n平安守護：穩定氣場，抵禦外在干擾。",
             suitableFor: "渴望開發直覺與靈性視野的人。\n經常處於高能量環境中工作者。",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-sodalite.png`,
                     alt: "蘇打石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "蘇打石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-moonstone.png`,
                     alt: "月光石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "月光石"
                 }
             ]
@@ -69,19 +69,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-sodalite.png`,
                     alt: "蘇打石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "蘇打石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-moonstone.png`,
                     alt: "月光石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "月光石"
                 }
             ]
@@ -97,19 +97,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-tanzanite.png`,
                     alt: "丹泉石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "丹泉石"
                 }
             ]
@@ -126,13 +126,13 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-lapislazuli.png`,
                     alt: "青金石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "青金石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 }
             ]
@@ -148,19 +148,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-pietersite.png`,
                     alt: "彼得石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "彼得石"
                 }
             ]
@@ -176,13 +176,13 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-moonstone.png`,
                     alt: "月光石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "月光石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-sodalite.png`,
                     alt: "蘇打石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "蘇打石"
                 }
             ]
@@ -198,19 +198,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-moonstone.png`,
                     alt: "月光石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "月光石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 }
             ]
@@ -226,13 +226,13 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-albite.png`,
                     alt: "白月光鈣長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白月光鈣長石"
                 }
             ]
@@ -248,25 +248,25 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-moonstone.png`,
                     alt: "月光石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "月光石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-amethyst.png`,
                     alt: "紫水晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "紫水晶"
                 }
             ]
         }
     ],
-    專注工作: [
+    專注自信: [
         {
             name: "黃水晶",
             englishName: "Citrine",
@@ -278,19 +278,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-rutile-quartz.png`,
                     alt: "鈦晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "鈦晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-tigerseye.png`,
                     alt: "虎眼石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "虎眼石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-carnelian.png`,
                     alt: "紅瑪瑙",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "紅瑪瑙"
                 }
             ]
@@ -306,19 +306,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-sodalite.png`,
                     alt: "蘇打石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "蘇打石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
                     alt: "黃水晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "黃水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-lapislazuli.png`,
                     alt: "青金石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "青金石"
                 }
             ]
@@ -334,19 +334,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-tigerseye.png`,
                     alt: "虎眼石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "虎眼石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-labradorite.png`,
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-smokyquartz.png`,
                     alt: "茶晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "茶晶"
                 }
             ]
@@ -362,19 +362,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-hawkseye.png`,
                     alt: "鷹眼石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "鷹眼石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
                     alt: "黃水晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "黃水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-blacktourmaline.png`,
                     alt: "黑碧璽",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "黑碧璽"
                 }
             ]
@@ -390,19 +390,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
                     alt: "黃水晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "黃水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-rutile-quartz.png`,
                     alt: "鈦晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "鈦晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-fluorite.png`,
                     alt: "螢石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "螢石"
                 }
             ]
@@ -419,19 +419,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
                     alt: "黃水晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "黃水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-smokyquartz.png`,
                     alt: "茶晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "茶晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 }
             ]
@@ -447,19 +447,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-sodalite.png`,
                     alt: "蘇打石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "蘇打石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-fluorite.png`,
                     alt: "螢石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "螢石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 }
             ]
@@ -468,26 +468,26 @@ const crystalsData = {
             name: "紫螢石",
             englishName: "Purple Fluorite",
             image: `${base}images/S-CrystalSingle/crystal-purplefluorite.png`,
-            description: "紫螢石具備高度智慧與安定波頻，是強化創意思維與深入專注的絕佳水晶。",
+            description: "紫螢石是一種高頻能量晶體，被視為智慧與專注之石，能激發創意思維，釐清想法並帶來安定感。",
             effects: "創意啟動：激發靈感與抽象思維能力。\n專注穩定：減少腦部雜訊與疲勞。\n靜心清明：有助冥想與靈感釐清。",
             suitableFor: "從事創作、設計、研究與教學的人，\n或正面臨思緒混亂、需要提升專注與心靈清明的人。",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-fluorite.png`,
                     alt: "螢石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "螢石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`,
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-lapislazuli.png`,
                     alt: "青金石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "青金石"
                 }
             ]
@@ -503,19 +503,19 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-fluorite.png`,
                     alt: "螢石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "螢石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-aquamarine.png`,
                     alt: "海藍寶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "海藍寶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
                     alt: "黃水晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "黃水晶"
                 }
             ]
@@ -531,25 +531,25 @@ const crystalsData = {
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
                     alt: "黃水晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "黃水晶"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-tigerseye.png`,
                     alt: "虎眼石",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "虎眼石"
                 },
                 {
                     src: `${base}images/S-CrystalSingle/crystal-rutile-quartz.png`,
                     alt: "鈦晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "鈦晶"
                 }
             ]
         }
     ],
-    愛與人際: [
+    愛情人緣: [
         {
             name: "菫青石",
             englishName: "Iolite",
@@ -558,9 +558,9 @@ const crystalsData = {
             effects: "釐清困惑：協助看清感情糾結與真實想法。\n增進理解：提升溝通力與人際理解。\n整合理性與直覺：幫助做出平衡決策。",
             suitableFor: "人際溝通困難、感情混亂的人",
             recommended: [
-                { src: `${base}images/S-CrystalSingle/crystal-iolite.png`, alt: "菫青石", category: "放鬆冥想", targetName: "菫青石" },
-                { src: `${base}images/S-CrystalSingle/crystal-amethyst.png`, alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
-                { src: `${base}images/S-CrystalSingle/crystal-sodalite.png`, alt: "蘇打石", category: "靈性直覺", targetName: "蘇打石" }
+                { src: `${base}images/S-CrystalSingle/crystal-iolite.png`, alt: "菫青石", category: "放鬆靜心", targetName: "菫青石" },
+                { src: `${base}images/S-CrystalSingle/crystal-amethyst.png`, alt: "紫水晶", category: "放鬆靜心", targetName: "紫水晶" },
+                { src: `${base}images/S-CrystalSingle/crystal-sodalite.png`, alt: "蘇打石", category: "靈感智慧", targetName: "蘇打石" }
             ]
         },
         {
@@ -571,9 +571,9 @@ const crystalsData = {
             effects: "放鬆情緒：穩定情緒波動與內心焦慮。\n溫柔覺察：引導愛與自我接納流動。\n人際平衡：提升共感力與理解他人感受。",
             suitableFor: "敏感而害怕受傷、需要安心關係的人",
             recommended: [
-                { src: `${base}images/S-CrystalSingle/crystal-rosequartz.png`, alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
-                { src: `${base}images/S-CrystalSingle/crystal-moonstone.png`, alt: "月光石", category: "放鬆冥想", targetName: "月光石" },
-                { src: `${base}images/S-CrystalSingle/crystal-labradorite.png`, alt: "拉長石", category: "靈性直覺", targetName: "拉長石" }
+                { src: `${base}images/S-CrystalSingle/crystal-rosequartz.png`, alt: "玫瑰石英", category: "愛情人緣", targetName: "玫瑰石英" },
+                { src: `${base}images/S-CrystalSingle/crystal-moonstone.png`, alt: "月光石", category: "放鬆靜心", targetName: "月光石" },
+                { src: `${base}images/S-CrystalSingle/crystal-labradorite.png`, alt: "拉長石", category: "靈感智慧", targetName: "拉長石" }
             ]
         },
         {
@@ -584,9 +584,9 @@ const crystalsData = {
             effects: "行動力：提升戀愛積極性與自信表現。\n吸引力：展現個人魅力與能量磁場。\n情感穩定：協助面對關係波動與不安。",
             suitableFor: "害羞、戀愛遲疑或自信不足的人",
             recommended: [
-                { src: `${base}images/S-CrystalSingle/crystal-rubellite.png`, alt: "紅碧璽", category: "愛與人際", targetName: "紅碧璽" },
-                { src: `${base}images/S-CrystalSingle/crystal-garnet.png`, alt: "紅石榴石", category: "愛與人際", targetName: "紅石榴石" },
-                { src: `${base}images/S-CrystalSingle/crystal-citrine.png`, alt: "黃水晶", category: "專注工作", targetName: "黃水晶" }
+                { src: `${base}images/S-CrystalSingle/crystal-rubellite.png`, alt: "紅碧璽", category: "愛情人緣", targetName: "紅碧璽" },
+                { src: `${base}images/S-CrystalSingle/crystal-garnet.png`, alt: "紅石榴石", category: "愛情人緣", targetName: "紅石榴石" },
+                { src: `${base}images/S-CrystalSingle/crystal-citrine.png`, alt: "黃水晶", category: "專注自信", targetName: "黃水晶" }
             ]
         },
         {
@@ -597,9 +597,9 @@ const crystalsData = {
             effects: "情感連結：強化伴侶間能量共鳴。\n穩固關係：增加忠誠與承諾能量。\n提升信任：穩定感情互動與情緒回應。",
             suitableFor: "已在感情中、想經營穩定關係的人",
             recommended: [
-                { src: `${base}images/S-CrystalSingle/crystal-carnelian.png`, alt: "紅瑪瑙", category: "愛與人際", targetName: "紅瑪瑙" },
-                { src: `${base}images/S-CrystalSingle/crystal-golden-strawberry-quartz.png`, alt: "草莓晶", category: "愛與人際", targetName: "草莓晶" },
-                { src: `${base}images/S-CrystalSingle/crystal-smokyquartz.png`, alt: "茶晶", category: "能量防護", targetName: "茶晶" }
+                { src: `${base}images/S-CrystalSingle/crystal-carnelian.png`, alt: "紅瑪瑙", category: "愛情人緣", targetName: "紅瑪瑙" },
+                { src: `${base}images/S-CrystalSingle/crystal-golden-strawberry-quartz.png`, alt: "草莓晶", category: "愛情人緣", targetName: "草莓晶" },
+                { src: `${base}images/S-CrystalSingle/crystal-smokyquartz.png`, alt: "茶晶", category: "平安守護", targetName: "茶晶" }
             ]
         },
         {
@@ -610,9 +610,9 @@ const crystalsData = {
             effects: "人際流動：營造輕鬆自在的人際環境。\n促進善意：增強溝通與包容互動。\n歡樂能量：帶來愉悅與心情釋放。",
             suitableFor: "想改善人際圈、增強交流順利度的人",
             recommended: [
-                { src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`, alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
-                { src: `${base}images/S-CrystalSingle/crystal-rosequartz.png`, alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
-                { src: `${base}images/S-CrystalSingle/crystal-citrine.png`, alt: "黃水晶", category: "專注工作", targetName: "黃水晶" }
+                { src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`, alt: "白水晶", category: "靈感智慧", targetName: "白水晶" },
+                { src: `${base}images/S-CrystalSingle/crystal-rosequartz.png`, alt: "玫瑰石英", category: "愛情人緣", targetName: "玫瑰石英" },
+                { src: `${base}images/S-CrystalSingle/crystal-citrine.png`, alt: "黃水晶", category: "專注自信", targetName: "黃水晶" }
             ]
         },
         {
@@ -623,9 +623,9 @@ const crystalsData = {
             effects: "打開心輪：喚醒愛與情感流動。\n促進包容：幫助接納自己與他人。\n修復人際：帶來關係的溫柔療癒。",
             suitableFor: "渴望愛情、修補人際關係、提升自我愛的人",
             recommended: [
-                { src: `${base}images/S-CrystalSingle/crystal-moonstone.png`, alt: "月光石", category: "放鬆冥想", targetName: "月光石" },
-                { src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`, alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
-                { src: `${base}images/S-CrystalSingle/crystal-rubellite.png`, alt: "紅碧璽", category: "愛與人際", targetName: "紅碧璽" }
+                { src: `${base}images/S-CrystalSingle/crystal-moonstone.png`, alt: "月光石", category: "放鬆靜心", targetName: "月光石" },
+                { src: `${base}images/S-CrystalSingle/crystal-clearquartz.png`, alt: "白水晶", category: "靈感智慧", targetName: "白水晶" },
+                { src: `${base}images/S-CrystalSingle/crystal-rubellite.png`, alt: "紅碧璽", category: "愛情人緣", targetName: "紅碧璽" }
             ]
         },
         {
@@ -636,9 +636,9 @@ const crystalsData = {
             effects: "增強桃花：提升戀愛運與人緣。\n甜美吸引：展現柔和與女性魅力。\n自我肯定：培養被愛的信心。",
             suitableFor: "正在尋找戀愛對象或希望提升戀愛運的人",
             recommended: [
-                { src: `${base}images/S-CrystalSingle/crystal-rosequartz.png`, alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
-                { src: `${base}images/S-CrystalSingle/crystal-rhodochrosite.png`, alt: "紅紋石", category: "愛與人際", targetName: "紅紋石" },
-                { src: `${base}images/S-CrystalSingle/crystal-garnet.png`, alt: "紅石榴石", category: "愛與人際", targetName: "紅石榴石" }
+                { src: `${base}images/S-CrystalSingle/crystal-rosequartz.png`, alt: "玫瑰石英", category: "愛情人緣", targetName: "玫瑰石英" },
+                { src: `${base}images/S-CrystalSingle/crystal-rhodochrosite.png`, alt: "紅紋石", category: "愛情人緣", targetName: "紅紋石" },
+                { src: `${base}images/S-CrystalSingle/crystal-garnet.png`, alt: "紅石榴石", category: "愛情人緣", targetName: "紅石榴石" }
             ]
         },
         {
@@ -649,9 +649,9 @@ const crystalsData = {
             effects: "療癒創傷：釋放過往情感陰影。\n喚醒溫柔：啟動內在小孩與愛的流動。\n開放心輪：幫助重新感受愛與被愛。",
             suitableFor: "情感受過傷、希望重新敞開心房的人",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-pinkquartz.png", alt: "粉晶", category: "愛與人際", targetName: "粉晶" },
-                { src: "./images/S-CrystalSingle/crystal-moonstone.png", alt: "月光石", category: "放鬆冥想", targetName: "月光石" },
-                { src: "./images/S-CrystalSingle/crystal-rubellite.png", alt: "紅碧璽", category: "愛與人際", targetName: "紅碧璽" }
+                { src: "./images/S-CrystalSingle/crystal-pinkquartz.png", alt: "粉晶", category: "愛情人緣", targetName: "粉晶" },
+                { src: "./images/S-CrystalSingle/crystal-moonstone.png", alt: "月光石", category: "放鬆靜心", targetName: "月光石" },
+                { src: "./images/S-CrystalSingle/crystal-rubellite.png", alt: "紅碧璽", category: "愛情人緣", targetName: "紅碧璽" }
             ]
         },
         {
@@ -660,11 +660,11 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-pinkquartz.png",
             description: "粉晶與玫瑰石英能量相似，但更加偏向於柔和內斂的愛與療癒，協助建立自愛與穩定情感。",
             effects: "柔性愛能量：釋放恐懼與心牆。\n情感安撫：帶來平靜與自我關懷。\n關係修補：協助建立穩定情感連結。",
-            suitableFor: "缺乏安全感、想重新相信愛與人際連結的人",
+            suitableFor: "缺乏安全感、想重新相信愛情人緣連結的人",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-lilac-amethyst.png", alt: "粉紫水晶", category: "愛與人際", targetName: "粉紫水晶" },
-                { src: "./images/S-CrystalSingle/crystal-tridacna.png", alt: "硨磲石", category: "能量防護", targetName: "硨磲石" },
-                { src: "./images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" }
+                { src: "./images/S-CrystalSingle/crystal-lilac-amethyst.png", alt: "粉紫水晶", category: "愛情人緣", targetName: "粉紫水晶" },
+                { src: "./images/S-CrystalSingle/crystal-tridacna.png", alt: "硨磲石", category: "平安守護", targetName: "硨磲石" },
+                { src: "./images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛情人緣", targetName: "玫瑰石英" }
             ]
         },
         {
@@ -675,13 +675,13 @@ const crystalsData = {
             effects: "激發情感：喚醒愛情熱度與慾望。\n鼓勵表達：幫助說出真實情緒。\n戀愛推進：增強親密與互動意願。",
             suitableFor: "戀愛中感到冷淡或情感表達困難者",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-rhodochrosite.png", alt: "紅紋石", category: "愛與人際", targetName: "紅紋石" },
-                { src: "./images/S-CrystalSingle/crystal-pinkquartz.png", alt: "粉晶", category: "愛與人際", targetName: "粉晶" },
-                { src: "./images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "愛與人際", targetName: "紅瑪瑙" }
+                { src: "./images/S-CrystalSingle/crystal-rhodochrosite.png", alt: "紅紋石", category: "愛情人緣", targetName: "紅紋石" },
+                { src: "./images/S-CrystalSingle/crystal-pinkquartz.png", alt: "粉晶", category: "愛情人緣", targetName: "粉晶" },
+                { src: "./images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "愛情人緣", targetName: "紅瑪瑙" }
             ]
         }
     ],
-    能量防護: [
+    平安守護: [
         {
             name: "黑曜石",
             englishName: "Obsidian",
@@ -693,19 +693,19 @@ const crystalsData = {
                 {
                     src: "./images/S-CrystalSingle/crystal-snowflakeobsidian.png",
                     alt: "雪花黑曜石",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "雪花黑曜石"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
                     alt: "黑碧璽",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "黑碧璽"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-amethyst.png",
                     alt: "紫水晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "紫水晶"
                 }
             ]
@@ -714,26 +714,26 @@ const crystalsData = {
             name: "金曜石",
             englishName: "Gold Obsidian",
             image: "./images/S-CrystalSingle/crystal-goldobsidian.png",
-            description: "金曜石象徵光明照進黑暗，能深入潛意識協助轉化陰影與建立能量防護罩，是極具力量的靈性護盾。",
-            effects: "能量防護：建立氣場屏障，隔絕負面能量干擾。\n陰影整合：協助面對潛藏情緒與未解的內在議題。\n穩定地氣：提供實際支持感與穩定的安全基礎。",
+            description: "金曜石象徵光明照進黑暗，能深入潛意識協助轉化陰影與建立平安守護罩，是極具力量的靈性護盾。",
+            effects: "平安守護：建立氣場屏障，隔絕負面能量干擾。\n陰影整合：協助面對潛藏情緒與未解的內在議題。\n穩定地氣：提供實際支持感與穩定的安全基礎。",
             suitableFor: "需要防護外界干擾或負能量的人。\n正在做內在探索、陰影整合或轉化療癒者。",
             recommended: [
                 {
                     src: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
                     alt: "黑碧璽",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "黑碧璽"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-smokyquartz.png",
                     alt: "茶晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "茶晶"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-labradorite.png",
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 }
             ]
@@ -742,26 +742,26 @@ const crystalsData = {
             name: "黑碧璽",
             englishName: "Tourmaline",
             image: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
-            description: "黑碧璽是最具能量防護力的水晶，能有效吸收與轉化負能量，並穩定自身氣場，是職場與靈性實踐中最受信任的保護石。",
+            description: "黑碧璽是最具平安守護力的水晶，能有效吸收與轉化負能量，並穩定自身氣場，是職場與靈性實踐中最受信任的保護石。",
             effects: "氣場防護：建立能量屏障，防止外界干擾與情緒。\n情緒穩定：減緩緊張、焦慮與能量混亂。\n地氣連結：強化根部，提升內在安全與行動力。",
             suitableFor: "長期處於人際壓力或能量混亂環境的人。\n敏感體質、易受影響、情緒容易失衡者。",
             recommended: [
                 {
                     src: "./images/S-CrystalSingle/crystal-smokyquartz.png",
                     alt: "茶晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "茶晶"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-goldobsidian.png",
                     alt: "金曜石",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "金曜石"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-labradorite.png",
                     alt: "拉長石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "拉長石"
                 }
             ]
@@ -774,22 +774,22 @@ const crystalsData = {
             effects: "能量平衡：協調情緒能場與內在衝突。\n清理情緒：釋放壓抑與潛藏的創傷能量。\n穩定防護：建立內在穩定結界，抵禦負面波動。",
             suitableFor: "情緒敏感或容易被他人影響的人。\n需要深入自我整合與能量保護的人。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-blackobsidian.png", alt: "黑曜石", category: "能量防護", targetName: "黑曜石" },
-                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
-                { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" }
+                { src: "./images/S-CrystalSingle/crystal-blackobsidian.png", alt: "黑曜石", category: "平安守護", targetName: "黑曜石" },
+                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆靜心", targetName: "紫水晶" },
+                { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆靜心", targetName: "茶晶" }
             ]
         },
         {
             name: "黑銀曜石",
             englishName: "Silver Sheen O.",
             image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
-            description: "黑銀曜石表面呈現銀色光澤，象徵內在洞察與能量防護，適合需要看清真相與穩固自我界線的人使用。",
+            description: "黑銀曜石表面呈現銀色光澤，象徵內在洞察與平安守護，適合需要看清真相與穩固自我界線的人使用。",
             effects: "心靈保護：阻隔情緒干擾與負能量渲染。\n提升洞察：看見潛意識中的模式與真相。\n自我連結：穩定能場，深化內在力量。",
             suitableFor: "靈性工作者、情緒敏感族群、能量療癒師，\n或經常處於複雜人際與高壓環境中者。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-goldobsidian.png", alt: "金曜石", category: "能量防護", targetName: "金曜石" },
-                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
-                { src: "./images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "能量防護", targetName: "黑碧璽" }
+                { src: "./images/S-CrystalSingle/crystal-goldobsidian.png", alt: "金曜石", category: "平安守護", targetName: "金曜石" },
+                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈感智慧", targetName: "白水晶" },
+                { src: "./images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "平安守護", targetName: "黑碧璽" }
             ]
         },
         {
@@ -800,35 +800,35 @@ const crystalsData = {
             effects: "建立界線：守護內在空間與情感完整性。\n情緒療癒：撫平創傷，激發愛與自我價值。\n溫柔防護：在不失開放的前提下保持能場穩定。",
             suitableFor: "在人際中容易過度付出與能量流失者。\n需要學會說不、照顧自己界線的人。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
-                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
-                { src: "./images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "能量防護", targetName: "黑碧璽" }
+                { src: "./images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛情人緣", targetName: "玫瑰石英" },
+                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆靜心", targetName: "紫水晶" },
+                { src: "./images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "平安守護", targetName: "黑碧璽" }
             ]
         },
         {
             name: "黑鐵礦",
             englishName: "Hematite",
             image: "./images/S-CrystalSingle/crystal-hematite.png",
-            description: "黑鐵礦帶有金屬光澤，以強大的地氣與穩定能量著稱。有助集中注意力、排除負能量，並加強身體與地面的連結感",
+            description: "黑鐵礦帶有金屬光澤，以強大的地氣與穩定能量著稱。有助集中注意力、排除負能量，並加強身體與地面的連結感。",
             effects: "地氣穩定：強化根部連結與行動實踐。\n防護結界：隔離外界情緒干擾與負面投射。\n專注定心：清除雜念並提升專注執行力。",
             suitableFor: "易焦慮、能量浮動大、難以集中精神的人。\n需要穩定根基與保護氣場的療癒師與職場工作者。",
             recommended: [
                 {
                     src: "./images/S-CrystalSingle/crystal-smokyquartz.png",
                     alt: "茶晶",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "茶晶"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
                     alt: "黑碧璽",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "黑碧璽"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-carnelian.png",
                     alt: "紅瑪瑙",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "紅瑪瑙"
                 }
             ]
@@ -841,9 +841,9 @@ const crystalsData = {
             effects: "磁場淨化：清除雜念與心靈混亂。\n心性安定：提升慈悲頻率與內在和平。\n柔性防護：在柔和中形成能量結界。",
             suitableFor: "靈性修行、冥想或容易心浮氣躁者，\n特別適合追求內在平靜與能量淨化的療癒愛好者。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
-                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
-                { src: "./images/S-CrystalSingle/crystal-labradorite.png", alt: "拉長石", category: "靈性直覺", targetName: "拉長石" }
+                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈感智慧", targetName: "白水晶" },
+                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆靜心", targetName: "紫水晶" },
+                { src: "./images/S-CrystalSingle/crystal-labradorite.png", alt: "拉長石", category: "靈感智慧", targetName: "拉長石" }
             ]
         },
         {
@@ -854,13 +854,13 @@ const crystalsData = {
             effects: "強化氣場：提升生命力與能量耐受度。\n行動保護：在行動與挑戰中穩定自我。\n戰士精神：激發堅持與面對逆境的勇氣。",
             suitableFor: "面對挑戰、轉變或易消耗能量的環境者，\n特別適合需要持續堅持與承受壓力的工作者或療癒者。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" },
-                { src: "./images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "專注工作", targetName: "紅瑪瑙" },
-                { src: "./images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "能量防護", targetName: "黑碧璽" }
+                { src: "./images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "平安守護", targetName: "黑鐵礦" },
+                { src: "./images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "專注自信", targetName: "紅瑪瑙" },
+                { src: "./images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "平安守護", targetName: "黑碧璽" }
             ]
         }
     ],
-    放鬆冥想: [
+    放鬆靜心: [
         {
             name: "紫水晶",
             englishName: "Amethyst",
@@ -872,19 +872,19 @@ const crystalsData = {
                 {
                     src: "./images/S-CrystalSingle/crystal-rosequartz.png",
                     alt: "玫瑰石英",
-                    category: "愛與人際",
+                    category: "愛情人緣",
                     targetName: "玫瑰石英"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-clearquartz.png",
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-angelite.png",
                     alt: "天使石",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "天使石"
                 }
             ]
@@ -900,19 +900,19 @@ const crystalsData = {
                 {
                     src: "./images/S-CrystalSingle/crystal-moonstone.png",
                     alt: "月光石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "月光石"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-rosequartz.png",
                     alt: "玫瑰石英",
-                    category: "愛與人際",
+                    category: "愛情人緣",
                     targetName: "玫瑰石英"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-amethyst.png",
                     alt: "紫水晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "紫水晶"
                 }
             ]
@@ -929,19 +929,19 @@ const crystalsData = {
                 {
                     src: "./images/S-CrystalSingle/crystal-citrine.png",
                     alt: "黃水晶",
-                    category: "專注工作",
+                    category: "專注自信",
                     targetName: "黃水晶"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-rosequartz.png",
                     alt: "玫瑰石英",
-                    category: "愛與人際",
+                    category: "愛情人緣",
                     targetName: "玫瑰石英"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-amethyst.png",
                     alt: "紫水晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "紫水晶"
                 }
             ]
@@ -957,19 +957,19 @@ const crystalsData = {
                 {
                     src: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
                     alt: "黑碧璽",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "黑碧璽"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-hematite.png",
                     alt: "黑鐵礦",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "黑鐵礦"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-amethyst.png",
                     alt: "紫水晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "紫水晶"
                 }
             ]
@@ -982,9 +982,9 @@ const crystalsData = {
             effects: "釐清思緒：協助從焦躁中回到中心點。\n直覺開啟：加強第三眼與靈視覺化。\n冥想引導：幫助聚焦並進入深度冥想狀態。",
             suitableFor: "腦袋常打結、情緒反覆者。\n需要靈性練習與意念導引幫助者。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
-                { src: "./images/S-CrystalSingle/crystal-sodalite.png", alt: "蘇打石", category: "靈性直覺", targetName: "蘇打石" },
-                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" }
+                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆靜心", targetName: "紫水晶" },
+                { src: "./images/S-CrystalSingle/crystal-sodalite.png", alt: "蘇打石", category: "靈感智慧", targetName: "蘇打石" },
+                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈感智慧", targetName: "白水晶" }
             ]
         },
         {
@@ -995,9 +995,9 @@ const crystalsData = {
             effects: "穩定神經：減緩壓力與焦躁情緒。\n靜心入眠：幫助冥想與放鬆入睡。\n靈性共鳴：提升心靈寧靜與和平感。",
             suitableFor: "睡眠障礙、神經緊繃或能量敏感者，特別適合在身心疲憊、\n入眠困難或需要靜心沉澱時使用，幫助回歸平靜與安穩。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-angelite.png", alt: "天使石", category: "放鬆冥想", targetName: "天使石" },
-                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
-                { src: "./images/S-CrystalSingle/crystal-bluecalcite.png", alt: "藍方解石", category: "放鬆冥想", targetName: "藍方解石" }
+                { src: "./images/S-CrystalSingle/crystal-angelite.png", alt: "天使石", category: "放鬆靜心", targetName: "天使石" },
+                { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆靜心", targetName: "紫水晶" },
+                { src: "./images/S-CrystalSingle/crystal-bluecalcite.png", alt: "藍方解石", category: "放鬆靜心", targetName: "藍方解石" }
             ]
         },
         {
@@ -1008,22 +1008,22 @@ const crystalsData = {
             effects: "釐清雜念：協助從混亂回到安定中心。\n能量整理：穩定思緒與心輪能場。\n靜心作用：支持冥想時的專注與平和。",
             suitableFor: "容易分心、精神雜亂或情緒低落者，\n特別適合在壓力大、或想重建內在秩序時使用。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" },
-                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
-                { src: "./images/S-CrystalSingle/crystal-rosequartz.png", alt: "粉晶", category: "放鬆冥想", targetName: "粉晶" }
+                { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆靜心", targetName: "茶晶" },
+                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈感智慧", targetName: "白水晶" },
+                { src: "./images/S-CrystalSingle/crystal-rosequartz.png", alt: "粉晶", category: "放鬆靜心", targetName: "粉晶" }
             ]
         },
         {
             name: "黑銀曜石",
             englishName: "Silver Sheen O.",
             image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
-            description: "黑銀曜石不僅具有強大的能量防護作用，也能協助內在反思、釐清混亂思緒，是進入深層冥想與自我探索的優秀助手。",
+            description: "黑銀曜石不僅具有強大的平安守護作用，也能協助內在反思、釐清混亂思緒，是進入深層冥想與自我探索的優秀助手。",
             effects: "能量隔離：避免干擾，讓冥想更安定。\n內省輔助：看見潛意識中的情緒模式。\n心念沉澱：清理思緒並帶來平靜力量。",
             suitableFor: "靈性探索者與情緒敏感、容易受外界干擾的人，\n亦適合正在進行內在整合、冥想練習的人。",
             recommended: [
-                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
-                { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" },
-                { src: "./images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" }
+                { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈感智慧", targetName: "白水晶" },
+                { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆靜心", targetName: "茶晶" },
+                { src: "./images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "平安守護", targetName: "黑鐵礦" }
             ]
         },
         {
@@ -1037,19 +1037,19 @@ const crystalsData = {
                 {
                     src: "./images/S-CrystalSingle/crystal-amethyst.png",
                     alt: "紫水晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "紫水晶"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-bluecalcite.png",
                     alt: "藍方解石",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "藍方解石"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-clearquartz.png",
                     alt: "白水晶",
-                    category: "靈性直覺",
+                    category: "靈感智慧",
                     targetName: "白水晶"
                 }
             ]
@@ -1065,19 +1065,19 @@ const crystalsData = {
                 {
                     src: "./images/S-CrystalSingle/crystal-rosequartz.png",
                     alt: "粉晶",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "粉晶"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-moonstone.png",
                     alt: "月光石",
-                    category: "放鬆冥想",
+                    category: "放鬆靜心",
                     targetName: "月光石"
                 },
                 {
                     src: "./images/S-CrystalSingle/crystal-tridacna.png",
                     alt: "硨磲石",
-                    category: "能量防護",
+                    category: "平安守護",
                     targetName: "硨磲石"
                 }
             ]
