@@ -926,7 +926,7 @@
     margin-right: -0.25rem;
     right: 60%;
     z-index: 0;
-    top: -200px;
+    top: -210px;
 }
 
 .overlayContent {
@@ -1227,7 +1227,7 @@
     margin: 1rem auto;
     display: block;
     border-radius: 16px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); */
 }
 
 .infoBox {
@@ -1627,10 +1627,8 @@
     }
     /* 線(可刪？) */
     .line3 {
-        height: 2px;
         width: 100%;
-        /* border-color: #8750BF; */
-        border-color: rgba(130, 132, 162, 0.4);
+        border: 0.5px solid  #8284a2;
         margin: 0 -0.1rem;
     }
 
@@ -1678,15 +1676,6 @@
         opacity: 1;
     }}
 
-    /* 按鈕 */
-    /* #button-box {
-        flex-direction: column;
-        gap: 1.25rem;
-    }
-    .button1-j, .button2-j {
-        padding: 0.5rem;
-    } */
-
 
 
     /* 文字大小&間距 */
@@ -1702,8 +1691,15 @@
 
 
 
-/* 手鍊大小：≥ 600 */
+/* ≥ 600 */
 @media (max-width:601px) {
+    /* 水晶擺放教學 */
+    .crystalGuideOverlay {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    /* 手鍊 */
     .bracelet {
         transform: scale(0.8);
         margin: 0;
@@ -1734,4 +1730,22 @@
         transform: scale(0.65);
         margin: -10% 0;
     }
+
+    /* 右邊：小視窗 */
+    .panelContent {
+        width: 17rem;
+    }
+
+
+    /* 手鍊加入購物車彈窗 */
+    .noticeBox {
+        font-size: 14px;
+    }
+    .modalContentLarge {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        max-width: none;
+    }
+
 }
