@@ -58,9 +58,8 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  /* margin-bottom: -80px; */
 }
-
+/* 主水晶英文 */
 .know-crystal-category-singlecrystal > h1 {
   position: absolute;
   z-index: 1;
@@ -69,13 +68,14 @@
   opacity: 0.16;
 
   font-family: Lora;
-  font-size: 160px;
+  font-size: 10rem;
   font-style: italic;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 8px;
+  letter-spacing: 0.5rem;
 }
 
+/* 主水晶、左右切換按鈕 */
 .know-crystal-category-singlecrystal-img {
   position: relative;
   z-index: 2;
@@ -88,24 +88,24 @@
 
   margin-top: 130px;
 }
-
+/* 主水晶大小 */
+.know-crystal-category-singlecrystal-center {
+  width: 150px;
+  height: auto;
+}
+/* 左右切換按鈕：預設 */
 .know-crystal-category-singlecrystal-arrow {
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
-
+/* 左右切換按鈕：hover */
 .know-crystal-category-singlecrystal-arrow:hover {
   scale: 1.3;
 }
-
+/* 左右切換按鈕：已點擊 */
 .know-crystal-category-singlecrystal-arrow:active {
   scale: 1.15;
-}
-
-.know-crystal-category-singlecrystal-center {
-  width: 150px;
-  height: auto;
 }
 
 
@@ -176,21 +176,21 @@
 .know-crystal-content-h2 {
   /* 中文/霞鶩文楷/標題4 */
   font-family: "LXGW WenKai Mono TC";
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 36px */
-  letter-spacing: 2.4px;
+  line-height: 150%;
+  letter-spacing: 0.15rem;
   text-align: center;
 }
 .know-crystal-content-p {
   /* 中文/思源黑體/內文1 */
   font-family: "Noto Sans TC";
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 160%; /* 25.6px */
-  letter-spacing: 1.6px;
+  line-height: 160%;
+  letter-spacing: 0.1rem;
   text-align: center;
   white-space: pre-line;
 }
@@ -199,3 +199,29 @@
   width: 34.5vw;
   margin: 12px 0;
 }
+
+/* --- 平板 ≤ 1024px --- */
+@media (max-width: 1024px){
+  /* 選單 */
+  .know-crystal-category-menu {
+    gap: 80px;
+  }
+
+  /* 主水晶英文 */
+  .know-crystal-category-singlecrystal > h1 {
+    font-size: 6.25rem;
+  }
+  
+  /* 主水晶、左右切換按鈕 */
+  .know-crystal-category-singlecrystal-img {
+    margin-top: 80px;
+  }
+
+  /* 主水晶大小 */
+  .know-crystal-category-singlecrystal-center {
+    width: 110px;
+  }
+}
+
+/* --- 手機螢幕 ≤ 767px --- */
+@media (max-width: 767px){}
