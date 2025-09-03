@@ -120,10 +120,10 @@ export default function Customize4() {
   }, [braceletBeads, selectedSize]);
 
   const [openPanel, setOpenPanel] = useState(null); // null 或 "measure", "result", "wiki", "note", "custom"
-  const [selectedCategory, setSelectedCategory] = useState("靈感"); // 預設分類
+  const [selectedCategory, setSelectedCategory] = useState("靈感智慧"); // 預設分類
 
   const crystalData = {
-    靈感: [
+    靈感智慧: [
       "./images/S-CrystalSingle/crystal-kyanite.png",
       "./images/S-CrystalSingle/crystal-labradorite.png",
       "./images/S-CrystalSingle/crystal-lapislazuli.png",
@@ -136,7 +136,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-moonstone.png",
       "./images/S-CrystalSingle/crystal-clearquartz.png"
     ],
-    專心: [
+    專注工作: [
       "./images/S-CrystalSingle/crystal-citrine.png",
       "./images/S-CrystalSingle/crystal-rutile-quartz.png",
       "./images/S-CrystalSingle/crystal-aquamarine.png",
@@ -148,7 +148,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-green-phantom.png",
       "./images/S-CrystalSingle/crystal-carnelian.png"
     ],
-    人緣: [
+    愛情人緣: [
       "./images/S-CrystalSingle/crystal-iolite.png",
       "./images/S-CrystalSingle/crystal-lilac-amethyst.png",
       "./images/S-CrystalSingle/crystal-pinkquartz.png",
@@ -161,7 +161,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-oceanjasper.png"
 
     ],
-    守護: [
+    守護淨化: [
       "./images/S-CrystalSingle/crystal-blackobsidian.png",
       "./images/S-CrystalSingle/crystal-goldobsidian.png",
       "./images/S-CrystalSingle/crystal-blacktourmaline.png",
@@ -172,7 +172,7 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-bloodstone.png",
       "./images/S-CrystalSingle/crystal-tridacna.png",
     ],
-    靜心: [
+    放鬆靜心: [
       "./images/S-CrystalSingle/crystal-pinkcalcite.png",
       "./images/S-CrystalSingle/crystal-amethyst.png",
       "./images/S-CrystalSingle/crystal-iolite.png",
@@ -252,7 +252,7 @@ export default function Customize4() {
   // };
 
   const categorizedCrystalInfo = {
-    "靈感": [
+    "靈感智慧": [
       {
         name: "藍晶石",
         en: "Kyanite",
@@ -320,7 +320,7 @@ export default function Customize4() {
         desc: "放大能量，協助靈性提升與淨化。"
       }
     ],
-    "專心": [
+    "專注工作": [
       {
         name: "黃水晶",
         en: "Citrine",
@@ -382,7 +382,7 @@ export default function Customize4() {
         desc: "注入活力與行動力，激發創造與熱情。"
       }
     ],
-    "人緣": [
+    "愛情人緣": [
       {
         name: "堇青石",
         en: "Iolite",
@@ -432,7 +432,7 @@ export default function Customize4() {
         desc: "穩定情緒與和諧交流。"
       }
     ],
-    "守護": [
+    "守護淨化": [
       {
         name: "黑曜石",
         en: "Black Obsidian",
@@ -488,7 +488,7 @@ export default function Customize4() {
         desc: "帶來純淨能量，清除雜念與焦慮。"
       }
     ],
-    "靜心": [
+    "放鬆靜心": [
       {
         name: "粉方解石",
         en: "Pink Calcite",
@@ -897,22 +897,6 @@ export default function Customize4() {
           {/* 水晶欄 */}
           <div id={style.beadWindow}>
             {/* 水晶系列分類標籤 */}
-            {/* <nav className={style.tabs}>
-              {Object.keys(crystalData).map((category, index) => (
-                <button
-                  key={category}
-                  className={`${style.tab} ${selectedCategory === category ? style.active : ""}`}
-                  onClick={() => setSelectedCategory(category)}
-                > */}
-            {/* 第一個<hr />刪除 */}
-            {/* {index !== 0 && <div className={style.tabLine}></div>}
-
-                  {category}
-                </button>
-              ))}
-            </nav> */}
-
-            {/* test */}
             <nav className={style.tabs}>
               {Object.keys(crystalData).map((category, index, array) => {
                 const isSelected = selectedCategory === category;
@@ -929,7 +913,14 @@ export default function Customize4() {
                     {index !== 0 && !isSelected && !isNextToSelected && (
                       <div className={style.tabLine}></div>
                     )}
-                    {category}
+                    {/* {category} */}
+                    {/* 電腦版 */}
+                    <span className={style.tabLabelFull}>{category}</span>
+
+                    {/* 手機版 */}
+                    <span className={style.tabLabelShort}>
+                      {category.slice(0, 2)}   {/* 例：靈感智慧 → 靈感 */}
+                    </span>
                   </button>
                 );
               })}
@@ -982,11 +973,11 @@ export default function Customize4() {
 
             {/* 手鍊 */}
             <div className={style.bracelet}
-              // style={{
-              //   width: `${braceletRadius * 2 * scale}px`,
-              //   height: `${braceletRadius * 2 * scale}px`,
-              // }}
-              >
+            // style={{
+            //   width: `${braceletRadius * 2 * scale}px`,
+            //   height: `${braceletRadius * 2 * scale}px`,
+            // }}
+            >
               {(() => {
                 let accumulatedAngle = 0;
                 return braceletBeads.map((bead, index) => {
