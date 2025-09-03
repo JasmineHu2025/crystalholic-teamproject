@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 export default function Customize4() {
   // 串接購物車
   const { addToCart } = useCart();
@@ -805,6 +806,7 @@ export default function Customize4() {
   };
 
 
+
   return (
     <>
       <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
@@ -1420,7 +1422,7 @@ export default function Customize4() {
               </div>
 
               {/* 清除彈跳視窗 */}
-              {showConfirmModal && (
+              {/* {showConfirmModal && (
                 <div className={style.modalOverlay}>
                   <div className={style.modalContent}>
                     <p>確定要清除整條手鍊嗎？</p>
@@ -1430,16 +1432,17 @@ export default function Customize4() {
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
+
               {/* 儲存彈跳視窗 */}
-              {showCustomModal && (
+              {/* {showCustomModal && (
                 <div className={style.modalOverlay}>
                   <div className={style.modalContent}>
                     <p>手鍊資料儲存成功！</p>
                     <button className={style.btnConfirm} onClick={() => setShowCustomModal(false)}>確認</button>
                   </div>
                 </div>
-              )}
+              )} */}
               {/* 購物車按鈕(未製作手鍊)彈跳視窗 */}
               {showIncompleteModal && (
                 <div className={style.modalOverlay}>
@@ -1628,6 +1631,30 @@ export default function Customize4() {
           </div>
         )}
       </main>
+
+      {/* 清除彈跳視窗 */}
+      {showConfirmModal && (
+        <div className={style.modalOverlay}>
+          <div className={style.modalContent}>
+            <p>確定要清除整條手鍊嗎？</p>
+            <div className={style.modalButtons}>
+              <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
+              <button onClick={() => setShowConfirmModal(false)}>取消</button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* 儲存彈跳視窗 */}
+      {showCustomModal && (
+        <div className={style.modalOverlay}>
+          <div className={style.modalContent}>
+            <p>手鍊資料儲存成功！</p>
+            <button className={style.btnConfirm} onClick={() => setShowCustomModal(false)}>確認</button>
+          </div>
+        </div>
+      )}
+
+
       <CopyrightNotice />
     </>
   )

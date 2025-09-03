@@ -1294,14 +1294,12 @@
 /* 小於 1024px：上下分區 */
 @media (max-width: 1024px) {
     .index {
-        /* flex-direction: column; */
         flex-direction: column-reverse;
         align-items: center;
-        /* padding: 2rem 1rem; */
         gap: 2rem;
         height: 100%;
-        overflow: hidden;
         max-width: 100%;
+        overflow: hidden;
     }
 
     /* 左邊＆中間 */
@@ -1537,16 +1535,11 @@
     /* 尺寸設定視窗 */
     .crystalSizeBox,
     .ringSizeBox,
-    .ringJewelryBox,
-    .imagesBox {
+    .ringJewelryBox {
         gap: 0.5rem;
     }
     .sizeBox, #beadWindow {
         padding: 1.25rem;
-    }
-    .imagesBox {
-        gap: 0.5rem;
-        margin: 0;
     }
 
     /* ⭐️珠子頁籤列 */
@@ -1657,7 +1650,43 @@
     }
 
     /* 隱藏按鈕：動畫 */
-    
+    /* 滑出 */
+    .slideOut {
+        animation: slideOutRight 0.45s forwards ease-in-out;
+    }
+        @keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }}
+    /* 滑入 */
+    .slideIn {
+    animation: slideInRight 0.35s forwards ease-in-out;
+    }
+
+    @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }}
+
+    /* 按鈕 */
+    /* #button-box {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .button1-j, .button2-j {
+        padding: 0.5rem;
+    } */
+
 
 
     /* 文字大小&間距 */
@@ -1680,16 +1709,25 @@
         margin: 0;
     }
 }
-/* 手鍊大小 & 珠子頁籤：≥ 450 */
+/* ≥ 450 */
 @media (max-width:451px) {
+    /* 手鍊配飾 */
+    .imagesBox {
+        margin: 0;
+        gap: 0.5rem;
+    }
+
     /* 珠子頁籤 */
+    .tabLine {
+        margin-right: 27%;
+        margin-left: -33%;
+    }
     .tabLabelFull {
         display: none;
     }
     .tabLabelShort {
         display: flex;
     }
-
 
     /* 手鍊 */
     .bracelet {
