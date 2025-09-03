@@ -465,6 +465,7 @@
         scroll-snap-type: x mandatory; /* ✅ 可選：讓滑動對齊 */
         -webkit-overflow-scrolling: touch; /* ✅ 手機滑動順暢 */
     }
+    .p_collection_products::-webkit-scrollbar{ display:none; }
     .p_product_card {
         width: 73%;
         flex: 0 0 auto;        /* ✅ 讓卡片不自動壓縮成多欄 */

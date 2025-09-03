@@ -90,7 +90,7 @@
 }
 /* 主水晶大小 */
 .know-crystal-category-singlecrystal-center {
-  width: 150px;
+  width: 120px;
   height: auto;
 }
 /* 左右切換按鈕：預設 */
@@ -202,26 +202,107 @@
 
 /* --- 平板 ≤ 1024px --- */
 @media (max-width: 1024px){
+  .knowledge-crystal-main {
+    min-height: 0;
+  }
   /* 選單 */
   .know-crystal-category-menu {
     gap: 80px;
   }
-
   /* 主水晶英文 */
   .know-crystal-category-singlecrystal > h1 {
     font-size: 6.25rem;
   }
-  
   /* 主水晶、左右切換按鈕 */
   .know-crystal-category-singlecrystal-img {
     margin-top: 80px;
   }
-
   /* 主水晶大小 */
   .know-crystal-category-singlecrystal-center {
-    width: 110px;
+    width: 100px;
+  }
+  /* 左右切換按鈕：預設 */
+  .know-crystal-category-singlecrystal-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* 下半區：水晶相關內容 */
+  .know-crystal-content {
+    clip-path: ellipse(110% 150% at 50% 150%);
   }
 }
 
 /* --- 手機螢幕 ≤ 767px --- */
-@media (max-width: 767px){}
+@media (max-width: 767px){
+  /* 選單:讓分頁列可左右滑動 */
+  .know-crystal-category-menu{
+    justify-content: flex-start;
+    gap: 32px; 
+    padding-right: 30px;
+    margin-left: 30px;
+    overflow-x: auto;  
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; 
+  }
+
+  /* 隱藏卷軸 */
+  .know-crystal-category-menu::-webkit-scrollbar{ display:none; }
+  .know-crystal-category-menu{ scrollbar-width: none; }
+  
+  /* 選單:預設 */
+  .know-crystal-category-menu li{
+    white-space: nowrap; 
+    scroll-snap-align: start;        /* 捲到項目左緣貼齊 */
+  }
+  /* 選單:hover */
+  .know-crystal-category-menu li:hover {
+    padding: 4px 16px;
+  }
+  /* 選單:已選取 */
+  .know-crystal-category-menu li.active {
+    padding: 4px 16px;
+  }
+  
+  /* 主水晶英文 */
+  .know-crystal-category-singlecrystal > h1 {
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 0.15rem;
+    width: 85%;
+  }
+  /* 主水晶、左右切換按鈕 */
+  .know-crystal-category-singlecrystal-img{
+    width: 85%;
+    margin-top: 85px;
+  }
+
+  /* 下半區：水晶相關內容 */
+  .know-crystal-content {
+    clip-path: ellipse(170% 150% at 50% 150%);
+    padding-top: 10.5%;
+    margin: 12% 0;
+    gap: 40px;
+  }
+  /* 主石介紹 */
+  .know-crystal-content-area1 {
+    width: 80%;
+  }
+  /* 功效＆人群 */
+  .know-crystal-content-area2 {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 40px;
+  }
+  .know-crystal-content-area2-1,.know-crystal-content-area2-2 {
+    width: 100%;
+  }
+  .know-crystal-content-hr {
+    width: 100%;
+  }
+  /* 推薦三顆水晶-單顆 */
+  .know-crystal-content-recommended img {
+    width: 46px;
+  }
+}
