@@ -10,7 +10,7 @@ export default function KnowledgeCleanse() {
       <NavBarWrapper variant="light" />
       <main className="know-clean-main">
         <BgDark />
-
+        
         {/* 左側標題區 */}
         <section className="know-clean-title">
           <img className="know-clean-deco1" src="./images/HomePage/deco1-diamond.png" alt="裝飾鑽石" />
