@@ -136,7 +136,6 @@
 #bg{position:absolute;inset:0}
 
 
-/* BgDark.css 末尾或任何全域檔 */
 .bgdark-embed{
   position: absolute;   /* 離開文件流，不撐高 */
   inset: 0;             /* 撐滿父層 */

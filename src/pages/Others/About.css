@@ -226,6 +226,7 @@
   }
   .about-hero-title {
     margin-bottom: 50px;
+    gap: 4px;
   }
   .about-hero-title-intro {
     width: 80%;

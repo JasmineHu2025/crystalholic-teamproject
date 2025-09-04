@@ -11,7 +11,7 @@ import BgDark from '../../components/BgDark';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
 import '../../App.scss/css/Style.min.css';
-import BackToTopBtn from '../../components/BackToTopBtn';
+// import BackToTopBtn from '../../components/BackToTopBtn';
 
 /*feedback*/
 const slides = [
@@ -146,147 +146,7 @@ const slides = [
             {/* 回饋內文 */}
             <p>水晶超美又有能量，超級推薦喜愛客製化手鍊的人！</p>
         </div>
-    </div>,
-    // <div className="feedback">
-    //     <div className="review-pic">
-
-    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-    //     </div>
-    //     <div className="feedback-left">
-    //         {/* 水晶5星評價 */}
-    //         <div className="fdstar-box">
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //         </div>
-    //         {/* 回饋內文 */}
-    //         <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
-    //     </div>
-    // </div>,
-    // <div className="feedback">
-    //     <div className="review-pic">
-
-    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-    //     </div>
-    //     <div className="feedback-left">
-    //         {/* 水晶5星評價 */}
-    //         <div className="fdstar-box">
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //         </div>
-    //         {/* 回饋內文 */}
-    //         <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
-    //     </div>
-    // </div>,
-    // <div className="feedback">
-    //     <div className="review-pic">
-
-    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-    //     </div>
-    //     <div className="feedback-left">
-    //         {/* 水晶5星評價 */}
-    //         <div className="fdstar-box">
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //         </div>
-    //         {/* 回饋內文 */}
-    //         <p>手鍊戴起來超美，真的讓我越來越相信水晶的能量！</p>
-    //     </div>
-    // </div>,
-    // <div className="feedback">
-    //     <div className="review-pic">
-
-    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-    //     </div>
-    //     <div className="feedback-left">
-    //         {/* 水晶5星評價 */}
-    //         <div className="fdstar-box">
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //         </div>
-    //         {/* 回饋內文 */}
-    //         <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
-    //     </div>
-    // </div>,
-    // <div className="feedback">
-    //     <div className="review-pic">
-
-    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-    //     </div>
-    //     <div className="feedback-left">
-    //         {/* 水晶5星評價 */}
-    //         <div className="fdstar-box">
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //         </div>
-    //         {/* 回饋內文 */}
-    //         <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
-    //     </div>
-    // </div>,
-    // <div className="feedback">
-    //     <div className="review-pic">
-
-    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-    //     </div>
-    //     <div className="feedback-left">
-    //         {/* 水晶5星評價 */}
-    //         <div className="fdstar-box">
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //         </div>
-    //         {/* 回饋內文 */}
-    //         <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
-    //     </div>
-    // </div>,
-    // <div className="feedback">
-    //     <div className="review-pic">
-
-    //         <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-    //         <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-    //     </div>
-    //     <div className="feedback-left">
-    //         {/* 水晶5星評價 */}
-    //         <div className="fdstar-box">
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-    //         </div>
-    //         {/* 回饋內文 */}
-    //         <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
-    //     </div>
-    // </div>
+    </div>
 ];
 
 export default function Cover() {
@@ -310,6 +170,7 @@ export default function Cover() {
             './images/HomePage/lbtc6.png',
             './images/HomePage/lightboxdeco.svg',
             './images/HomePage/star.svg',
+            './images/HomePage/hand-number-mobile.png'
         ];
 
         let loadedCount = 0;
@@ -332,7 +193,7 @@ export default function Cover() {
     const [showSecondCover, setShowSecondCover] = useState(false); // 顯示第二段封面
     const [allowScroll, setAllowScroll] = useState(false);         // 開放滾動下滑
 
-    /* 進場動畫時間 */
+    /* 進場動畫時間：註解可以看進場畫面 */
     useEffect(() => {
         if (!imagesLoaded) return;
         const timer1 = setTimeout(() => {
@@ -553,17 +414,14 @@ export default function Cover() {
             <NavBarWrapper variant="light" />
 
             <main className="home_main">
-                {/* 背景 */}
-                <div className='coverbg'>
-                    <div className="bgdark1"><BgDark /></div>
-                    <div className="bgdark2"><BgDark /></div>
-                </div>
-
+                
+                {/* 背景：兩段封面用 */}
+                <div className="coverbg"><BgDark /></div>
 
                 {/* ＝＝＝＝＝ 兩段封面：疊在同一個容器交錯顯示 ＝＝＝＝＝ */}
                 <div className="cover-stack">
                     <AnimatePresence mode="wait">
-                        {/* Cover 1 */}
+                        {/* Cover 1：進場畫面 */}
                         {!hideFirstCover && (
                             <motion.section
                                 key="cover1"
@@ -584,7 +442,7 @@ export default function Cover() {
                             </motion.section>
                         )}
 
-                        {/* Cover 2 */}
+                        {/* Cover 2：第二畫面（覆蓋） */}
                         {showSecondCover && (
                             <motion.section
                                 key="cover2"
@@ -806,6 +664,7 @@ export default function Cover() {
 
                 {/* 礦迷回饋 */}
                 <section id="section-feedback">
+                    <BgDark embed />
                     <header className="feedback-displaytitle">
                         <img src="./images/HomePage/deco-left.svg" alt="" aria-hidden="true" />
                         <h2 className="fbtitle">

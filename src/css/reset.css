@@ -131,6 +131,7 @@ ol {
 img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 /* 重置連結 */
@@ -139,4 +140,14 @@ a {
   /* a 預設是行內元素，不支援寬高與上下間距，因此修改為區塊 */
   color: #444;
   text-decoration: none;
+}
+
+/* 重置按鈕 */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
