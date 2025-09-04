@@ -974,12 +974,7 @@ export default function Customize4() {
             </div>
 
             {/* 手鍊 */}
-            <div className={style.bracelet}
-            // style={{
-            //   width: `${braceletRadius * 2 * scale}px`,
-            //   height: `${braceletRadius * 2 * scale}px`,
-            // }}
-            >
+            <div className={style.bracelet}>
               {(() => {
                 let accumulatedAngle = 0;
                 return braceletBeads.map((bead, index) => {
@@ -1421,29 +1416,6 @@ export default function Customize4() {
 
               </div>
 
-              {/* 清除彈跳視窗 */}
-              {/* {showConfirmModal && (
-                <div className={style.modalOverlay}>
-                  <div className={style.modalContent}>
-                    <p>確定要清除整條手鍊嗎？</p>
-                    <div className={style.modalButtons}>
-                      <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
-                      <button onClick={() => setShowConfirmModal(false)}>取消</button>
-                    </div>
-                  </div>
-                </div>
-              )} */}
-
-              {/* 儲存彈跳視窗 */}
-              {/* {showCustomModal && (
-                <div className={style.modalOverlay}>
-                  <div className={style.modalContent}>
-                    <p>手鍊資料儲存成功！</p>
-                    <button className={style.btnConfirm} onClick={() => setShowCustomModal(false)}>確認</button>
-                  </div>
-                </div>
-              )} */}
-
 
               {/* 加入購物車按鈕 */}
               <div
@@ -1451,19 +1423,12 @@ export default function Customize4() {
                 onClick={handleAddToCart}
               >
                 <div className={style.btnCart}></div>
-                {/* <img src="./images/Custom/btn_cart.svg" alt="btn_cart" /> */}
                 <p>加購物車</p>
               </div>
             </div>
           )}
 
           {/* 隱藏按鈕：推薦設計款(手機版) */}
-          {/* <button className={style.buttonMobile}>
-              <p className={style.recommendDesign}>工具列</p>
-              <img src="./images/Numtest/icon-arrow.svg" alt="" />
-            </button> */}
-
-          {/* test */}
           {showTools && (
             <button className={`${style.buttonMobile} ${animating ? style.slideOut : style.slideIn}`}
               onClick={toggleTools}
