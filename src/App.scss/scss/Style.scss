@@ -187,10 +187,8 @@
         align-items: center;
 
         @media ($media-lg) {
-            justify-content: flex-start;
-        }
-        @media ($media-sm) {
             padding-top: 70px;
+            justify-content: flex-start;
         }
 
         .startbox1 {

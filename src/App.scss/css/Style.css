@@ -251,12 +251,8 @@
 }
 @media (max-width:1025px) {
   .cover-stack .second-cover {
-    justify-content: flex-start;
-  }
-}
-@media (max-width:767px) {
-  .cover-stack .second-cover {
     padding-top: 70px;
+    justify-content: flex-start;
   }
 }
 .cover-stack .second-cover .startbox1 {
