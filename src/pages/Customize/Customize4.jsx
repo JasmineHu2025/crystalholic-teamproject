@@ -1443,15 +1443,6 @@ export default function Customize4() {
                   </div>
                 </div>
               )} */}
-              {/* 購物車按鈕(未製作手鍊)彈跳視窗 */}
-              {showIncompleteModal && (
-                <div className={style.modalOverlay}>
-                  <div className={style.modalContent}>
-                    <p>請先完成整條手鍊的設計，才能加入購物車！</p>
-                    <button className={style.btnConfirm} onClick={() => setShowIncompleteModal(false)}>確認</button>
-                  </div>
-                </div>
-              )}
 
 
               {/* 加入購物車按鈕 */}
@@ -1488,7 +1479,7 @@ export default function Customize4() {
 
         {/* 加入購物車彈跳視窗 */}
         {showCartModal && (
-          <div className={style.modalOverlay}>
+          <div className={style.modalOverlay2}>
             <div className={style.modalContentLarge}>
               {/* 標題 */}
               <div className={style.previewtopic}>
@@ -1653,6 +1644,16 @@ export default function Customize4() {
           </div>
         </div>
       )}
+      {/* 購物車按鈕(未製作手鍊)彈跳視窗 */}
+      {showIncompleteModal && (
+        <div className={style.modalOverlay}>
+          <div className={style.modalContent}>
+            <p>請先完成整條手鍊的設計，才能加入購物車！</p>
+            <button className={style.btnConfirm} onClick={() => setShowIncompleteModal(false)}>確認</button>
+          </div>
+        </div>
+      )}
+
 
 
       <CopyrightNotice />

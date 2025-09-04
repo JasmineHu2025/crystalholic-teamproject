@@ -811,7 +811,7 @@
 
 .line2 {
     border: .5px solid var(--color-font-gray);
-    height: 0.063rem;
+    /* height: 0.063rem; */
     margin-bottom: 1.5rem;
 }
 
@@ -993,9 +993,9 @@
     height: auto;
 }
 .decoDividerMobile2 hr {
-    height: 1.5px;
+    /* height: 1.5px; */
     width: 100%;
-    border-color: #8750BF;
+    border: 0.5px solid #8750BF;
     margin: 0 -0.1rem;
 }
 
@@ -1105,7 +1105,7 @@
 
 
 /*是否刪除的彈窗*/
-.modalOverlay {
+.modalOverlay, .modalOverlay2 {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.25);
@@ -1448,48 +1448,6 @@
     }
 
 
-    /* 水晶頁籤 */
-    /* .tabs { */
-        /* position: static;
-        transform: none;
-        width: 32rem;
-        margin-top: 120px;
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1.5rem; */
-        /* width: 26rem; */
-    /* } */
-
-    /* .tab.active {
-        color: var(--color-primary1);
-        background: var(--color-white);
-        z-index: 2;
-    } */
-
-    /* 水晶列表 */
-    /* .tabs hr {
-        background: var(--color-primary3);
-        border-style: none;
-        width: 0.063rem;
-        height: 1.469rem;
-        margin: 0;
-        padding: 0;
-    } */
-
-    /* 單一頁籤 */
-    /* .tab {
-        display: flex;
-        justify-content: center;
-        gap: 20rem;
-        width: 100rem;
-        position: relative;
-        transform: none;
-        margin: 0 auto;
-        transform: translate(0%, -230%);
-    } */
-
-
     /* 珠子網格 */
     .beadGrid {
         /* margin-top: -3rem; */
@@ -1703,6 +1661,11 @@
     .bracelet {
         transform: scale(0.8);
         margin: 0;
+    }
+
+    /* 購物車按鈕(未製作手鍊)彈跳視窗 */
+    .modalOverlay {
+        padding: 0 10%;
     }
 }
 /* ≥ 450 */
