@@ -1301,7 +1301,7 @@ export default function Customize4() {
                               onClick={() => window.open('#/KnowledgeCrystal', '_blank')}
                               className={style.wikiBtn}
                             >
-                              前往水晶小百科查看更多
+                              前往水晶小百科
                             </button>
                           </div>
                         </div>
