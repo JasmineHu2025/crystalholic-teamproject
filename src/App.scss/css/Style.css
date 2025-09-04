@@ -1569,7 +1569,6 @@
   align-items: center;
   overflow: visible;
   position: relative;
-  overflow: hidden;
   clip-path: ellipse(105% 150% at 50% 150%);
   /* 標題 */
   /* 輪播 */

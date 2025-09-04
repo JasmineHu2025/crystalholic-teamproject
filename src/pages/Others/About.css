@@ -182,7 +182,7 @@
 
   clip-path: ellipse(73% 100% at 50% 100%);
   padding-top: 9.75%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* --- 平板 ≤ 1024px --- */

@@ -1624,7 +1624,7 @@
     overflow: visible;
 
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     clip-path: ellipse(105% 150% at 50% 150%);
 
     @media ($media-lg) {
