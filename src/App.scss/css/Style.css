@@ -251,8 +251,12 @@
 }
 @media (max-width:1025px) {
   .cover-stack .second-cover {
-    padding-top: 70px;
     justify-content: flex-start;
+  }
+}
+@media (max-width:767px) {
+  .cover-stack .second-cover {
+    padding-top: 70px;
   }
 }
 .cover-stack .second-cover .startbox1 {
@@ -265,7 +269,7 @@
 }
 @media (max-width:1025px) {
   .cover-stack .second-cover .startbox1 {
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 @media (max-width:767px) {
@@ -288,7 +292,7 @@
 @media (max-width:1025px) {
   .cover-stack .second-cover .startbox1 .hand-number-mobile {
     display: flex;
-    width: 70vw;
+    width: 65vw;
     z-index: 1;
   }
 }
@@ -329,7 +333,7 @@
 }
 @media (max-width:1025px) {
   .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap {
-    width: 30vw;
+    width: 26vw;
   }
 }
 @media (max-width:767px) {
