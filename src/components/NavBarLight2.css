@@ -201,6 +201,11 @@ header ul {
   margin-right: 9px;
 }
 
+@media (max-width: 1024px) {
+  .search-li {
+    display: none;
+  }
+}
 /* RWD：小螢幕不顯示 */
 /* 手機螢幕 ≤ 767px */
 @media (max-width: 767px) {
