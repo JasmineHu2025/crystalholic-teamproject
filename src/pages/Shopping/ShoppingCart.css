@@ -48,9 +48,8 @@
 }
 
 .cart_title hr {
-    height: 1.5px;
     width: 10.5vw;
-    border-color: #8750BF;
+    border: 0.95px solid  #8750BF;
     margin: 0 -0.1rem;
 }
 

@@ -775,9 +775,8 @@
   height: auto;
 }
 .lightbox .lightbox-content .lbborder1 .lbborder2 .lightbox-text .lbcontent .lb-info .lbdeco hr {
-  height: 1.5px;
   width: 100%;
-  border-color: #e3d2ff;
+  border: 0.95px solid #e3d2ff;
   margin: 0 -0.1rem;
 }
 @media (max-width:767px) {
