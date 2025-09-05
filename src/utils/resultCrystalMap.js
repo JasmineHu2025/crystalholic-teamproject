@@ -26,7 +26,8 @@ export const resultCrystalMap = {
         ]
     },
     2: {
-        description: "關懷他人 ✧ 情感細膩 ✧ 溫柔包容",
+        // description: "關懷他人 ✧ 情感細膩 ✧ 溫柔包容",
+        description: ["關懷他人", "情感細膩", "溫柔包容"],
         crystals: [
             {
                 name: "金髮晶",

@@ -1089,7 +1089,7 @@ export default function Customize4() {
                             <div>
                               <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
                                 <img
-                                  src="./images/Custom/deco-diamaond.png"
+                                  src="./images/Custom/deco-diamaond.svg"
                                   alt="裝飾圖"
                                   style={{
                                     width: "1rem",
@@ -1106,7 +1106,7 @@ export default function Customize4() {
                             <div>
                               <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
                                 <img
-                                  src="./images/Custom/deco-diamaond.png"
+                                  src="./images/Custom/deco-diamaond.svg"
                                   alt="裝飾圖"
                                   style={{
                                     width: "1rem",
@@ -1167,7 +1167,6 @@ export default function Customize4() {
                               <hr />
                               <img className={style.dividerRight} src="images/Custom/deco-divider_purple-right.svg" alt="divider-right" />
                             </div>
-                            {/* <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" /> */}
                           </div>
                           <div className={style.overlayContent}>
                             {!lifePathNumber ? (
@@ -1180,35 +1179,71 @@ export default function Customize4() {
                               </button>
                             ) : (
                               <>
-                                <p>你的生命靈數是 <strong style={{ color: "#8750BF" }}>{lifePathNumber} 號人</strong>。</p>
-                                <p style={{ marginBottom: "1rem" }}>{resultCrystalMap[lifePathNumber]?.description}</p>
+                                <p style={{ fontSize: "16px", letterSpacing: "0.075rem" }}>你的生命靈數是 <strong style={{ fontSize: "16px", color: "#8750BF", letterSpacing: "0.075rem" }}>{lifePathNumber} 號人</strong>。</p>
+                                <p style={{ fontSize: "16px", marginBottom: "1.25rem"}}>{(resultCrystalMap[lifePathNumber]?.description || []).map((txt, i) => (
+                                  <div
+                                    key={i}
+                                    style={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                      fontSize: "16px",
+                                      marginBottom: ".4rem",
+                                      gap: ".5rem",
+                                    }}
+                                  >
+                                    <img
+                                      src="./images/Custom/deco-diamaond.svg"
+                                      alt=""
+                                      style={{ width: "1rem", height: "1rem" }}
+                                    />
+                                    {txt}
+                                  </div>
+                                ))}</p>
 
-                                <h3 className={style.panelTitle2}>✧ 推薦水晶 ✧</h3>
+                                <h3 className={style.panelTitle2}>✦ 推薦水晶 ✦</h3>
                                 {resultCrystalMap[lifePathNumber]?.crystals.map((crystal, index) => (
                                   <div
                                     key={index}
                                     style={{
                                       display: "flex",
-                                      alignItems: "center",
-                                      gap: "1rem",
+                                      flexDirection: "column",
+                                      alignItems: "baseline",
+                                      gap: "0.5rem",
                                       marginBottom: "1rem"
                                     }}
                                   >
-                                    <img
-                                      src={crystal.image}
-                                      alt={crystal.name}
+                                    <p className={style.resultCategory} style={{ fontSize: "17px", fontWeight: "600", color: "#8750BF" }}>
+                                      【{crystal.category}】
+                                    </p>
+                                    <div
                                       style={{
-                                        width: "3.5rem",
-                                        height: "3.5rem",
-                                        borderRadius: "999px",
-                                        objectFit: "cover"
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "1rem",
+                                        marginBottom: "1rem"
                                       }}
-                                    />
-                                    <div>
-                                      <p style={{ fontWeight: "500", color: "#8750BF" }}>
-                                        【{crystal.category}】 {crystal.name} {crystal.en}
-                                      </p>
-                                      <p style={{ fontSize: "0.8rem", color: "#585858" }}>{crystal.desc}</p>
+
+                                    >
+                                      <img
+                                        src={crystal.image}
+                                        alt={crystal.name}
+                                        style={{
+                                          width: "3.5rem",
+                                          height: "3.5rem",
+                                          borderRadius: "999px",
+                                          objectFit: "cover"
+                                        }}
+                                      />
+                                      <div>
+                                        <p style={{ fontSize: "16px", fontWeight: "500", color: "#8750BF" }}>
+                                          {/* {crystal.category}
+                                        <br /> */}
+                                          {crystal.name}
+                                          <br />
+                                          {crystal.en}
+                                        </p>
+                                        <p style={{ fontSize: "1rem", color: "#585858" }}>{crystal.desc}</p>
+                                      </div>
                                     </div>
                                   </div>
                                 ))}
