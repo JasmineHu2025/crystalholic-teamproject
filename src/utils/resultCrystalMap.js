@@ -1,6 +1,6 @@
 export const resultCrystalMap = {
     1: {
-        description: "目標導向 ✧ 領導天賦 ✧ 勇於冒險",
+        description: ["目標導向", "領導天賦", "勇於冒險"],
         crystals: [
             {
                 name: "黃水晶",
@@ -53,7 +53,7 @@ export const resultCrystalMap = {
         ]
     },
     3: {
-        description: "創意靈感 ✧ 表達能力 ✧ 生活熱情",
+        description: ["創意靈感", "表達能力", "生活熱情"],
         crystals: [
             {
                 name: "螢石",
@@ -79,7 +79,7 @@ export const resultCrystalMap = {
         ]
     },
     4: {
-        description: "穩定踏實 ✧ 責任感強 ✧ 追求真理",
+        description: ["穩定踏實", "責任感強", "追求真理"],
         crystals: [
             {
                 name: "紫水晶",
@@ -105,7 +105,7 @@ export const resultCrystalMap = {
         ]
     },
     5: {
-        description: "冒險精神 ✧ 渴望自由 ✧ 活力充沛",
+        description: ["冒險精神", "渴望自由", "活力充沛"],
         crystals: [
             {
                 name: "黑曜石",
@@ -131,7 +131,7 @@ export const resultCrystalMap = {
         ]
     },
     6: {
-        description: "關愛家庭 ✧ 和諧溫暖 ✧ 美感細膩",
+        description: ["關愛家庭", "和諧溫暖", "美感細膩"],
         crystals: [
             {
                 name: "紅紋石",
@@ -157,7 +157,7 @@ export const resultCrystalMap = {
         ]
     },
     7: {
-        description: "靈性直覺 ✧ 內在探索 ✧ 情緒沉穩",
+        description: ["靈性直覺", "內在探索", "情緒沉穩"],
         crystals: [
             {
                 name: "拉長石",
@@ -183,7 +183,7 @@ export const resultCrystalMap = {
         ]
     },
     8: {
-        description: "自信堅定 ✧ 擁有企圖心 ✧ 財務觀清晰",
+        description: ["自信堅定", "擁有企圖心", "財務觀清晰"],
         crystals: [
             {
                 name: "金曜石",
@@ -209,7 +209,7 @@ export const resultCrystalMap = {
         ]
     },
     9: {
-        description: "充滿慈悲 ✧ 熱愛分享 ✧ 靈性覺醒",
+        description: ["充滿慈悲", "熱愛分享", "靈性覺醒"],
         crystals: [
             {
                 name: "天使石",
