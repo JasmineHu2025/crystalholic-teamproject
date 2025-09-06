@@ -61,3 +61,16 @@
 
   flex: 1;
 }
+
+/* ≥ 600 */
+@media (max-width:601px) {
+  /* 登入/註冊 */
+  .tabs button {
+    padding: .75rem 0;
+    font-size: 1.25rem;
+  }
+  /* 內文 */
+  .form-area {
+    padding: 0 1.75rem 1rem;
+  }
+}

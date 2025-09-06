@@ -212,7 +212,7 @@
 .auth-form select {
   -webkit-appearance: none;
   appearance: none;
-  font-size: 16px !important;
+  font-size: 16px;
   /* line-height: 1.2 !important; */
   /* padding: 0 1.25rem; */
   flex: 1;
@@ -225,4 +225,48 @@
   /* ← 位置靠右內縮 */
   background-size: 26px;
   padding-right: 40px;
+}
+
+/* ≥ 600 */
+@media (max-width:601px) {
+  /* 用戶名＆信箱＆密碼區塊 */
+  .auth-form input {
+    font-size: 0.875rem;
+    padding: 0 1rem;
+  }
+  /* 小字 */
+  .hint {
+    font-size: 0.75rem;
+    margin-top: 0.0125rem;
+    padding-left: 1rem;
+  }
+  /* 忘記密碼 */
+  .forgot {
+    font-size: 0.75rem;
+  }
+  /* 出生年月日區塊 */
+  .auth-form select {
+    font-size: 0.875rem;
+    background-size: 1rem;
+    padding-right: 1.75rem;
+    padding-left: 1rem;
+    background-position: right 0.5rem center;
+  }
+  /* 同意勾選 */
+  .checkbox label, .checkbox2 label {
+    font-size: 0.875rem;
+    letter-spacing: 0.025rem;
+  }
+  .checkbox {
+    margin-left: 0;
+    justify-content: center;
+    gap: 4px;
+  }
+  .checkbox2 {
+    margin-left: 1rem;
+  }
+  /* 按鈕 */
+  .submit-button {
+    letter-spacing: 0.075rem;
+  }
 }

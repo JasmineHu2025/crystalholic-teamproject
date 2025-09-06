@@ -1,6 +1,9 @@
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
@@ -22,8 +25,13 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes popup {
@@ -31,9 +39,17 @@
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
+/* ≥ 600 */
+@media (max-width:601px) {
+  .modal-wrapper {
+    width: 80%;
+    height: 90%;
+  }
+}
