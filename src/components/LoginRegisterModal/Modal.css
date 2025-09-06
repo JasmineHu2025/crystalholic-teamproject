@@ -49,7 +49,7 @@
 /* ≥ 600 */
 @media (max-width:601px) {
   .modal-wrapper {
-    width: 80%;
+    width: 90%;
     height: 90%;
   }
 }

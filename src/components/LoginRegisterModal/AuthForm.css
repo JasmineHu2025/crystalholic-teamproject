@@ -237,7 +237,7 @@
   /* 小字 */
   .hint {
     font-size: 0.75rem;
-    margin-top: 0.0125rem;
+    margin-top: -0.5rem;
     padding-left: 1rem;
   }
   /* 忘記密碼 */
@@ -255,7 +255,7 @@
   /* 同意勾選 */
   .checkbox label, .checkbox2 label {
     font-size: 0.875rem;
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.05rem;
   }
   .checkbox {
     margin-left: 0;
