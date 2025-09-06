@@ -256,6 +256,7 @@
   .checkbox label, .checkbox2 label {
     font-size: 0.875rem;
     letter-spacing: 0.05rem;
+    margin-right: auto;
   }
   .checkbox {
     gap: 4px;
