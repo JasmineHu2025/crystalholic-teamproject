@@ -62,8 +62,13 @@ export default function NumTest3() {
                 <main className="index-numtest3">
                     {/* 隱藏按鈕：推薦設計款(手機版) */}
                     {!showButton && (
-                        <div className={`bracelet-box-mobile ${isAnimating ? 'slide-out' : 'slide-in'}`} onClick={handleToggle} >
-                            <img className="bracelet-mobile" src={data.braceletMobile} alt={`bracelet-${data.number}`} />
+                        // <div className={`bracelet-box-mobile ${isAnimating ? 'slide-out' : 'slide-in'}`} onClick={handleToggle} >
+                        <div className={`bracelet-box-mobile ${isAnimating ? 'slide-out' : 'slide-in'}`} >
+                            <div className="bracelet-arrow-button" onClick={handleToggle} >
+                                <img src="./images/Numtest/icon-arrow.svg" alt="" />
+                                <hr className="bracelet-box-line" />
+                            </div>
+                            <img className="bracelet-mobile" src={data.braceletMobile} alt={`bracelet-${data.number}`} onClick={handleBraceletClick}/>
                         </div>)}
 
                     {showButton && (
