@@ -68,7 +68,7 @@ export default function RegisterForm({ onCloseModal }) {
             </div>
 
             <div className="birthday">
-                <select required defaultValue="">
+                <select className="birthdayYear" required defaultValue="">
                     <option value="" disabled hidden>出生 年</option>
                     {years.map((y) => (
                         <option key={y} value={y}>{y}</option>

@@ -252,6 +252,12 @@
     padding-left: 1rem;
     background-position: right 0.5rem center;
   }
+  .birthday {
+    gap: 8px;
+  }
+  .birthdayYear {
+    width: 120%;
+  }
   /* 同意勾選 */
   .checkbox label, .checkbox2 label {
     font-size: 0.875rem;
@@ -262,6 +268,7 @@
   }
   .checkbox {
     /* gap: 0; */
+    justify-content: flex-start;
   }
   .checkbox2 {
     margin-left: 1rem;
