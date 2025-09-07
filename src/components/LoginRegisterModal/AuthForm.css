@@ -248,8 +248,8 @@
   .auth-form select {
     /* font-size: 0.875rem; */
     background-size: 1rem;
-    /* padding-right: 1.75rem; */
-    /* padding-left: 1rem; */
+    padding-right: 1.75rem;
+    padding-left: 1rem;
     background-position: right 0.5rem center;
   }
   /* 同意勾選 */
