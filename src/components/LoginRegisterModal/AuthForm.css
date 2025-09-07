@@ -231,22 +231,22 @@
 @media (max-width:601px) {
   /* 用戶名＆信箱＆密碼區塊 */
   .auth-form input {
-    /* font-size: 0.875rem; */
+    font-size: 0.875rem;
     padding-left: 1rem;
   }
   /* 小字 */
   .hint {
-    /* font-size: 0.75rem; */
+    font-size: 0.75rem;
     margin-top: -0.5rem;
     padding-left: 1rem;
   }
   /* 忘記密碼 */
   .forgot {
-    /* font-size: 0.75rem; */
+    font-size: 0.75rem;
   }
   /* 出生年月日區塊 */
   .auth-form select {
-    /* font-size: 0.875rem; */
+    font-size: 0.875rem;
     background-size: 1rem;
     padding-right: 1.75rem;
     padding-left: 1rem;
@@ -257,15 +257,15 @@
     font-size: 0.875rem;
     letter-spacing: 0.05rem;
   }
-  /* .checkbox label {
-    margin-left: 4px;
+  .checkbox label {
+    /* margin-left: 4px; */
   }
   .checkbox {
-    gap: 0;
+    /* gap: 0; */
   }
   .checkbox2 {
     margin-left: 1rem;
-  } */
+  }
   /* 按鈕 */
   .submit-button {
     letter-spacing: 0.075rem;
