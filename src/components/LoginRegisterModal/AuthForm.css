@@ -265,10 +265,10 @@
   }
   .checkbox label {
     /* margin-left: 4px; */
+    text-align: left;
   }
   .checkbox {
     /* gap: 0; */
-    justify-content: flex-start;
   }
   .checkbox2 {
     margin-left: 1rem;
