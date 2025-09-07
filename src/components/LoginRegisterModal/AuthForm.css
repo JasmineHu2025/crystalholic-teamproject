@@ -232,13 +232,13 @@
   /* 用戶名＆信箱＆密碼區塊 */
   .auth-form input {
     font-size: 0.875rem;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
   }
   /* 小字 */
   .hint {
     font-size: 0.75rem;
-    margin-top: -0.5rem;
-    padding-left: 1rem;
+    /* margin-top: -0.5rem;
+    padding-left: 1rem; */
   }
   /* 忘記密碼 */
   .forgot {
@@ -248,8 +248,8 @@
   .auth-form select {
     font-size: 0.875rem;
     background-size: 1rem;
-    padding-right: 1.75rem;
-    padding-left: 1rem;
+    /* padding-right: 1.75rem; */
+    /* padding-left: 1rem; */
     background-position: right 0.5rem center;
   }
   /* 同意勾選 */
