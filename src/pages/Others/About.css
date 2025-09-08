@@ -152,9 +152,8 @@
   height: auto;
 }
 .about-deco > hr {
-  height: 1.5px;
   width: 100%;
-  border-color: #8750BF;
+  border: .95px solid #8750BF;
   margin: 0 -0.1rem;
 }
 .about-content-depiction,.about-content-list {

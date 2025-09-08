@@ -411,8 +411,8 @@
 .cover-stack .second-cover .startbox2 .scroll-indicator {
   position: relative;
   height: 85px;
+  width: 40px;
   z-index: 1;
-  overflow: hidden;
 }
 @media (max-width:767px) {
   .cover-stack .second-cover .startbox2 .scroll-indicator {
@@ -420,15 +420,18 @@
   }
 }
 .cover-stack .second-cover .startbox2 .scroll-indicator .scroll-line {
-  width: 100%;
+  width: 0.1px;
   height: 100%;
-  display: block;
+  background-color: #FFF;
+  margin: 0 auto;
+  border-radius: 2px;
 }
 .cover-stack .second-cover .startbox2 .scroll-indicator .scroll-diamond {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 35px;
+  width: 30px;
+  height: auto;
   animation: scrollDiamondAnim 2.4s infinite ease-in-out;
   pointer-events: none;
   z-index: 2;

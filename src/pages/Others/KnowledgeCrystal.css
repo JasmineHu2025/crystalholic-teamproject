@@ -197,7 +197,7 @@
   z-index: 1;
 }
 .know-crystal-content-hr {
-  height: 2px;
+  border: .95px solid;
   width: 34.5vw;
   margin: 12px 0;
   z-index: 1;
