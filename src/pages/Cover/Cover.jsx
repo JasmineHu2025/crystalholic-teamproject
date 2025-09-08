@@ -198,15 +198,15 @@ export default function Cover() {
         if (!imagesLoaded) return;
         const timer1 = setTimeout(() => {
             setHideFirstCover(true); // 開始淡出第一段
-        }, 2500);
+        }, 2000);
 
         const timer2 = setTimeout(() => {
             setShowSecondCover(true); // 開始淡入第二段
-        }, 3300);
+        }, 2300);
 
         const timer3 = setTimeout(() => {
             setAllowScroll(true); // 允許滾動下滑
-        }, 3500);
+        }, 2500);
 
         return () => {
             clearTimeout(timer1);
@@ -494,7 +494,7 @@ export default function Cover() {
                                     <div className="scroll-indicator">
                                         {/* <img className="scroll-line" src="./images/HomePage/scroll-line.png" alt="往下滾動" /> */}
                                         <div className="scroll-line"></div>
-                                        <img className="scroll-diamond" src="./images/HomePage/scroll-diamond.png" alt="往下滾動" />
+                                        <img className="scroll-diamond" src="./images/HomePage/scroll-diamond.g" alt="往下滾動" />
                                     </div>
                                 </div>
                             </motion.section>
