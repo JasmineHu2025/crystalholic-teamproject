@@ -32,7 +32,7 @@ const characterData = {
         crystaltext2: "工作神隊友",
         crystaltext3: "溝通表達力",
         bracelet: "./images/Numtest/bracelet/bracelet1.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-1.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-1.png",
     },
     2: {
         number: "2",
@@ -67,7 +67,7 @@ const characterData = {
         crystaltext2: "戀愛桃花王",
         crystaltext3: "直覺開天眼",
         bracelet: "./images/Numtest/bracelet/bracelet2.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-2.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-2.png",
     },
     3: {
         number: "3",
@@ -102,7 +102,7 @@ const characterData = {
         crystaltext2: "內心靜音器",
         crystaltext3: "避邪防小人",
         bracelet: "./images/Numtest/bracelet/bracelet3.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-3.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-3.png",
     },
     4: {
         number: "4",
@@ -137,7 +137,7 @@ const characterData = {
         crystaltext2: "工作神隊友",
         crystaltext3: "心靈超療癒",
         bracelet: "./images/Numtest/bracelet/bracelet3.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-3.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-3.png",
     },
     5: {
         number: "5",
@@ -172,7 +172,7 @@ const characterData = {
         crystaltext2: "行動開外掛",
         crystaltext3: "理性大腦派",
         bracelet: "./images/Numtest/bracelet/bracelet4.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-4.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-4.png",
     },
     6: {
         number: "6",
@@ -207,7 +207,7 @@ const characterData = {
         crystaltext2: "潛能大爆發",
         crystaltext3: "萬能淨化王",
         bracelet: "./images/Numtest/bracelet/bracelet2.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-2.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-2.png",
     },
     7: {
         number: "7",
@@ -242,7 +242,7 @@ const characterData = {
         crystaltext2: "溝通表達力",
         crystaltext3: "人氣甜甜圈",
         bracelet: "./images/Numtest/bracelet/bracelet1.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-1.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-1.png",
     },
     8: {
         number: "8",
@@ -277,7 +277,7 @@ const characterData = {
         crystaltext2: "心靈超療癒",
         crystaltext3: "目標衝衝衝",
         bracelet: "./images/Numtest/bracelet/bracelet4.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-4.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-4.png",
     },
     9: {
         number: "9",
@@ -312,7 +312,7 @@ const characterData = {
         crystaltext2: "自信開外掛",
         crystaltext3: "情傷修補師",
         bracelet: "./images/Numtest/bracelet/bracelet2.png",
-        braceletMobile: "./images/Numtest/bracelet/bracelet-2.svg",
+        braceletMobile: "./images/Numtest/bracelet/bracelet-2.png",
     },
 };
 export default characterData;
