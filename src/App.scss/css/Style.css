@@ -412,6 +412,7 @@
   position: relative;
   height: 85px;
   width: 40px;
+  margin: 0 auto;
   z-index: 1;
 }
 @media (max-width:767px) {
