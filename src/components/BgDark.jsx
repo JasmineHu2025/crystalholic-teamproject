@@ -1,6 +1,6 @@
 import './BgDark.css';
 import { useEffect, useRef } from 'react';
-import { createStarsBackground } from '../../public/background-star22';
+import { createStarsBackground } from '../../public/background-star';
 
 export default function BgDark({ embed = false }) {
     const bgRef = useRef(null);

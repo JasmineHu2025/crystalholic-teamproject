@@ -1,12 +1,12 @@
 import { UIProvider } from '../context/UIContext';
-import NavBarLight2 from './NavBarLight2';
-import NavBarDark2 from './NavBarDark2';
+import NavBarLight from './NavBarLight';
+import NavBarDark from './NavBarDark';
 import MenuOverlay from './MenuOverlay';
 
 export default function NavBarWrapper({ variant = 'light' }) {
   return (
     <UIProvider>
-      {variant === 'dark' ? <NavBarDark2 /> : <NavBarLight2 />}
+      {variant === 'dark' ? <NavBarDark /> : <NavBarLight />}
       <MenuOverlay />
     </UIProvider>
   );

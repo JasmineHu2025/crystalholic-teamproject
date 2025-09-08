@@ -1,73 +1,66 @@
 export function createStarsBackground(container) {
-  const canvas = document.createElement("canvas");
-  canvas.id = "bg";
-  // 設定 canvas 樣式
-  canvas.style.position = "absolute";
-  canvas.style.top = 0;
-  canvas.style.left = 0;
-  canvas.style.width = "100%";
-  canvas.style.height = "100%";
-  canvas.style.zIndex = -2;
-  canvas.style.pointerEvents = "none";
+  const canvas = document.createElement('canvas');
+  canvas.id = 'bg';
+  canvas.style.cssText = `
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+  `;
 
-  // 同步 container 尺寸
-  const rect = container.getBoundingClientRect();
-  canvas.width = rect.width;
-  canvas.height = rect.height;
-  // canvas.width = window.innerWidth;
-  // canvas.height = window.innerHeight;
+  const DPR = window.devicePixelRatio || 1; 
 
+  function resize() {
+    const { width, height } = container.getBoundingClientRect();
+    canvas.width = width * DPR;      
+    canvas.height = height * DPR;    
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.scale(DPR, DPR);             
+  }
 
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext('2d');
+  resize();
 
+  /* 縮減星星數量 ↓ */
   const stars = [];
-  const numStars = 200;
-
+  const numStars = 120;              
   for (let i = 0; i < numStars; i++) {
     stars.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 1.5 + 0.5,
-      alpha: Math.random(),
-      delta: Math.random() * 0.02 + 0.005
+      x: Math.random() * canvas.width / DPR,
+      y: Math.random() * canvas.height / DPR,
+      r: Math.random() * 1.5 + 0.5,   /* 星星大小調整 */
+      a: Math.random(),
+      d: Math.random() * 0.035 + 0.009,  /* 星星閃爍速度 */
     });
   }
 
-  function drawStars() {
+  /* 30 fps throttle ↓ */
+  let last = 0;                      
+  function draw(now) {
+    if (now - last < 33) { requestAnimationFrame(draw); return; }
+    last = now;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let star of stars) {
+    for (const s of stars) {
       ctx.beginPath();
-      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${s.a})`;
       ctx.fill();
-
-      star.alpha += star.delta;
-      if (star.alpha <= 0 || star.alpha >= 1) {
-        star.delta = -star.delta;
-      }
+      s.a += s.d;
+      if (s.a <= 0 || s.a >= 1) s.d = -s.d;
     }
-
-    requestAnimationFrame(drawStars);
+    requestAnimationFrame(draw);
   }
+  requestAnimationFrame(draw);
 
-  drawStars();
-
-  function handleResize() {
-    // canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight;
-    const rect = container.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-  }
-
-  window.addEventListener("resize", handleResize);
-
+  window.addEventListener('resize', resize);
   container.appendChild(canvas);
 
-  // 返回清除函式
   return () => {
-    window.removeEventListener("resize", handleResize);
+    window.removeEventListener('resize', resize);
     container.removeChild(canvas);
   };
 }

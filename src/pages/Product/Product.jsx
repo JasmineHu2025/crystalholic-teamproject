@@ -127,7 +127,7 @@ export default function Product() {
           {/* 麵包屑導覽 */}
           <div className="breadcrumb">
             <span className="bc_text">
-              <Link to="/cover0602" className="bc_link">首頁</Link>
+              <Link to="/Home" className="bc_link">首頁</Link>
               <span className="bc_sep">｜</span>
               <Link to="/ProductCollection" className="bc_link">全系列商品</Link>
               <span className="bc_sep">｜</span>

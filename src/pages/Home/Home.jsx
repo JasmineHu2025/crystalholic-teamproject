@@ -149,7 +149,7 @@ const slides = [
     </div>
 ];
 
-export default function Cover() {
+export default function Home() {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     // 預先載入圖片
     useEffect(() => {
@@ -619,34 +619,6 @@ export default function Cover() {
 
                     </div>
 
-                    {/* 版1 */}
-                    {/* <div className="crystal-display">
-                        <div className="circlebox">
-                            {crystals.map((id, index) => (
-                                <div className='circle' key={id}>
-                                    {index === 0 ?
-                                    (
-                                        <div className='withbtn'>
-                                            <button id='circleup' onClick={handleUp}>
-                                                <img src="./images/HomePage/icon_btn_down.ico.svg" alt="" />
-                                            </button>
-                                            <div>
-                                                <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
-                                            </div>
-                                            <button id='circledown' onClick={handleDown}>
-                                                <img src="./images/HomePage/icon_btn_up.ico.svg" alt="" />
-                                            </button>
-                                        </div>
-                                    ) 
-                                    :
-                                    (
-                                        <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
-
                     {/* 右邊：顯示對應水晶資訊 */}
                     <div className="section-crystaldiscovery">
                         <header>
@@ -987,14 +959,3 @@ function renderCrystalContent(id) {
         </>
     );
 }
-
-
-
-
-
-{/* jquery CDN 要先執行 */ }
-{/* < script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" ></script > */}
-{/* 自訂的js (一定放在最下面) */ }
-{/* < script src="./js/script.js" ></script > */ }
-

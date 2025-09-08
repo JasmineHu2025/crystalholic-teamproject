@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
-import { useAuth } from '../context/AuthContext';
-import { useUI } from '../context/UIContext';
+import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal.jsx';
+import { useAuth } from '../context/AuthContext.jsx';
+import { useUI } from '../context/UIContext.jsx';
 import { useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useScrollDirection from '../hooks/useScrollDirection.js';
@@ -11,7 +11,7 @@ import useScrollDirection from '../hooks/useScrollDirection.js';
 /* 🆕 取得購物車內容 */
 import { useCart } from '../pages/Shopping/CartContext.jsx';
 
-import './NavBarLight2.css';
+import './NavBarLight.css';
 
 export default function NavBarLight() {
   const { isLoggedIn, logout, user } = useAuth();

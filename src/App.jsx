@@ -10,7 +10,7 @@ import About from './pages/Others/About';
 import KnowledgeCrystal from './components/KnowledgeCrystal/KnowledgeCrystal';
 import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 
-import Cover from './pages/Cover/Cover';
+import Home from './pages/Home/Home';
 
 import NumTest1 from './pages/NumTest/NumTest1';
 import NumTest2 from './pages/NumTest/NumTest2';
@@ -36,7 +36,7 @@ export default function App() {
                 <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
                 <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
 
-                <Route path="/" element={<Cover />} />
+                <Route path="/" element={<Home />} />
 
                 <Route path="/NumTest1" element={<NumTest1 />} />
                 <Route path="/NumTest2" element={<NumTest2 />} />
