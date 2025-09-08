@@ -430,7 +430,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
+  width: 35px;
   height: auto;
   animation: scrollDiamondAnim 2.4s infinite ease-in-out;
   pointer-events: none;
