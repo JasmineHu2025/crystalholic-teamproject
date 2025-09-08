@@ -88,11 +88,11 @@ export default function MenuOverlay() {
     },
     {
       id: 'custom',
-      zh: '專屬水晶',
+      zh: '客製水晶',
       en: 'Customized',
       links: [
         { to: '/NumTest1', label: '生命靈數測驗' },
-        { to: '/Customize1', label: '開始客製' },
+        { to: '/Customize1', label: '客製化設計' },
       ]
     },
   ]), []);
