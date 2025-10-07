@@ -537,11 +537,3 @@
         font-size: 1.375rem;
     }
 }
-
-/* customize3 手機平板點擊手鏈優化 */
-@media (hover: none) and (pointer: coarse) {
-  .bracelet-preview {
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-  }
-}
