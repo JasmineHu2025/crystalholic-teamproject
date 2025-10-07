@@ -114,7 +114,8 @@ export default function Customize3() {
                   }}
                 >
                   <svg viewBox="0 0 480 480" width="360" height="360" className="bracelet-svg"
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.stopPropagation();               // ✅ 重要：避免事件再冒泡到外層 div
                       setSelectedBracelet(idx);
                       handleSelectCrystal(crystal);
                     }}>
