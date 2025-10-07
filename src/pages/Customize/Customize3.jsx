@@ -102,6 +102,7 @@ export default function Customize3() {
                   onMouseEnter={() => setHoveredBracelet(idx)}
                   onMouseLeave={() => setHoveredBracelet(null)}
                   onClick={() => handleSelectBracelet(idx, crystal)}
+                  onTouchStart={() => handleSelectBracelet(idx, crystal)}
                   style={{
                     cursor: 'pointer',
                     transform: selectedBracelet === idx ? 'scale(1.05)' : 'scale(1)',
@@ -139,6 +140,7 @@ export default function Customize3() {
                           width={size}
                           height={size}
                           style={{
+                            pointerEvents: 'none',
                             transform:
                               hoveredBracelet === idx || selectedBracelet === idx ? 'scale(1.1)' : 'scale(1)',
                             filter:
