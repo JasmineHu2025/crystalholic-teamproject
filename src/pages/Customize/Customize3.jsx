@@ -113,7 +113,11 @@ export default function Customize3() {
                     transition: 'transform 0.3s ease',
                   }}
                 >
-                  <svg viewBox="0 0 480 480" width="360" height="360" className="bracelet-svg">
+                  <svg viewBox="0 0 480 480" width="360" height="360" className="bracelet-svg"
+                    onClick={() => {
+                      setSelectedBracelet(idx);
+                      handleSelectCrystal(crystal);
+                    }}>
                     <defs>
                       {layout.map((bead, i) => {
                         const isCrystal = bead === 'crystal';
