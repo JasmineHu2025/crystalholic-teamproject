@@ -101,8 +101,10 @@ export default function Customize3() {
                 <div
                   key={idx}
                   className="bracelet-preview"
-                  onMouseEnter={() => setHoveredBracelet(idx)}
-                  onMouseLeave={() => setHoveredBracelet(null)}
+                  // onMouseEnter={() => setHoveredBracelet(idx)}
+                  // onMouseLeave={() => setHoveredBracelet(null)}
+                  onPointerEnter={(e) => { if (e.pointerType === 'mouse') setHoveredBracelet(idx); }}
+                  onPointerLeave={(e) => { if (e.pointerType === 'mouse') setHoveredBracelet(null); }}
                   onClick={() => {
                     setSelectedBracelet(idx);
                     handleSelectCrystal(crystal);
@@ -144,6 +146,7 @@ export default function Customize3() {
                           width={size}
                           height={size}
                           style={{
+                            pointerEvents: 'none',
                             transform:
                               hoveredBracelet === idx || selectedBracelet === idx ? 'scale(1.1)' : 'scale(1)',
                             filter:
