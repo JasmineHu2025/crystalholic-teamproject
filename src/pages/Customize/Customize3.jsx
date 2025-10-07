@@ -31,46 +31,48 @@ export default function Customize3() {
   //推薦手鍊hover及點擊效果
   const [hoveredBracelet, setHoveredBracelet] = useState(null);
   const [selectedBracelet, setSelectedBracelet] = useState(null);
-  const [selectedCrystal, setSelectedCrystal] = useState(null);
-  const [showRecommendErrorModal, setShowRecommendErrorModal] = useState(false);
-
   // 取得推薦水晶（假設 resultCrystalMap[7].crystals 是陣列）
   const recommendedCrystals = resultCrystalMap[lifePathNumber]?.crystals.slice(0, 3); // 取前3顆
 
-  // 點擊手鍊
-  const handleSelectBracelet = (idx, crystal) => {
-    setSelectedBracelet(idx);
-    setSelectedCrystal(crystal);
+  const handleStartWithoutRecommend = () => {
+    // 🔥 統一清掉所有推薦用到的 key
+    sessionStorage.removeItem('selectedCrystalImage');
+    sessionStorage.removeItem('selectedMetalImage');
+    sessionStorage.removeItem('shouldApplyRecommend');
+    sessionStorage.setItem('designMode', 'custom');
+
+    navigate('/Customize4');
   };
 
-  // 套用推薦
-  const handleStartWithRecommend = () => {
-    // 🔥 改成同時檢查兩個 state
-    const crystalToUse = selectedCrystal ?? (selectedBracelet !== null ? recommendedCrystals[selectedBracelet] : null);
+  const [showRecommendErrorModal, setShowRecommendErrorModal] = useState(false);
 
-    if (!crystalToUse) {
-      setShowRecommendErrorModal(true);
+  const handleStartWithRecommend = () => {
+    if (!selectedCrystal) {
+      setShowRecommendErrorModal(true); // 開啟錯誤彈窗
       return;
     }
+    // 只存圖片路徑，不存整顆物件
+    sessionStorage.setItem('selectedCrystalImage', selectedCrystal.image);
 
-    sessionStorage.setItem('selectedCrystalImage', crystalToUse.image);
+    // 預設金屬珠
     sessionStorage.setItem('selectedMetalImage', './images/Custom/ball3.png');
+
     sessionStorage.setItem('shouldApplyRecommend', 'true');
     sessionStorage.setItem('designMode', 'recommend');
 
     navigate('/Customize4');
   };
 
-  const handleStartWithoutRecommend = () => {
-    sessionStorage.removeItem('selectedCrystalImage');
-    sessionStorage.removeItem('selectedMetalImage');
-    sessionStorage.removeItem('shouldApplyRecommend');
-    sessionStorage.setItem('designMode', 'custom');
-    navigate('/Customize4');
+
+
+  const [selectedCrystal, setSelectedCrystal] = useState(null);
+  const handleSelectCrystal = (crystal) => {
+    setSelectedCrystal(crystal);
   };
 
 
   return (
+
 
     <div className="customize3-page">
       <NavBarWrapper variant="dark" />
@@ -101,8 +103,10 @@ export default function Customize3() {
                   className="bracelet-preview"
                   onMouseEnter={() => setHoveredBracelet(idx)}
                   onMouseLeave={() => setHoveredBracelet(null)}
-                  onClick={() => handleSelectBracelet(idx, crystal)}
-                  onTouchStart={() => handleSelectBracelet(idx, crystal)}
+                  onClick={() => {
+                    setSelectedBracelet(idx);
+                    handleSelectCrystal(crystal);
+                  }}
                   style={{
                     cursor: 'pointer',
                     transform: selectedBracelet === idx ? 'scale(1.05)' : 'scale(1)',
@@ -140,7 +144,6 @@ export default function Customize3() {
                           width={size}
                           height={size}
                           style={{
-                            pointerEvents: 'none',
                             transform:
                               hoveredBracelet === idx || selectedBracelet === idx ? 'scale(1.1)' : 'scale(1)',
                             filter:
