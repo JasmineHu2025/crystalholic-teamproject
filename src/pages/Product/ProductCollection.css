@@ -26,7 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
     cursor:pointer;
 }
 .pc_icon_item:hover img {
@@ -47,7 +47,7 @@
     color: #585858;
 
     font-family: "Noto Sans TC";
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 450;
     line-height: 150%;
@@ -110,7 +110,7 @@
 
 /* 單張商品卡 */
 .pc_product_card {
-    width: 28%;
+    width: 20%;
     /* flex:1 1 16rem; */
     max-width:20rem;
     cursor: pointer;
@@ -323,11 +323,11 @@
     box-shadow: 0 0 15px 0 rgba(255, 206, 197, 0.8);
 }
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
     .pc_icon_item img {
         width: 9rem;
     }
-}
+} */
 @media (max-width: 820px) {
     .pc_divider_line {
         width: 85%;
