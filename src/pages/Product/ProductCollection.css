@@ -329,9 +329,18 @@
     }
 } */
 @media (max-width: 820px) {
+    .pc_icon_item img {
+        width: 6rem;
+    }
+    .pc_product_card {
+        width: 25%;
+    }
     .pc_divider_line {
         width: 85%;
     }   
+    .pc_footer {
+        clip-path: ellipse(88% 100% at 50% 100%);        
+    }
 }
 
 /* 手機螢幕 ≤ 767px */
