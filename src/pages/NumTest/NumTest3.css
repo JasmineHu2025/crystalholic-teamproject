@@ -292,7 +292,8 @@
 .button2-j {
     border-radius: 99px;
     border-style: none;
-    padding: 1rem 2rem;
+    height: 3.5rem;
+    padding: 0 2rem;
 }
 
 .button1-j {
