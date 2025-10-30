@@ -350,22 +350,22 @@
 .cart_detail_area {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     padding: 1.875rem;/* 30px */
     height: 100%;
-    gap: 1.875rem;/* 30px */
 }
 
 /* 明細項目 */
 .cart_detail_area ul {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;/* 20px */
+    gap: 0.625rem;
+    
 
     color: #585858;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
 }
 
@@ -374,6 +374,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 2.375rem;
 }
 
 /* 優惠券 */
@@ -387,7 +388,7 @@
 
 .cart_detail_area ul li input {
     width: 100%;
-    height: 1.875rem;
+    height: 2rem;
     border: 1px solid rgba(134, 134, 134, 0.50);
     border-radius: 99px;
     padding: 0 16px;
@@ -433,6 +434,7 @@
     letter-spacing: 0.063rem;
     
     color: white;
+    margin-top: 20px;
 }
 .cart_btn_checkout:hover {
     background-color: #9764ca;
@@ -492,6 +494,9 @@
         width: 100%;
         max-width: 950px;
         height: 100%;
+    }
+    .cart_detail_area ul li input {
+        width: 40%;
     }
 }
 
@@ -587,6 +592,9 @@
         /* 中文/霞鶩文楷/標題4 */
         font-size: 1.5rem;
         letter-spacing: 0.15rem;
+    }
+    .cart_detail_area ul li input {
+        width: 100%;
     }
     /* 1. 刪除鈕 */
     .cart_cross_btn {
